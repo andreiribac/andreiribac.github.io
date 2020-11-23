@@ -1,0 +1,56 @@
+// Variables
+$white: #fff;
+$gray: #eeeeee;
+$gray2: #cccccc;
+$alert: #fc6769;
+$acive: #ffaf00;
+$main_color: #0066ff;
+$active_main_color: #0098ff;
+$second_color: #0080ff;
+$acive_second_color: #66cc00;
+$font_color: #2d2d2d;
+$menu_color: #363c43;
+$menu_sec_color: #e8ebef;
+
+// Libs
+@import "reset.css";
+@import "slick-theme.css";
+@import "slick.css";
+@import "animate.css";
+@import "jquery-ui.css";
+@import "magnific-popup.css";
+
+// Components
+@import "animation";
+@import "elements";
+
+
+// Home Page
+
+// Catalog Page
+@import "catalog";
+
+// Catalog Page
+@import "news";
+
+// Item Page
+@import "item";
+
+// Prices Page
+@import "prices";
+
+// Card Page
+@import "cart";
+
+
+// Last Style CSS
+@import "basic";
+
+
+
+
+
+
+
+
+

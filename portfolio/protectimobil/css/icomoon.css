@@ -1,0 +1,112 @@
+@font-face {
+    font-family: icomoon;
+    src: url(/fonts/icomoon/icomoon2.eot);
+    src: url(/fonts/icomoon/icomoon2.eot#iefix) format("embedded-opentype"),
+    url(/fonts/icomoon/icomoon2.ttf) format("truetype"),
+    url(/fonts/icomoon/icomoon2.woff) format("woff"),
+    url(/fonts/icomoon/icomoon2.svg#icomoon) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+.icon {
+    font-family: icomoon !important;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased
+}
+
+#menu-wrapper li, .listing-search .custom-select-item-content, .listing-search .custom-select-list, .listing-val {
+    text-transform: uppercase
+}
+
+.icon-flats:before {
+    content: ""
+}
+
+.icon-new-apartments:before {
+    content: ""
+}
+
+.icon-about:before {
+    content: ""
+}
+
+.icon-colab:before {
+    content: ""
+}
+
+.icon-contact:before {
+    content: ""
+}
+
+.icon-news:before {
+    content: ""
+}
+
+.icon-add:before {
+    content: ""
+}
+
+.icon-admin:before {
+    content: ""
+}
+
+.icon-lot:before {
+    content: ""
+}
+
+.icon-career:before {
+    content: ""
+}
+
+.icon-client:before {
+    content: ""
+}
+
+.icon-commercial:before {
+    content: ""
+}
+
+.icon-credit:before {
+    content: ""
+}
+
+.icon-eval:before {
+    content: ""
+}
+
+.icon-houses:before {
+    content: ""
+}
+
+.icon-lease:before {
+    content: ""
+}
+
+.icon-ofices:before {
+    content: ""
+}
+
+.icon-old-apartments:before {
+    content: ""
+}
+
+.icon-qa:before {
+    content: ""
+}
+
+.icon-sale:before {
+    content: ""
+}
+
+.icon-suburbs:before {
+    content: ""
+}
+
+.icon-urgent:before {
+    content: ""
+}

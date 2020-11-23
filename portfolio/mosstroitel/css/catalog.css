@@ -1,0 +1,10 @@
+.bread_crumbs_catalog_nav {
+  display: flex;
+  align-items: center;
+  padding: 25px 0 20px 40px; }
+
+.bread_crumbs_catalog_nav_list {
+  display: flex;
+  align-items: center; }
+
+/*# sourceMappingURL=catalog.css.map */

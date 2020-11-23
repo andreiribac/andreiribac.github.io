@@ -1,0 +1,21 @@
+/**
+ * Forms
+ * =========================================== */
+.form-control {
+	border-radius: 0;
+	background-color: transparent;
+	padding: 0.5rem .75rem;
+	font-weight: 300;
+}
+.form-control:focus {
+	background-color: transparent;
+	box-shadow: 0 0 0 0.2rem rgba(190, 167, 149, .25);
+}
+.search-form .btn {
+	font-size: 18px;
+}
+.subscribe-form .btn {
+	text-transform: inherit;
+	padding-left: 35px;
+	padding-right: 35px;
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,yBAA0B;EACxB,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,OAAO,EAAE,gBAAgB;;AAE3B,8BAA+B;EAC7B,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM",
+"sources": ["catalog.scss"],
+"names": [],
+"file": "catalog.css"
+}

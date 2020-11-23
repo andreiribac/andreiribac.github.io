@@ -1,0 +1,18 @@
+
+@font-face {
+  font-family: 'Graphie-Bold';
+  src: url('Graphie-Bold.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphie-Bold';
+  src:  url('Graphie-Bold.otf')  format('opentype'),
+	    url('Graphie-Bold.ttf')  format('truetype'),
+        url('Graphie-Bold.svg#Graphie-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+

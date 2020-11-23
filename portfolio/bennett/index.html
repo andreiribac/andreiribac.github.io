@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Bennet HTML Template</title>
+	<meta name="description" content="">
+	<link href="assets/images/icons/favicon.ico" rel="icon">
+	<link href="assets/images/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+	<meta name="theme-color" content="#563d7c">
+	<!-- FontAwesome -->
+	<link href="assets/css/fontawesome-all.css" rel="stylesheet">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,700%7CPrata%7CAllura" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Styles -->
+	<link href="assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+
+	<!-- Modal Search -->
+	<div class="modal fade modal-search" >
+		<span class="modal-search-close" data-dismiss="modal"></span>
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+				<h3 class="modal-title">Search ...</h3>
+				<div class="modal-body">
+
+					<form role="search" method="get" class="search-form" action="/">
+						<div class="input-group">
+							<input type="search" class="form-control" placeholder="Search &hellip;" value="" name="s">
+							<div class="input-group-append">
+								<button class="btn btn-light" type="submit">
+									<i class="far fa-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+
+				</div><!-- .modal-body -->
+			</div><!-- .modal-content -->
+		</div><!-- .modal-dialog -->
+	</div>
+	<!-- End Modal Search -->
+
+	<!-- Header -->
+	<header class="header">
+
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-lg">
+
+			<a class="navbar-brand" href="#">
+				<img src="assets/images/logo-mobile.svg" alt="Logo">
+			</a>
+			<button class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+				<span class="navbar-toggler-icon">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</button>
+
+			<div class="container">
+				<div class="row">
+
+					<div class="collapse navbar-collapse justify-content-between" id="navbar-collapse">
+						
+						<div class="col-lg-2 text-center">
+							<a href="index.html" class="navbar-logo">
+								<img src="assets/images/logo.svg" alt="Logo">
+							</a>
+						</div><!-- .col-x -->
+
+						<div class="col-lg-5 order-first">
+							<ul class="navbar-nav">
+								<li class="nav-item active">
+									<a class="nav-link" href="index.html">Home</a>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Pages</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a class="dropdown-item" href="#">About us</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#">Services</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#">Blog</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#">Contact</a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Look book</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="shop.html">Shop</a>
+								</li>
+							</ul><!-- .navbar-nav -->
+						</div><!-- .col-x -->
+
+						<div class="col-lg-5 order-last">
+							<ul class="navbar-nav navbar-nav-right justify-content-end">
+
+								<li class="nav-item nav-item-search">
+									<a class="nav-link nav-link-search" href="#">
+										<i class="far fa-search"></i>
+									</a>
+								</li>
+
+								<li class="nav-item dropdown dropdown-valute">
+									<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">USD$</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a class="dropdown-item" href="#">EUR€</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#">TRY£</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#">YEN¥</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#">RUB₽</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="nav-item dropdown dropdown-language">
+									<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">eng</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a class="dropdown-item" href="#">FRE</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#">TUR</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#">JPN</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#">RUS</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="nav-item dropdown dropdown-cart">
+									<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Cart <span class="count">0</span></a>
+									<div class="dropdown-menu">
+										<p>No products in the cart.</p>
+									</div>
+								</li>
+							</ul>
+						</div><!-- .col-x -->
+
+					</div><!-- .navbar-collapse -->
+
+				</div><!-- .row -->
+			</div><!-- .container -->
+		</nav>
+		<!-- End Navbar -->
+
+	</header>
+	<!-- End Header -->
+
+	<!-- Main Carousel -->
+	<div id="main-carousel" class="carousel fade main-carousel" data-ride="carousel" data-interval="7000" data-pause="hover">
+
+		<ol class="carousel-indicators">
+			<li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+			<li data-target="#main-carousel" data-slide-to="1"></li>
+			<li data-target="#main-carousel" data-slide-to="2"></li>
+			<li data-target="#main-carousel" data-slide-to="3"></li>
+		</ol>
+
+		<div class="carousel-inner">
+
+			<div class="carousel-item" style="background-image: url(content/slider/slide-1.jpg);">
+				<div class="container justify-content-start">
+					<div class="carousel-caption">
+						<h2>New Collection Fall 2018 </h2>
+						<p>Nam volutpat dapibus placerat. Aliquam bibecndum sem vel elit egestas mal.</p>
+						<p class="carousel-actions">
+							<a class="btn btn-lg btn-dark" href="#">Find out more</a>
+							<a class="btn btn-lg btn-outline-dark" href="#">Sale the shop</a>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item" style="background-image: url(content/slider/slide-2.jpg);">
+				<div class="container justify-content-end">
+					<div class="carousel-caption">
+						<h2>New Collection Fall 2018 </h2>
+						<p>Nam volutpat dapibus placerat. Aliquam bibecndum sem vel elit egestas mal.</p>
+						<p class="carousel-actions">
+							<a class="btn btn-lg btn-dark" href="#">Find out more</a>
+							<a class="btn btn-lg btn-outline-dark" href="#">Sale the shop</a>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item" style="background-image: url(content/slider/slide-3.jpg);">
+				<div class="container justify-content-center">
+					<div class="carousel-caption">
+						<h2>New Collection Fall 2018 </h2>
+						<p>Nam volutpat dapibus placerat. Aliquam bibecndum sem vel elit egestas mal.</p>
+						<p class="carousel-actions">
+							<a class="btn btn-lg btn-dark" href="#">Find out more</a>
+							<a class="btn btn-lg btn-outline-dark" href="#">Sale the shop</a>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="carousel-item dark" style="background-image: url(content/slider/slide-4.jpg);">
+				<div class="container justify-content-end">
+					<div class="carousel-caption">
+						<h2>New Collection Fall 2018 </h2>
+						<p>Nam volutpat dapibus placerat. Aliquam bibecndum sem vel elit egestas mal.</p>
+						<p class="carousel-actions">
+							<a class="btn btn-lg btn-light" href="#">Find out more</a>
+							<a class="btn btn-lg btn-outline-light" href="#">Sale the shop</a>
+						</p>
+					</div>
+				</div>
+			</div>
+
+		</div><!-- .carousel-inner -->
+
+		<a class="carousel-control-prev" href="#main-carousel" data-slide="prev">
+			<i class="fal fa-arrow-left"></i>
+		</a>
+		<a class="carousel-control-next" href="#main-carousel" data-slide="next">
+			<i class="fal fa-arrow-right"></i>
+		</a>
+	</div>
+	<!-- End Main Carousel -->
+
+	<!-- Icons -->
+	<section class="section-icons">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-4">
+					<div class="icons-item">
+						<i class="fal fa-truck"></i>
+						<div class="icons-heading">
+							<h5>Free Delivery</h5>
+							<span>on orders over $99</span>
+						</div>
+						<p>Morbi eu malesuada nulla. Pelledacntesque ut suscipit  caerelit. </p>
+					</div>
+				</div><!-- .col-xx-n -->
+
+				<div class="col-md-4">
+					<div class="icons-item">
+						<i class="fal fa-money-bill-alt"></i>
+						<div class="icons-heading">
+							<h5>Money Back</h5>
+							<span>30 days money back guarantee</span>
+						</div>
+						<p>Morbi eu malesuada nulla. Pelledacntesque ut suscipit  caerelit. </p>
+					</div>
+				</div><!-- .col-xx-n -->
+
+				<div class="col-md-4">
+					<div class="icons-item">
+						<i class="fal fa-tags"></i>
+						<div class="icons-heading">
+							<h5>Best Deals Online</h5>
+							<span>Regular offers & daily deals</span>
+						</div>
+						<p>Morbi eu malesuada nulla. Pelledacntesque ut suscipit  caerelit. </p>
+					</div>
+				</div><!-- .col-xx-n -->
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section>
+	<!-- End Icons -->
+
+	<!-- Arrival -->
+	<section class="section-arrival">
+		<div class="container">
+			<header class="section-heading">
+				<h2>NEW ARRIVAL</h2>
+			</header>
+
+			<ul class="nav nav-filter justify-content-center">
+				<li class="nav-item">
+					<a class="nav-link active" href="#all">All</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#arrivals">New arrivals</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#bestsellers">Bestsellers</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#featured">Featured</a>
+				</li>
+			</ul>
+			
+			<div class="row ajax-load">
+
+				<div class="col-lg-4 col-md-6">
+					<div class="product-item">
+						<figure class="product-image">
+							<a href="single-product.html" class="product-link">
+								<img src="content/products/product-image-1-400x500.jpg" class="product-image" alt="Product Name">
+							</a>
+							<span class="product-actions">
+								<a href="#" class="js-add-to-cart">
+									<i class="fal fa-shopping-cart"></i>
+								</a>
+								<a href="content/products/product-image-1.jpg" data-title="Product name" class="js-zoom-image">
+									<i class="fal fa-search"></i>
+								</a>
+								<a href="#" class="js-like">
+									<i class="fal fa-heart"></i>
+								</a>
+							</span>
+						</figure>
+						<div class="product-info d-flex justify-content-between">
+							<a href="single-product.html" class="product-name">Pink Skirt</a>
+							<span class="product-price">$150.00</span>
+						</div>
+					</div>
+				</div><!-- .col-xx-n -->
+
+				<div class="col-lg-4 col-md-6">
+					<div class="product-item">
+						<figure class="product-image">
+							<a href="single-product.html" class="product-link">
+								<img src="content/products/product-image-2-400x500.jpg" class="product-image" alt="Product Name">
+							</a>
+							<span class="product-actions">
+								<a href="#" class="js-add-to-cart">
+									<i class="fal fa-shopping-cart"></i>
+								</a>
+								<a href="content/products/product-image-2.jpg" class="js-zoom-image">
+									<i class="fal fa-search"></i>
+								</a>
+								<a href="#" class="js-like">
+									<i class="fal fa-heart"></i>
+								</a>
+							</span>
+						</figure>
+						<div class="product-info d-flex justify-content-between">
+							<a href="single-product.html" class="product-name">Vintage Straight Jeans</a>
+							<span class="product-price">$150.00</span>
+						</div>
+					</div>
+				</div><!-- .col-xx-n -->
+
+				<div class="col-lg-4 col-md-6">
+					<div class="product-item">
+						<figure class="product-image">
+							<a href="single-product.html" class="product-link">
+								<img src="content/products/product-image-3-400x500.jpg" class="product-image" alt="Product Name">
+							</a>
+							<span class="product-actions">
+								<a href="#" class="js-add-to-cart">
+									<i class="fal fa-shopping-cart"></i>
+								</a>
+								<a href="content/products/product-image-3.jpg" class="js-zoom-image">
+									<i class="fal fa-search"></i>
+								</a>
+								<a href="#" class="js-like">
+									<i class="fal fa-heart"></i>
+								</a>
+							</span>
+						</figure>
+						<div class="product-info d-flex justify-content-between">
+							<a href="single-product.html" class="product-name">Basic Contrasting T-Shirt</a>
+							<span class="product-price">$150.00</span>
+						</div>
+					</div>
+				</div><!-- .col-xx-n -->
+
+				<div class="col-lg-4 col-md-6">
+					<div class="product-item">
+						<figure class="product-image">
+							<a href="single-product.html" class="product-link">
+								<img src="content/products/product-image-4-400x500.jpg" class="product-image" alt="Product Name">
+							</a>
+							<span class="product-actions">
+								<a href="#" class="js-add-to-cart">
+									<i class="fal fa-shopping-cart"></i>
+								</a>
+								<a href="content/products/product-image-4.jpg" class="js-zoom-image">
+									<i class="fal fa-search"></i>
+								</a>
+								<a href="#" class="js-like">
+									<i class="fal fa-heart"></i>
+								</a>
+							</span>
+						</figure>
+						<div class="product-info d-flex justify-content-between">
+							<a href="single-product.html" class="product-name">Vintage Straight Jeans</a>
+							<span class="product-price">$150.00</span>
+						</div>
+					</div>
+				</div><!-- .col-xx-n -->
+
+				<div class="col-lg-4 col-md-6">
+					<div class="product-item">
+						<figure class="product-image">
+							<a href="single-product.html" class="product-link">
+								<img src="content/products/product-image-5-400x500.jpg" class="product-image" alt="Product Name">
+							</a>
+							<span class="product-actions">
+								<a href="#" class="js-add-to-cart">
+									<i class="fal fa-shopping-cart"></i>
+								</a>
+								<a href="content/products/product-image-5.jpg" class="js-zoom-image">
+									<i class="fal fa-search"></i>
+								</a>
+								<a href="#" class="js-like">
+									<i class="fal fa-heart"></i>
+								</a>
+							</span>
+						</figure>
+						<div class="product-info d-flex justify-content-between">
+							<a href="single-product.html" class="product-name">White Jumper</a>
+							<span class="product-price">$150.00</span>
+						</div>
+					</div>
+				</div><!-- .col-xx-n -->
+
+				<div class="col-lg-4 col-md-6">
+					<div class="product-item">
+						<figure class="product-image">
+							<a href="single-product.html" class="product-link">
+								<img src="content/products/product-image-6-400x500.jpg" class="product-image" alt="Product Name">
+							</a>
+							<span class="product-actions">
+								<a href="#" class="js-add-to-cart">
+									<i class="fal fa-shopping-cart"></i>
+								</a>
+								<a href="content/products/product-image-6.jpg" class="js-zoom-image">
+									<i class="fal fa-search"></i>
+								</a>
+								<a href="#" class="js-like">
+									<i class="fal fa-heart"></i>
+								</a>
+							</span>
+						</figure>
+						<div class="product-info d-flex justify-content-between">
+							<a href="single-product.html" class="product-name">Knitted Jumper</a>
+							<span class="product-price">$150.00</span>
+						</div>
+					</div>
+				</div><!-- .col-xx-n -->
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section>
+	<!-- End Arrival -->
+
+	<!-- Banner -->
+	<section class="section-banner" style="background-image: url(content/banner/banner.jpg)">
+		<div class="container">
+			<div class="row align-items-center justify-content-center">
+				<div class="banner-content col-md-8">
+					<h2>Shop Limited Edition</h2>
+					<p>Etiam accumsan odio in ex imperdiet, at sagittis turpis elementum. Vivamus a diam metus, donec commodo </p>
+					<div class="banner-actions">
+						<a class="btn btn-lg btn-light" href="#">Find out more</a>
+						<a class="btn btn-lg btn-outline-light" href="#">Sale the shop</a>
+					</div>
+				</div>
+			</div>
+		</div><!-- .container -->
+	</section>
+	<!-- End Banner -->
+
+	<!-- Collection -->
+	<section class="section-collection">
+		<div class="container">
+			<header class="section-heading">
+				<h2>TOP COLLECTIONS</h2>
+			</header>
+
+			<div class="collection-masonry">
+				<div class="collection-col">
+					<a href="#" class="collection-item">
+						<img src="content/collections/collection-1.jpg" alt="" class="collection-image">
+						<span class="collection-info">
+							<span class="collection-name"># Woman</span>
+							<span class="collection-count">5 items</span>
+						</span>
+					</a>
+				</div>
+				<div class="collection-col">
+					<a href="#" class="collection-item">
+						<img src="content/collections/collection-2.jpg" alt="" class="collection-image">
+						<span class="collection-info">
+							<span class="collection-name"># Accessories</span>
+							<span class="collection-count">8 items</span>
+						</span>
+					</a>
+				</div>
+				<div class="collection-col">
+					<a href="#" class="collection-item">
+						<img src="content/collections/collection-4.jpg" alt="" class="collection-image">
+						<span class="collection-info">
+							<span class="collection-name"># Man</span>
+							<span class="collection-count">5 items</span>
+						</span>
+					</a>
+				</div>
+				<div class="collection-col">
+					<a href="#" class="collection-item">
+						<img src="content/collections/collection-3.jpg" alt="" class="collection-image">
+						<span class="collection-info">
+							<span class="collection-name"># Shoes</span>
+							<span class="collection-count">8 items</span>
+						</span>
+					</a>
+				</div>
+
+			</div><!-- .collection-masonry -->
+		</div><!-- .container -->
+	</section>
+	<!-- End Collection -->
+
+	<!-- Articles -->
+	<section class="section-articles">
+		<div class="container">
+			<header class="section-heading">
+				<h2>News</h2>
+			</header>
+			<div class="row">
+
+				<div class="col-md-4">
+					<div class="article-item">
+						<a href="#" class="article-link">
+							<img src="content/articles/article-1-400x250.jpg" alt="Article Image" class="article-image">
+						</a>
+						<div class="article-categories">
+							<a href="#">Style</a>
+						</div>
+						<h4><a href="#">Studio Spring Man 2017</a></h4>
+						<div class="article-tags">
+							<span>by</span> <a href="#">Amanda Smith</a> <span>on</span> Sep 14, 2017
+						</div>
+						<p class="article-excerpt">Donec cursus quam consectetur cursus dapiuis. Quisque egestas odio non dui finibus, temus aliquet tellus vestibulum. Integer nec quam letus...</p>
+						<a href="#" class="article-more">Continue reading</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="article-item">
+						<a href="#" class="article-link">
+							<img src="content/articles/article-2-400x250.jpg" alt="Article Image" class="article-image">
+						</a>
+						<div class="article-categories">
+							<a href="#">Fashion</a>
+						</div>
+						<h4><a href="#">Fall Summer Fashion Trends 2017</a></h4>
+						<div class="article-tags">
+							<span>by</span> <a href="#">Amanda Smith</a> <span>on</span> Sep 14, 2017
+						</div>
+						<p class="article-excerpt">Donec cursus quam consectetur cursus dapiuis. Quisque egestas odio non dui finibus, temus aliquet tellus vestibulum. Integer nec quam letus...</p>
+						<a href="#" class="article-more">Continue reading</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="article-item">
+						<a href="#" class="article-link">
+							<img src="content/articles/article-3-400x250.jpg" alt="Article Image" class="article-image">
+						</a>
+						<div class="article-categories">
+							<a href="#">Style</a>
+							<a href="#">Fashion</a>
+						</div>
+						<h4><a href="#">Italian Fashion Style</a></h4>
+						<div class="article-tags">
+							<span>by</span> <a href="#">Amanda Smith</a> <span>on</span> Sep 14, 2017
+						</div>
+						<p class="article-excerpt">Donec cursus quam consectetur cursus dapiuis. Quisque egestas odio non dui finibus, temus aliquet tellus vestibulum. Integer nec quam letus...</p>
+						<a href="#" class="article-more">Continue reading</a>
+					</div>
+				</div>
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section>
+	<!-- End Articles -->
+
+	<!-- Instragram -->
+	<section class="section-instagram">
+		<div class="instagram-images d-flex">
+			<a href="#" class="instagram-item">
+				<img src="content/instagram/instagram-1-thumbnail.jpg" alt="Instragram">
+			</a>
+			<a href="#" class="instagram-item">
+				<img src="content/instagram/instagram-2-thumbnail.jpg" alt="Instragram">
+			</a>
+			<a href="#" class="instagram-item">
+				<img src="content/instagram/instagram-3-thumbnail.jpg" alt="Instragram">
+			</a>
+			<a href="#" class="instagram-item">
+				<img src="content/instagram/instagram-4-thumbnail.jpg" alt="Instragram">
+			</a>
+			<a href="#" class="instagram-item">
+				<img src="content/instagram/instagram-5-thumbnail.jpg" alt="Instragram">
+			</a>
+			<a href="#" class="instagram-item">
+				<img src="content/instagram/instagram-6-thumbnail.jpg" alt="Instragram">
+			</a>
+		</div><!-- .instagram-images -->
+		<footer class="instragram-footer">
+			<h2>Follow us on instagram</h2>
+			<p><a href="#">@bennet_store</a></p>
+		</footer><!-- .instragram-footer -->
+	</section>
+	<!-- End Instragram -->
+
+<!-- Footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<div class="footer-widget">
+						<p>
+							<a href="#">
+								<img src="assets/images/logo.svg" alt="Logo">
+							</a>
+						</p>
+						<p>© 2017 Bennett. All Rights Reserved.</p>
+						<ul class="social-menu d-flex">
+							<li>
+								<a href="#">
+									<i class="fab fa-facebook-f"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fab fa-twitter"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fab fa-instagram"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div><!-- .col-xx-n -->
+				<div class="col-lg-3 col-md-6">
+
+					<div class="footer-widget widget_nav_menu">
+						<div class="footer-widget-menu-contaner">
+							<ul class="menu">
+								<li>
+									<a href="index.html">Home</a>
+								</li>
+								<li>
+									<a href="#">Lookbook</a>
+								</li>
+								<li>
+									<a href="#">About</a>
+								</li>
+								<li>
+									<a href="shop.html">Shop</a>
+								</li>
+								<li>
+									<a href="#">Services</a>
+								</li>
+								<li>
+									<a href="#">Contact</a>
+								</li>
+							</ul>
+						</div>
+					</div><!-- .footer-widget -->
+
+				</div><!-- .col-xx-n -->
+				<div class="col-lg-5 col-md-12">
+
+					<div class="footer-widget widget_text last">
+						<h2 class="widget-title">GET 20% OFF COUPON</h2>
+						<div class="textwidget">
+							<p class="mb-lg-5">Subscribe our newsletter and get discount 20% off</p>
+							<form method="get" class="subscribe-form" action="/">
+								<div class="input-group">
+									<input class="form-control" placeholder="Enter your email...">
+									<div class="input-group-append">
+										<button class="btn btn-dark" type="submit">
+											Subscribe
+										</button>
+									</div>
+								</div>
+							</form>
+						</div><!-- .textwidget -->
+					</div><!-- .footer-widget -->
+
+				</div><!-- .col-xx-n -->
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</footer>
+	<!-- End Footer -->
+
+
+	<!-- <div style="font-family: 'Allura', cursive; font-size: 30px;">Amanda Bennett</div>-->
+
+	<!--
+	<i class="fal fa-search"></i>
+
+	<i class="fal fa-heart"></i>
+
+	<i class="fal fa-shopping-cart"></i>
+
+	<i class="fab fa-vk"></i>
+	<i class="fab fa-facebook-f"></i>
+	<i class="fab fa-twitter"></i>
+	<i class="fab fa-instagram"></i>
+	<i class="fab fa-dribbble"></i>
+	<i class="fab fa-github-alt"></i>
+	<i class="fab fa-google-plus-g"></i>
+	<i class="fab fa-linkedin-in"></i>
+	<i class="fab fa-odnoklassniki"></i>
+	<i class="fab fa-slack-hash"></i>
+	<i class="fab fa-skype"></i>
+	<i class="fab fa-telegram-plane"></i>
+	<i class="fab fa-viber"></i>
+	<i class="fab fa-whatsapp"></i>
+	<i class="fab fa-yelp"></i>
+	<i class="fab fa-yandex"></i>
+	<i class="fab fa-youtube"></i>
+
+	<i class="fal fa-long-arrow-left"></i>
+	<i class="fal fa-long-arrow-right"></i>
+
+	<i class="fas fa-reply"></i>
+
+	<i class="fal fa-copyright"></i>
+
+	<i class="fal fa-star"></i>
+	<i class="fas fa-star"></i>
+
+	<i class="fam fa-gift"></i>
+	-->
+
+
+	<!-- jQuery -->
+	<script src="assets/js/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<!-- Custom JavaScript -->
+	<script src="assets/js/scripts.js"></script>
+	<!-- Demo -->
+	<script src="assets/js/demo.js"></script>
+</body>
+</html>

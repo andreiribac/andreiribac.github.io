@@ -1,0 +1,39 @@
+/**
+ * Buttons
+ * =========================================== */
+.btn {
+	border-radius: 0;
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+.btn + .btn {
+	margin-left: 20px;
+}
+.btn-group-lg > .btn,
+.btn-lg {
+	padding: 14px 30px;
+	font-size: 14px;
+}
+.btn-dark {
+	color: #fff;
+	background-color: #222;
+	border-color: #222;
+}
+.btn-dark:hover {
+	background-color: #000;
+	border-color: #000;
+}
+.btn-outline-dark {
+	color: #222;
+	border-color: #222;
+}
+.btn-outline-dark:hover {
+	color: #fff;
+	background-color: #222;
+}
+@media (max-width: 575px) {
+	.btn-lg {
+		padding: .375rem .75rem;
+	}
+}

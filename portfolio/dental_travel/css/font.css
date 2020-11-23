@@ -1,0 +1,99 @@
+/*Graphie-Regular*/
+@import "fonts/graphie/Graphie-Regular/styles.css";
+
+/*Graphie-SemiBold*/
+@import "fonts/graphie/Graphie-SemiBold/styles.css";
+
+/*Graphie-Bold*/
+@import "fonts/graphie/Graphie-Bold/styles.css";
+
+/*Graphie-Light*/
+@import "fonts/graphie/Graphie-Light/styles.css";
+
+/* ICON FONT */
+@font-face {
+  font-family: 'dental-icon';
+  src:  url('fonts/dental-icon.eot?vesd4o');
+  src:  url('fonts/dental-icon.eot?vesd4o#iefix') format('embedded-opentype'),
+    url('fonts/dental-icon.ttf?vesd4o') format('truetype'),
+    url('fonts/dental-icon.woff?vesd4o') format('woff'),
+    url('fonts/dental-icon.svg?vesd4o#dental-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="dental-"], [class*=" dental-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'dental-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dental-arms:before {
+  content: "\e900";
+}
+.dental-arrow:before {
+  content: "\e901";
+}
+.dental-chat:before {
+  content: "\e902";
+}
+.dental-down-btn:before {
+  content: "\e903";
+}
+.dental-facebook:before {
+  content: "\e904";
+}
+.dental-finger:before {
+  content: "\e905";
+}
+.dental-home:before {
+  content: "\e906";
+}
+.dental-left-arrow:before {
+  content: "\e907";
+}
+.dental-logo-white:before {
+  content: "\e908";
+}
+.dental-medic:before {
+  content: "\e909";
+}
+.dental-messanger:before {
+  content: "\e90a";
+}
+.dental-ok:before {
+  content: "\e90b";
+}
+.dental-phone:before {
+  content: "\e90c";
+}
+.dental-quaet:before {
+  content: "\e90d";
+}
+.dental-right-arrow:before {
+  content: "\e90e";
+}
+.dental-send:before {
+  content: "\e90f";
+}
+.dental-star:before {
+  content: "\e910";
+}
+.dental-travel:before {
+  content: "\e911";
+}
+.dental-upload:before {
+  content: "\e912";
+}
+.dental-viber:before {
+  content: "\e913";
+}

@@ -1,0 +1,18 @@
+
+@font-face {
+  font-family: 'Graphie-Regular';
+  src: url('Graphie-Regular.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphie-Regular';
+  src:  url('Graphie-Regular.otf')  format('opentype'),
+        url('Graphie-Regular.ttf')  format('truetype'),
+        url('Graphie-Regular.svg#Graphie-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+

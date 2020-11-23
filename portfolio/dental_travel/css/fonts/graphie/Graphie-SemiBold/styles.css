@@ -1,0 +1,18 @@
+
+@font-face {
+  font-family: 'Graphie-SemiBold';
+  src: url('Graphie-SemiBold.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphie-SemiBold';
+  src:  url('Graphie-SemiBold.otf')  format('opentype'),
+        url('Graphie-SemiBold.ttf')  format('truetype'),
+        url('Graphie-SemiBold.svg#Graphie-SemiBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+

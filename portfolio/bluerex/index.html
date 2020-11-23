@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    <!--  /* ===== .preloader_box ===== .preloader_box ===== .preloader_box ===== .preloader_box ===== .preloader_box ===== .preloader_box */  -->
+    .preloader_box {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: linear-gradient(to right bottom, #db33f4, #ba33f3, #9435f2, #6737ef, #1238eb);
+      overflow: hidden;
+      z-index: 1002;
+    }
+    .spinner-border {
+      width: 10em;
+      height: 10em;
+    }
+    .spinner-grow {
+      width: 8em;
+      height: 8em;
+    }
+  </style>
+  <!--  Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Poppins:600,700&display=swap&subset=cyrillic"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+        integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+  <!--  Style-->
+  <link href="css/baguetteBox.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+
+  <title>BlueRex</title>
+</head>
+<body>
+<div class="preloader_box d-flex justify-content-center align-items-center">
+  <div class="spinner-border text-danger" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div><!-- /.preloader_box -->
+<button class="scrollToTop"><i class="fas fa-angle-up"></i></button>
+<header class="main-header">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="index.html"><img src="css/img/logo.png" alt="BlueRex"> BlueRex</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-right">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="blog.html">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Reviews</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Faq</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="main-header-text text-center text-lg-left">
+    <h3>We are best and creative agency</h3>
+    <h4>We turn creative ideas
+      into your business.</h4>
+    <p>Lorem ipsum dolor sit am et, consec tetur adipi scing elit. Sed sodales enim ut rhoncus lorem ipsum ese
+      terds.</p>
+    <div class="main-header-buttons">
+      <button type="button" class="btn shadow btn-pink rounded-pill">our story</button>
+      <button type="button" class="btn shadow btn-violet rounded-pill">read more</button>
+    </div>
+  </div><!-- /.main-header-text -->
+</header>
+<main class="main-main">
+  <section class="section-watch">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-12 col-lg-6 watch-text-box">
+          <h3 class="text-center text-md-left">Dream Big Inspire the World</h3>
+          <h4 class="text-center text-md-left">We turn creative ideas
+            into your business.</h4>
+          <ul class="nav nav-pills justify-content-center justify-content-sm-start" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link rounded-pill active" id="webdesign-tab" data-toggle="tab" href="#webdesign" role="tab"
+                 aria-controls="webdesign" aria-selected="true">Web design</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-pill" id="mobileapp-tab" data-toggle="tab" href="#mobileapp" role="tab"
+                 aria-controls="mobileapp" aria-selected="false">Mobile app</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-pill" id="branding-tab" data-toggle="tab" href="#branding" role="tab"
+                 aria-controls="branding" aria-selected="false">Branding</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="webdesign" role="tabpanel" aria-labelledby="webdesign-tab">
+              <p>Web design 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quo sed velit.</p>
+              <button class="btn btn-pink btn-shadow">Read More</button>
+            </div>
+            <div class="tab-pane fade" id="mobileapp" role="tabpanel" aria-labelledby="mobileapp-tab">Mobile app 2 Lorem
+              ipsum dolor sit amet, consectetur adipisicing elit. Atque deserunt minus qui quisquam.
+            </div>
+            <div class="tab-pane fade" id="branding" role="tabpanel" aria-labelledby="branding-tab">Branding 3 Lorem
+              ipsum dolor sit amet, consectetur adipisicing elit. Dolore, iure quidem!
+            </div>
+          </div>
+        </div><!-- /.col-12 col-md-6 -->
+        <div class="col-12 col-lg-6 d-md-flex justify-content-end watch-img-box d-none">
+          <img src="css/img/watch.png" alt="">
+        </div><!-- /.col-12 col-md-6 -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </section><!-- /.section-watch -->
+  <section class="section-progress text-center text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 progress-item">
+          <div><i class="fas fa-bullhorn"></i></div>
+          <div class="num">500+</div>
+          <h4><span>Successfully </span>comleted project</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, eaque eius ex nesciunt sint voluptate?</p>
+        </div><!-- /.col-12 col-md-4 -->
+        <div class="col-12 col-md-4 progress-item">
+          <div><i class="fas fa-bullhorn"></i></div>
+          <div class="num">254</div>
+          <h4><span>Highly </span>specialised employees</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, eaque eius ex nesciunt sint voluptate?</p>
+        </div><!-- /.col-12 col-md-4 -->
+        <div class="col-12 col-md-4 progress-item">
+          <div><i class="fas fa-bullhorn"></i></div>
+          <div class="num">45+</div>
+          <h4><span>Awards </span>around the world</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, eaque eius ex nesciunt sint voluptate?</p>
+        </div><!-- /.col-12 col-md-4 -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </section><!-- /.section-progress -->
+  <section class="section-lets text-center text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3>Let's Grow Together</h3>
+          <h4>We turn creative ideas into your business.</h4>
+        </div>
+        <div class="w-100"></div>
+        <div class="col col-md-10 offset-md-1">
+          <p>Lorem ipsum dolor sit am et, consec tetur adipi scing elit. Sed sodales enim ut rhoncus lorem ipsum ese
+            terds.
+            Lorem ipsum dolor sit am et, consec tetur adipi scing elit.</p>
+          <button class="mt-4 btn btn-pink btn-shadow">Read More</button>
+        </div>
+      </div>
+    </div>
+  </section><!-- /.section-lets text-center -->
+  <section class="section-design">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-xl-6">
+          <h3 class="text-center text-xl-left">We are best and creative agency</h3>
+          <h4 class="text-center text-xl-left">We turn creative ideas into your business.</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque itaque, nisi obcaecati sapiente velit
+            voluptas?</p>
+          <div class="row">
+            <div class="mb-3 col-12 col-md-6">
+              <p class="text-center text-xl-left"><i class="fas fa-comments"></i></p>
+              <h5 class="text-center text-xl-left">Graphic Design</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus neque ratione vel?</p>
+              <button class="btn btn-pink btn-shadow">Read More</button>
+            </div>
+            <div class="mb-3 col-12 col-md-6">
+              <p class="text-center text-xl-left"><i class="fas fa-bullhorn"></i></p>
+              <h5 class="text-center text-xl-left">Graphic Design</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, harum, quibusdam. Nisi, unde.</p>
+              <button class="btn btn-pink btn-shadow">Read More</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-xl-6">
+          <div class="video">
+            <div class="video-wrapper embed-responsive embed-responsive-16by9 mt-5">
+              <iframe width="853" height="480" id="videoPlayer"
+                      src="https://www.youtube.com/embed/KlVvTofZn7I?enablejsapi=1&amp;html5=1&amp;rel=0&amp;controls=0&amp;showinfo=0"
+                      frameborder="0" allowfullscreen=""></iframe>
+              <div id="videoPlayBtn"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- /.section-design -->
+  <section class="section-work">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-12">
+          <h4>Our Recent Work</h4>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-12 col-md-10 offset-md-1">
+          <p>Lorem ipsum dolor sit am et, consec tetur adipi scing elit. Sed sodales enim ut rhoncus lorem ipsum ese
+            terds.
+            Lorem ipsum dolor sit am et, consec tetur adipi scing elit.</p>
+        </div>
+        <div class="col-12">
+          <ul class="nav nav-pills mt-4 mb-3 justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link rounded-pill active" id="pills-home-tab" data-toggle="pill" href="#pills-home"
+                 role="tab" aria-controls="pills-home" aria-selected="true">Web design</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-pill" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
+                 role="tab" aria-controls="pills-profile" aria-selected="false">Mobile app</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-pill" id="pills-contact-tab" data-toggle="pill" href="#pills-contact"
+                 role="tab" aria-controls="pills-contact" aria-selected="false">Branding</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <div class="gallery row justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/1.jpg"><img
+                        src="css/img/gallery/1_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/2.jpg"><img
+                        src="css/img/gallery/2_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/3.jpg"><img
+                        src="css/img/gallery/3_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/4.jpg"><img
+                        src="css/img/gallery/4_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/5.jpg"><img
+                        src="css/img/gallery/5_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/6.jpg"><img
+                        src="css/img/gallery/6_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/7.jpg"><img
+                        src="css/img/gallery/7_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/8.jpg"><img
+                        src="css/img/gallery/8_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/9.jpg"><img
+                        src="css/img/gallery/9_s.jpg" alt=""></a></div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <div class="gallery row justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/5.jpg"><img
+                        src="css/img/gallery/5_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/6.jpg"><img
+                        src="css/img/gallery/6_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/7.jpg"><img
+                        src="css/img/gallery/7_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/8.jpg"><img
+                        src="css/img/gallery/8_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/9.jpg"><img
+                        src="css/img/gallery/9_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/1.jpg"><img
+                        src="css/img/gallery/1_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/2.jpg"><img
+                        src="css/img/gallery/2_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/3.jpg"><img
+                        src="css/img/gallery/3_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/4.jpg"><img
+                        src="css/img/gallery/4_s.jpg" alt=""></a></div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+              <div class="gallery row justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/3.jpg"><img
+                        src="css/img/gallery/3_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/4.jpg"><img
+                        src="css/img/gallery/4_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/5.jpg"><img
+                        src="css/img/gallery/5_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/6.jpg"><img
+                        src="css/img/gallery/6_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/7.jpg"><img
+                        src="css/img/gallery/7_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/1.jpg"><img
+                        src="css/img/gallery/1_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/2.jpg"><img
+                        src="css/img/gallery/2_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/8.jpg"><img
+                        src="css/img/gallery/8_s.jpg" alt=""></a></div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 gallery-item"><a href="css/img/gallery/9.jpg"><img
+                        src="css/img/gallery/9_s.jpg" alt=""></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.container -->
+  </section><!-- /.section-work -->
+  <section class="section-reviews">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="row">
+              <div class="offset-2 col-8 offset-sm-0 col-sm-7">
+                <div class="carousel-caption">
+                  <h3 class="text-center text-sm-left">Our happy client</h3>
+                  <h4 class="text-center text-sm-left">Testimonials</h4>
+                  <blockquote class="blockquote">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
+                      ante.</p>
+                    <footer class="blockquote-footer">MR Andrei</footer>
+                  </blockquote>
+                </div>
+              </div>
+              <div class="col-12 col-sm-5 d-none d-sm-block">
+                <img src="css/img/client.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="offset-2 col-8 offset-sm-0 col-sm-7">
+                <div class="carousel-caption">
+                  <h3 class="text-center text-sm-left">Our happy client</h3>
+                  <h4 class="text-center text-sm-left">Testimonials</h4>
+                  <blockquote class="blockquote">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
+                      ante.</p>
+                    <footer class="blockquote-footer">MR Andrei</footer>
+                  </blockquote>
+                </div>
+              </div>
+              <div class="col-12 col-sm-5 d-none d-sm-block">
+                <img src="css/img/client.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="offset-2 col-8 offset-sm-0 col-sm-7">
+                <div class="carousel-caption">
+                  <h3 class="text-center text-sm-left">Our happy client</h3>
+                  <h4 class="text-center text-sm-left">Testimonials</h4>
+                  <blockquote class="blockquote">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
+                      ante.</p>
+                    <footer class="blockquote-footer">MR Andrei</footer>
+                  </blockquote>
+                </div>
+              </div>
+              <div class="col-12 col-sm-5 d-none d-sm-block">
+                <img src="css/img/client.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section><!-- /.section-reviews -->
+  <section class="section-form text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h4>Need Help?</h4>
+          <h5>Don't Forget to Contact With Us</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio impedit libero, mollitia
+            necessitatibus odit repellendus? Doloremque dolorum ea eum fugit ipsam, laudantium numquam quae quam quia
+            quibusdam quidem quisquam tempore.</p>
+          <form>
+            <div class="row justify-content-center align-items-center">
+              <div class="mb-3 col-10 col-sm-8 col-md-5">
+                <input type="text" class="form-control border-0" placeholder="First name">
+              </div>
+              <div class="mb-3 col-10 col-sm-8 col-md-5">
+                <input type="text" class="form-control border-0" placeholder="Last name">
+              </div>
+              <div class="w-100 d-md-none"></div>
+              <div class="mb-3 col-auto col-md-2">
+                <button type="submit" class="btn btn-violet btn-shadow">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section><!-- /.section-form -->
+</main>
+<footer class="main-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="row">
+          <div class="col-6">
+            <h5>Company</h5>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Aproach</a></li>
+              <li><a href="#">Sustainability</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">News</a></li>
+            </ul>
+          </div><!-- /.col-6 -->
+          <div class="col-6">
+            <h5>Company</h5>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Aproach</a></li>
+              <li><a href="#">Sustainability</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">News</a></li>
+            </ul>
+          </div><!-- /.col-6 -->
+          <div class="col-6">
+            <h5>Company</h5>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Aproach</a></li>
+              <li><a href="#">Sustainability</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">News</a></li>
+            </ul>
+          </div><!-- /.col-6 -->
+          <div class="col-6">
+            <h5>Company</h5>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Aproach</a></li>
+              <li><a href="#">Sustainability</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">News</a></li>
+            </ul>
+          </div><!-- /.col-6 -->
+        </div><!-- /.row -->
+      </div><!-- /.col-12 col-md-6 -->
+      <div class="col-12 col-md-6 footer-images">
+        <div class="row">
+          <div class="col-6">
+            <img class="rounded-lg" src="css/img/footer_img1.jpg" alt="">
+          </div><!-- /.col-6 -->
+          <div class="col-6">
+            <img class="rounded-lg" src="css/img/footer_img2.jpg" alt="">
+          </div><!-- /.col-6 -->
+          <div class="col-6">
+            <img class="rounded-lg" src="css/img/footer_img3.jpg" alt="">
+          </div><!-- /.col-6 -->
+          <div class="col-6">
+            <img class="rounded-lg" src="css/img/footer_img4.jpg" alt="">
+          </div><!-- /.col-6 -->
+        </div><!-- /.row -->
+      </div><!-- /.col-12 col-md-6 -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</footer>
+<div class="copyright">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="nav justify-content-center text-center">
+          <li class="nav-item"><span class="nav-link">&copy; 2022 Theme by psdfreebies.com</span></li>
+          <!-- /.nav-item -->
+          <li class="nav-item"><a href="#" class="nav-link">Privacy</a></li><!-- /.nav-item -->
+          <li class="nav-item"><a href="#" class="nav-link">Terms of Use</a></li><!-- /.nav-item -->
+          <li class="nav-item"><a href="#" class="nav-link">Site Map</a></li><!-- /.nav-item -->
+        </ul>
+        <!-- /.nav -->
+      </div><!-- /.col-md-12 -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</div><!-- /.copyright -->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/baguetteBox.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

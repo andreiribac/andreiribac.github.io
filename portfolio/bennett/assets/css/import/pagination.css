@@ -1,0 +1,64 @@
+/**
+ * Pagination
+ * =========================================== */
+.pagination {
+	padding: 70px 0;
+	margin: 0;
+}
+.page-item + .page-item {
+	margin-left: 10px;
+}
+.page-link {
+	padding: 0 10px;
+	min-width: 40px;
+	height: 40px;
+	margin-left: 0;
+	line-height: 40px;
+	color: #222;
+	background-color: transparent;
+	border: 0;
+	text-align: center;
+	border-radius: 20px;
+}
+.page-link:hover {
+	color: #222;
+	background-color: #eee;
+}
+span.page-link:not(:disabled):not(.disabled),
+span.page-link:hover,
+.page-item.active .page-link {
+	cursor: inherit;
+	pointer-events: none;
+}
+.page-item.active .page-link {
+	color: #fff;
+	background-color: #222;
+	border-color: #222;
+}
+.page-link > i {
+	font-size: 80%;
+}
+.page-item:first-child .page-link {
+	border-radius: 20px 4px 4px 20px;
+}
+.page-item:last-child .page-link {
+	border-radius: 4px 20px 20px 4px;
+}
+@media (min-width: 768px) {
+	.page-item:first-child .page-link > i {
+	margin-right: 10px;
+	}
+	.page-item:last-child .page-link > i {
+		margin-left: 10px;
+	}
+}
+@media (max-width: 767px) {
+	.page-item .page-link > span {
+		display: none;
+	}
+}
+@media (max-width: 575px) {
+	.pagination {
+		padding: 30px 0;
+	}
+}

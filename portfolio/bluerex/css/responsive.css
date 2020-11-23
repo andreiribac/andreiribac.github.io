@@ -1,0 +1,123 @@
+/*// Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) {
+
+}
+
+/*// Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) {
+    .main-header-text {
+        left: 50%;
+        background-color: rgba(0,0,0,0.3);
+        transform: translateX(-50%);
+    }
+    .navbar-nav {
+        position: relative;
+        padding: 0 15px;
+        max-width: 290px;
+        background-image: linear-gradient(to right top, #ed1b33, #d70058, #b20073, #802082, #442e82);
+        z-index: 1;
+    }
+    .navbar-nav:after {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        display: block;
+        content: '';
+        width: 140px;
+        height: 140px;
+        background: url(img/logo.png) bottom left no-repeat;
+        background-size: 100%;
+        opacity: 0.2;
+    }
+    .main-header .navbar-dark .navbar-nav .nav-link:hover:after {
+        transform: scale(0);
+    }
+    .watch-text-box {
+        position: relative;
+        z-index: 2;
+    }
+    .watch-img-box {
+        position: absolute;
+        top: 100px;
+        right: -150px;
+        z-index: 1;
+    }
+    .section-reviews h3, .section-reviews h4{
+        font-size: 25px;
+    }
+    .section-reviews .blockquote {
+        margin-top: 40px;
+        padding-left: 20px;
+        font-size: 16px;
+    }
+    .section-reviews .blockquote:before {
+        font-size: 100px;
+        top: -50px;
+    }
+}
+
+/*// Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) {
+    h3,h4,
+    .section-watch h3, .section-watch h4{
+        font-size: 30px;
+    }
+    section,
+    .section-progress .progress-item{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+/*// Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .main-header .navbar-brand {
+        font-size: 25px;
+    }
+    .navbar-brand img{
+        max-width: 35px;
+    }
+    .main-header-text {
+        top: 55px;
+    }
+    .main-header-buttons {
+        padding-left: 0;
+    }
+    .main-header-buttons .btn {
+        display: block;
+        width: 100%;
+    }
+    .main-header-text {
+        background-color: rgba(0,0,0,0);
+    }
+    section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .section-work .nav-link,
+    .section-watch .nav-link {
+        padding: 7px 15px;
+    }
+    .section-reviews .carousel-caption {
+        position: unset;
+        top: 5%;
+    }
+    .thumb {
+        float: none;
+        width: 100%;
+    }
+
+}
+@media (max-width: 390px) {
+    .section-work .nav-item,
+    .section-watch .nav-item {
+        flex: 0 0 100%;
+        max-width: 70%;
+        text-align: center;
+    }
+
+}
+
+
+
+

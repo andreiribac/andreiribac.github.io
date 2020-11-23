@@ -1,0 +1,105 @@
+.prices_section {
+  padding-top: 36px;
+}
+.price_info_box {
+  margin-top: 36px;
+  padding-top: 40px;
+  border-top: 1px solid $gray;
+}
+.info_wrapper {
+  display: block;
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 1460px;
+  width: 100%;
+}
+.table_box {
+  margin-bottom: 30px;
+}
+h3.table_heading {
+  font-size: 19px;
+  font-weight: 700;
+}
+.table_description {
+  display: block;
+  font-size: 15px;
+}
+table.price_table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 15px;
+  tr {
+    height: 40px;
+    vertical-align: center;
+    &:nth-child(odd) {
+      background: $gray;
+    }
+    th,
+    td {
+      padding-left: 30px;
+      &:first-child {
+        width: 470px;
+      }
+    }
+  }
+}
+// list_box
+.list_box {
+
+}
+.list_heading {
+  font-size: 19px;
+  font-weight: 700;
+}
+.price_proposition_list {
+  margin-top: 6px;
+  margin-bottom: 30px;
+  &.acive_color li{
+    &::before {
+      background: $acive_second_color;
+    }
+  }
+  li {
+    font-size: 15px;
+    line-height: 30px;
+    &::before {
+      content: '';
+      display: inline-block;
+      margin-right: 25px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: $gray2;
+    }
+  }
+}
+.alert_message {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+
+//***************//
+//  Responsive   //*****************************************************
+//***************//
+@media screen and (max-width: 800px) {
+  .table_box {
+    max-width: 738px;
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .price_table {
+    min-width: 738px;
+  }
+}
+// @media screen and (max-width: 800px) *******************************
+
+@media screen and (max-width: 600px) {
+  .info_wrapper {
+    padding: 0 10px;
+  }
+}
+// @media screen and (max-width: 600px) *******************************

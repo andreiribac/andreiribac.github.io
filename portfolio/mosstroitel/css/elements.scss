@@ -1,0 +1,390 @@
+//**************************//
+//      Heading Title       //
+//**************************//
+h1 {
+  font-size: 26px;
+  font-weight: 700;
+}
+h2 {
+  font-size: 32px;
+}
+h3 {
+  display: block;
+  margin: 0;
+  font-size: 15px;
+  text-transform: lowercase;
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+h4 {
+  margin-bottom: 3px;
+  font-size: 13px;
+  font-weight: 700;
+}
+h5 {
+  margin-top: 30px;
+  margin-bottom: 5px;
+  font-size: 19px;
+  font-weight: 700;
+}
+a {
+  color: $font_color;
+}
+//**************************//
+//      Special class       //
+//**************************//
+.overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0;bottom: 0;
+  display: none;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background: rgba($font_color,0.8);
+  z-index: 2;
+  &.overlay_on {
+    display: block;
+    visibility: visible;
+  }
+}
+.overflow_hidden {
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+}
+.alert {
+  color: $alert;
+}
+.bold {
+  font-weight: 700;
+}
+.extra_bold {
+  font-weight: 900;
+}
+.big_letter {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.thin_text {
+  font-weight: 400;
+}
+.ttu {
+  text-transform: uppercase;
+}
+.no_desctop {
+  display: none;
+  visibility: hidden;
+}
+.classic_link {
+  color: $active_main_color;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+    opacity: 0.7;
+  }
+}
+
+// *************************//
+//      Buttons Link       //
+//*************************//
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 120px;
+  width: 100%;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  letter-spacing: inherit;
+  color: $white;
+  text-transform: uppercase;
+  user-select: none;
+  border-radius: 20px;
+  background: linear-gradient(to right, $main_color, $active_main_color, $main_color, $main_color);
+  background-size: 350%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0,102,255,1);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0,102,255,1);
+  box-shadow: 0 4px 8px 0 rgba(0,102,255,1);
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    animation: pulse 1s infinite,
+               back-pos 20s infinite;
+  }
+  &:active {
+    background: $active_main_color;
+    animation: pulse_click 1s;
+    animation-iteration-count: 1;
+  }
+  &.btn-big {
+    max-width: 360px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 17px;
+  }
+  &.btn-second {
+    max-width: 190px;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: lowercase;
+    color: $font_color;
+    background: $gray;
+    background-size: 400%;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(204,204,204,0.8);
+    -moz-box-shadow: 0 4px 8px 0 rgba(204,204,204,0.8);
+    box-shadow: 0 4px 8px 0 rgba(204,204,204,0.8);
+    &:first-letter,
+    .ttu {
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      color: $white;
+      background: linear-gradient(to right, $main_color, $active_main_color, $main_color, $main_color);
+      background-size: 350%;
+      animation: pulse-second 1s infinite,
+      back-pos 20s infinite;
+    }
+    &:active {
+      background: #00ffde;
+      animation: pulse_click-second 1s;
+      animation-iteration-count: 1;
+    }
+  }
+  &.btn-yellow {
+    max-width: 220px;
+    font-size: 13px;
+    text-transform: lowercase;
+    color: $font_color;
+    background: linear-gradient(to right, #ffa800, #ffcc00, #fffd14, #ffa800);
+    background-size: 350%;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(#ffa800,1);
+    -moz-box-shadow: 0 4px 8px 0 rgba(#ffa800,1);
+    box-shadow: 0 4px 8px 0 rgba(#ffa800,1);
+
+    &:hover {
+      animation: pulse-yellow 1s infinite,
+      back-pos 20s infinite;
+    }
+    &:active {
+      background: #fffd14;
+      animation: pulse_click-yellow 1s;
+      animation-iteration-count: 1;
+    }
+  }
+}
+
+
+//**********************//
+//      Shop Item       //
+//**********************//
+.shop_item {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 0 20px 1px;
+  flex-basis: 20%;
+  display: flex;
+  justify-content: center;
+  max-width: 320px;
+  width: 100%;
+  min-width: 280px;
+  max-height: 400px;
+  height: 100%;
+  border-right: 1px solid $gray;
+  border-bottom: 1px solid $gray;
+  z-index: 1;
+  &:hover, &:focus {
+    padding: 20px 0 20px 0;
+    border-left: 1px solid $gray;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(204,204,204,0.8);
+    -moz-box-shadow: 0 4px 8px 0 rgba(204,204,204,0.8);
+    box-shadow: 0 4px 8px 0 rgba(204,204,204,0.8);
+    z-index: 2;
+
+    .shop_item_link {
+      color: $main_color;
+    }
+  }
+}
+.shop_item_center {
+  display: block;
+  width: 260px;
+  margin: 0 auto;
+}
+.shop_item_img_box {
+  position: relative;
+  margin-bottom: 15px;
+  display: block;
+  width: 260px;
+  height: 180px;
+}
+.super_price::before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 77px;
+  height: 113px;
+  background: transparent url("../css/img/basic_img/icon_superprice.svg") center center no-repeat;
+  background-size: 100%;
+}
+.top_sales::after {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  width: 77px;
+  height: 55px;
+  background: transparent url("../css/img/basic_img/icon_hotsale.svg") center center no-repeat;
+  background-size: 100%;
+}
+.shop_item_img {
+  display: block;
+  max-width: 260px;
+  width: 100%;
+  max-height: 180px;
+  height: 100%;
+}
+.shop_item_link {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 700;
+  transition: color 0.3s ease-in-out;
+}
+.shop_item_counter_box {
+  display: flex;
+  margin-bottom: 15px;
+  div {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    svg {
+      margin-right: 6px;
+      width: 20px;
+      height: 14px;
+    }
+  }
+}
+.shop_item_configuration_box {
+  margin-bottom: 20px;
+}
+.shop_item_footer_box {
+  display: flex;
+  justify-content: space-between;
+}
+.shop_item_price_box,
+.shop_item_action_box {
+  width: 50%;
+}
+.shop_item_old_price {
+  display: block;
+  min-height: 20px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.shop_item_delete_price {
+  position: relative;
+  display: inline-block;
+  margin-right: 7px;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1.3px;
+    background: rgba($font_color, 0.7);
+  }
+}
+.shop_item_sale_value {
+  display: inline-block;
+  width: 60px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: $white;
+  background: $acive_second_color;
+  border-radius: 3px;
+}
+.shop_item_current_price {
+  font-weight: 700;
+}
+.shop_item_price_info {
+  color: #999999;
+}
+.shop_item_action_box {
+  text-align: center;
+}
+.shop_item_current_status {
+  position: relative;
+  margin-bottom: 10px;
+  display: block;
+  &::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background: transparent url("../css/img/basic_img/icon_check.svg") center center no-repeat;
+    background-size: 100%;
+  }
+}
+
+
+
+//***************//
+//  Responsive   //******************************************************************************
+//***************//
+@media screen and (max-width: 1723px) {
+  .shop_item {
+    flex-basis: 25%;
+  }
+}
+// @media screen and (max-width: 1723px) *********************************************************
+
+
+@media screen and (max-width: 1443px) {
+  .shop_item {
+    flex-basis: 33.33%;
+  }
+}
+// @media screen and (max-width: 1443px) *********************************************************
+
+
+@media screen and (max-width: 861px) {
+  .shop_item {
+    flex-basis: 50%;
+  }
+}
+// @media screen and (max-width: 861px) *********************************************************
+
+
+@media screen and (max-width: 560px) {
+  .shop_item {
+    flex-basis: 100%;
+  }
+}
+// @media screen and (max-width: 560px) *********************************************************
+
+
+@media screen and (max-width: 500px) {
+  .btn.btn-big {
+    max-width: 290px;
+    font-size: 16px;
+  }
+}
+// @media screen and (max-width: 500px) *********************************************************
+
+

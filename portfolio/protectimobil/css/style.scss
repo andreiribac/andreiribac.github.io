@@ -1,0 +1,39 @@
+// Variables
+$gray: #ECECEC;
+$gray2: #707070;
+$blue: #007bff;
+
+// Fonts
+@import "fontstyle.css";
+@import "flaticon.css";
+
+// Libs
+@import "reset.css";
+@import "humburger.css";
+@import "bootstrap.min.css";
+@import "slick-theme.css";
+@import "slick.css";
+@import "animate.css";
+@import "jquery-ui.css";
+@import "magnific-popup.css";
+
+// index - Home Page
+@import "basic";
+
+// 404 - Page Not Found
+@import "404";
+
+// Orders
+@import "orders";
+
+// News
+@import "news";
+
+// News Item
+@import "news_item";
+
+// Favorites page
+@import "favorites";
+
+
+
