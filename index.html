@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Андрей Рыбак</title>
     <meta charset="UTF-8">
@@ -18,7 +19,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="css/img/favicon/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="css/img/favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="css/img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="css/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="css/img/favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="css/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="css/img/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="css/img/favicon/favicon-16x16.png">
@@ -29,263 +30,314 @@
 
 
     <!--CSS style-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/libs/reset.css">
+    <link rel="stylesheet" href="css/libs/slick.css">
+    <link rel="stylesheet" href="css/libs/slick-theme.css">
+    <link rel="stylesheet" href="css/style.min.css">
 
     <!--JS-->
     <script type="text/javascript" src="js/libs/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/libs/slick.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </head>
+
 <body>
-<main>
-    <div class="wrapper">
-        <h1>Андрей Рыбак</h1>
-        <div class="sv__box">
-            <div class="sv__item avatar">
-                <img class="sv__avatar" src="css/img/andrei_ribac.jpg" alt="">
-            </div><!-- /.sv__item -->
-            <div class="sv__item contact">
-                <h2>Front-end developer</h2>
-                <table class="contact_table">
-                    <tbody>
-                    <tr>
-                        <td>Email:</td>
-                        <td><a href="mailto:ribacandrei@gmail.com">ribacandrei@gmail.com</a></td>
-                    </tr>
-                    <tr>
-                        <td>Моб.:</td>
-                        <td><a href="tel:+37369788256">+37369788256</a></td>
-                    </tr>
-                    <tr>
-                        <td>Соц. сети:</td>
-                        <td><a target="_blank" href="https://www.linkedin.com/in/andrei-ribac-3a34a364/">LinkedIn</a></td>
-                    </tr>
-                    <tr>
-                        <td>Портфолио:</td>
-                        <td><a target="_blank" href="https://andreiribac.github.io/">andreiribac.github.io</a></td>
-                    </tr>
-                    <tr>
-                        <td>Расположение:</td>
-                        <td>Молдова, Кишинев</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div><!-- /.sv__item -->
-            <div class="sv__item about_me">
-                <h2>О СЕБЕ</h2>
-                <p>Уверенное знание <strong>HTML, CSS(SASS, SCSS, Less), jQuery (JavaScript)</strong> . Опыт работы с использованием framework-ов <strong>Bootstrap
-                4</strong> и <strong>Bootstrap 3</strong>. Адаптивная верстка с применением <strong>Flexbox, Grid</strong>. Верстка писем с применением framework <strong>Foundation for
-                Emails 2</strong>. Опыт работы с системой контроля версия <strong>Git</strong>. Качественная анимация на <strong>GSAP 3.0</strong>. Опыт работы в конструкторе
-                сайтов <strong>Tilda</strong>. Опыт работы с Wordpress. Базовое владение графическими программами <strong>Photoshop, Illustrator, Figma</strong>.</p>
-            </div><!-- /.sv__item -->
-            <div class="portfolio">
-                <div class="h1">Портфолио</div>
-                <div class="portfolio__slider">
-                    <div>
+    <main>
+        <div class="wrapper">
+            <h1>Андрей Рыбак</h1>
+            <div class="sv__box">
+                <div class="sv__item avatar">
+                    <img class="sv__avatar" src="css/img/andrei_ribac.jpg" alt="">
+                </div><!-- /.sv__item -->
+                <div class="sv__item contact">
+                    <h2>Front-end developer</h2>
+                    <table class="contact__table">
+                        <tbody>
+                            <tr>
+                                <td>Email:</td>
+                                <td><a href="mailto:ribacandrei@gmail.com">ribacandrei@gmail.com</a></td>
+                            </tr>
+                            <tr>
+                                <td>Моб.:</td>
+                                <td><a href="tel:+37369788256">+37369788256</a></td>
+                            </tr>
+                            <tr>
+                                <td>Соц. сети:</td>
+                                <td><a target="_blank"
+                                        href="https://www.linkedin.com/in/andrei-ribac-3a34a364/">LinkedIn</a></td>
+                            </tr>
+                            <tr>
+                                <td>Портфолио:</td>
+                                <td><a target="_blank" href="https://andreiribac.github.io/">andreiribac.github.io</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Расположение:</td>
+                                <td>Молдова, Кишинев</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><!-- /.sv__item -->
+                <div class="sv__item about-me">
+                    <h2>О СЕБЕ</h2>
+                    <p>Уверенное знание <strong>HTML, CSS(SASS, SCSS, Less), jQuery (JavaScript)</strong> . Опыт работы
+                        с использованием framework-ов <strong>Bootstrap
+                            4</strong> и <strong>Bootstrap 3</strong>. Адаптивная верстка с применением <strong>Flexbox,
+                            Grid</strong>. Верстка писем с применением framework <strong>Foundation for
+                            Emails 2</strong>. Опыт работы с системой контроля версия <strong>Git</strong>. Качественная
+                        анимация на <strong>GSAP 3.0</strong>. Опыт работы в конструкторе
+                        сайтов <strong>Tilda</strong>. Опыт работы с Wordpress. Базовое владение графическими
+                        программами <strong>Photoshop, Illustrator, Figma</strong>.</p>
+                </div><!-- /.sv__item -->
+                <div class="portfolio">
+                    <div class="h1">Портфолио</div>
+                    <div class="portfolio__slider">
                         <div>
-                            <div class="portfolio__slider_item">
-                                <div class="sv__item">
-                                    <a target="_blank" class="portfolio__img mini" href="portfolio/mini/index.html"></a>
-                                    <a target="_blank" href="portfolio/mini/index.html" class="h3">mini</a>
-                                    <h5>корпоративный сайт</h5>
-                                    <div class="text-center">
-                                        <a target="_blank" href="portfolio/mini/index.html" class="btn">посмотреть</a>
-                                    </div><!-- /.text-center -->
-                                </div><!-- /.sv__item -->
-                            </div><!-- /.portfolio__slider_item -->
+                            <div>
+                                <div class="portfolio__slider-item">
+                                    <div class="sv__item">
+                                        <a target="_blank" class="portfolio__img cleveron" href="portfolio/cleveron/index.html"></a>
+                                        <a target="_blank" href="portfolio/cleveron/index.html" class="h3">cleveron</a>
+                                        <h5>корпоративный сайт</h5>
+                                        <div class="text-center">
+                                            <a target="_blank" href="portfolio/cleveron/index.html" class="btn">посмотреть</a>
+                                        </div><!-- /.text-center -->
+                                    </div><!-- /.sv__item -->
+                                </div><!-- /.portfolio__slider-item -->
+                            </div>
                         </div>
-                    </div>
-                    <div>
                         <div>
-                            <div class="portfolio__slider_item">
-                                <div class="sv__item">
-                                    <a target="_blank" class="portfolio__img bennett" href="portfolio/bennett/index.html"></a>
-                                    <a target="_blank" href="portfolio/bennett/index.html" class="h3">bennett</a>
-                                    <h5>интернет магазин</h5>
-                                    <div class="text-center">
-                                        <a target="_blank" href="portfolio/bennett/index.html" class="btn">посмотреть</a>
-                                    </div><!-- /.text-center -->
-                                </div><!-- /.sv__item -->
-                            </div><!-- /.portfolio__slider_item -->
+                            <div>
+                                <div class="portfolio__slider-item">
+                                    <div class="sv__item">
+                                        <a target="_blank" class="portfolio__img mini"
+                                            href="portfolio/mini/index.html"></a>
+                                        <a target="_blank" href="portfolio/mini/index.html" class="h3">mini</a>
+                                        <h5>корпоративный сайт</h5>
+                                        <div class="text-center">
+                                            <a target="_blank" href="portfolio/mini/index.html"
+                                                class="btn">посмотреть</a>
+                                        </div><!-- /.text-center -->
+                                    </div><!-- /.sv__item -->
+                                </div><!-- /.portfolio__slider-item -->
+                            </div>
                         </div>
-                    </div>
-                    <div>
                         <div>
-                            <div class="portfolio__slider_item">
-                                <div class="sv__item">
-                                    <a target="_blank" class="portfolio__img simplerender" href="portfolio/simple_render/index.html"></a>
-                                    <a target="_blank" href="portfolio/simple_render/index.html" class="h3">simple render</a>
-                                    <h5>корпоративный сайт</h5>
-                                    <div class="text-center">
-                                        <a target="_blank" href="portfolio/simple_render/index.html" class="btn">посмотреть</a>
-                                    </div><!-- /.text-center -->
-                                </div><!-- /.sv__item -->
-                            </div><!-- /.portfolio__slider_item -->
+                            <div>
+                                <div class="portfolio__slider-item">
+                                    <div class="sv__item">
+                                        <a target="_blank" class="portfolio__img bennett"
+                                            href="portfolio/bennett/index.html"></a>
+                                        <a target="_blank" href="portfolio/bennett/index.html" class="h3">bennett</a>
+                                        <h5>интернет магазин</h5>
+                                        <div class="text-center">
+                                            <a target="_blank" href="portfolio/bennett/index.html"
+                                                class="btn">посмотреть</a>
+                                        </div><!-- /.text-center -->
+                                    </div><!-- /.sv__item -->
+                                </div><!-- /.portfolio__slider-item -->
+                            </div>
                         </div>
-                    </div>
-                    <div>
                         <div>
-                            <div class="portfolio__slider_item">
-                                <div class="sv__item">
-                                    <a target="_blank" class="portfolio__img dentaltravel" href="portfolio/dental_travel/index.html"></a>
-                                    <a target="_blank" href="portfolio/dental_travel/index.html" class="h3">dental travel</a>
-                                    <h5>корпоративный сайт</h5>
-                                    <div class="text-center">
-                                        <a target="_blank" href="portfolio/dental_travel/index.html" class="btn">посмотреть</a>
-                                    </div><!-- /.text-center -->
-                                </div><!-- /.sv__item -->
-                            </div><!-- /.portfolio__slider_item -->
+                            <div>
+                                <div class="portfolio__slider-item">
+                                    <div class="sv__item">
+                                        <a target="_blank" class="portfolio__img simplerender"
+                                            href="portfolio/simple_render/index.html"></a>
+                                        <a target="_blank" href="portfolio/simple_render/index.html" class="h3">simple
+                                            render</a>
+                                        <h5>корпоративный сайт</h5>
+                                        <div class="text-center">
+                                            <a target="_blank" href="portfolio/simple_render/index.html"
+                                                class="btn">посмотреть</a>
+                                        </div><!-- /.text-center -->
+                                    </div><!-- /.sv__item -->
+                                </div><!-- /.portfolio__slider-item -->
+                            </div>
                         </div>
-                    </div>
-                    <div>
                         <div>
-                            <div class="portfolio__slider_item">
-                                <div class="sv__item">
-                                    <a target="_blank" class="portfolio__img mosstroitel" href="portfolio/mosstroitel/index.html"></a>
-                                    <a target="_blank" href="portfolio/mosstroitel/index.html" class="h3">мосстроитель</a>
-                                    <h5>интернет магазин</h5>
-                                    <div class="text-center">
-                                        <a target="_blank" href="portfolio/mosstroitel/index.html" class="btn">посмотреть</a>
-                                    </div><!-- /.text-center -->
-                                </div><!-- /.sv__item -->
-                            </div><!-- /.portfolio__slider_item -->
+                            <div>
+                                <div class="portfolio__slider-item">
+                                    <div class="sv__item">
+                                        <a target="_blank" class="portfolio__img dentaltravel"
+                                            href="portfolio/dental_travel/index.html"></a>
+                                        <a target="_blank" href="portfolio/dental_travel/index.html" class="h3">dental
+                                            travel</a>
+                                        <h5>корпоративный сайт</h5>
+                                        <div class="text-center">
+                                            <a target="_blank" href="portfolio/dental_travel/index.html"
+                                                class="btn">посмотреть</a>
+                                        </div><!-- /.text-center -->
+                                    </div><!-- /.sv__item -->
+                                </div><!-- /.portfolio__slider-item -->
+                            </div>
                         </div>
-                    </div>
-                    <div>
                         <div>
-                            <div class="portfolio__slider_item">
-                                <div class="sv__item">
-                                    <a target="_blank" class="portfolio__img bluerex" href="portfolio/bluerex/index.html"></a>
-                                    <a target="_blank" href="portfolio/bluerex/index.html" class="h3">blue rex</a>
-                                    <h5>корпоративный сайт</h5>
-                                    <div class="text-center">
-                                        <a target="_blank" href="portfolio/bluerex/index.html" class="btn">посмотреть</a>
-                                    </div><!-- /.text-center -->
-                                </div><!-- /.sv__item -->
-                            </div><!-- /.portfolio__slider_item -->
+                            <div>
+                                <div class="portfolio__slider-item">
+                                    <div class="sv__item">
+                                        <a target="_blank" class="portfolio__img mosstroitel"
+                                            href="portfolio/mosstroitel/index.html"></a>
+                                        <a target="_blank" href="portfolio/mosstroitel/index.html"
+                                            class="h3">мосстроитель</a>
+                                        <h5>интернет магазин</h5>
+                                        <div class="text-center">
+                                            <a target="_blank" href="portfolio/mosstroitel/index.html"
+                                                class="btn">посмотреть</a>
+                                        </div><!-- /.text-center -->
+                                    </div><!-- /.sv__item -->
+                                </div><!-- /.portfolio__slider-item -->
+                            </div>
                         </div>
-                    </div>
-                    <div>
                         <div>
-                            <div class="portfolio__slider_item">
-                                <div class="sv__item">
-                                    <a target="_blank" class="portfolio__img protectimobil" href="portfolio/protectimobil/index.html"></a>
-                                    <a target="_blank" href="portfolio/protectimobil/index.html" class="h3">protectimobil</a>
-                                    <h5>корпоративный сайт</h5>
-                                    <div class="text-center">
-                                        <a target="_blank" href="portfolio/protectimobil/index.html" class="btn">посмотреть</a>
-                                    </div><!-- /.text-center -->
-                                </div><!-- /.sv__item -->
-                            </div><!-- /.portfolio__slider_item -->
+                            <div>
+                                <div class="portfolio__slider-item">
+                                    <div class="sv__item">
+                                        <a target="_blank" class="portfolio__img bluerex"
+                                            href="portfolio/bluerex/index.html"></a>
+                                        <a target="_blank" href="portfolio/bluerex/index.html" class="h3">blue rex</a>
+                                        <h5>корпоративный сайт</h5>
+                                        <div class="text-center">
+                                            <a target="_blank" href="portfolio/bluerex/index.html"
+                                                class="btn">посмотреть</a>
+                                        </div><!-- /.text-center -->
+                                    </div><!-- /.sv__item -->
+                                </div><!-- /.portfolio__slider-item -->
+                            </div>
                         </div>
-                    </div>
-                    <div>
                         <div>
-                            <div class="portfolio__slider_item">
-                                <div class="sv__item">
-                                    <a target="_blank" class="portfolio__img coil" href="portfolio/c-oil/index.html"></a>
-                                    <a target="_blank" href="portfolio/c-oil/index.html" class="h3">c-oil</a>
-                                    <h5>лендинг</h5>
-                                    <div class="text-center">
-                                        <a target="_blank" href="portfolio/c-oil/index.html" class="btn">посмотреть</a>
-                                    </div><!-- /.text-center -->
-                                </div><!-- /.sv__item -->
-                            </div><!-- /.portfolio__slider_item -->
+                            <div>
+                                <div class="portfolio__slider-item">
+                                    <div class="sv__item">
+                                        <a target="_blank" class="portfolio__img protectimobil"
+                                            href="portfolio/protectimobil/index.html"></a>
+                                        <a target="_blank" href="portfolio/protectimobil/index.html"
+                                            class="h3">protectimobil</a>
+                                        <h5>корпоративный сайт</h5>
+                                        <div class="text-center">
+                                            <a target="_blank" href="portfolio/protectimobil/index.html"
+                                                class="btn">посмотреть</a>
+                                        </div><!-- /.text-center -->
+                                    </div><!-- /.sv__item -->
+                                </div><!-- /.portfolio__slider-item -->
+                            </div>
                         </div>
+                        <div>
+                            <div>
+                                <div class="portfolio__slider-item">
+                                    <div class="sv__item">
+                                        <a target="_blank" class="portfolio__img coil"
+                                            href="portfolio/c-oil/index.html"></a>
+                                        <a target="_blank" href="portfolio/c-oil/index.html" class="h3">c-oil</a>
+                                        <h5>лендинг</h5>
+                                        <div class="text-center">
+                                            <a target="_blank" href="portfolio/c-oil/index.html"
+                                                class="btn">посмотреть</a>
+                                        </div><!-- /.text-center -->
+                                    </div><!-- /.sv__item -->
+                                </div><!-- /.portfolio__slider-item -->
+                            </div>
+                        </div>
+                    </div><!-- /.portfolio__slider -->
+                </div><!-- /.portfolio -->
+                <div class="sv__item work-ex">
+                    <h2>ОПЫТ</h2>
+                    <div class="work-ex__point">
+                        <h3>Front-end developer</h3>
+                        <h4>Октябрь 2017 - Настоящее время</h4>
+                        <ul>
+                            <li>Верстка крупных проектов (Интернет магазины, Игровые сайты)</li>
+                            <li>Создание landing page с подключением CMS WordPress</li>
+                            <li>Создание landing page в конструкторе Tilda</li>
+                            <li>Верстка писем (Foundation for Emails 2)</li>
+                        </ul>
                     </div>
-                </div><!-- /.portfolio__slider -->
-            </div><!-- /.portfolio -->
-            <div class="sv__item work_ex">
-                <h2>ОПЫТ</h2>
-                <div class="work_ex__point">
-                    <h3>Front-end developer</h3>
-                    <h4>Октябрь 2017 - Настоящее время</h4>
+                    <div class="work-ex__point">
+                        <h3>Руководитель отдела арбитража S.R.L. “Sport Fortune”</h3>
+                        <h4>Февраль 2013 - Октябрь 2017</h4>
+                        <ul>
+                            <li>Анализ спортивной биржи</li>
+                            <li>Координация действий сотрудников</li>
+                            <li>Активная торговля</li>
+                            <li>Расчет рисков</li>
+                            <li>Написание калькуляционных программ на базе Google docs</li>
+                        </ul>
+                        <p>Внедрил систему подсчета рабочих смен и премий на базе Google docs. Координировал разработку
+                            проекта новостного
+                            спортивного портала. Осуществляю техническую поддержку оборудования и софта. Профилактика и
+                            upgreat рабочих станций.</p>
+                    </div>
+                    <div class="work-ex__point">
+                        <h3>Директор S.R.L. “Sant”</h3>
+                        <h4>Январь 2012 - Январь 2013</h4>
+                        <ul>
+                            <li>дизайн и производство пластиковых карт</li>
+                            <li>работа с клиентами, заключение контрактов</li>
+                            <li>контроль и профилактика производственного оборудования</li>
+                            <li>закупка сырья, работа с поставщиками</li>
+                        </ul>
+                        <p>Внедрил новую систему просушки краски, сократив сроки получения готовой продукции с трех до
+                            одного дня. Разработал метод
+                            получения текстурированных пластиковых карт. Сократил стоимость производных материалов для
+                            получения матовой поверхности
+                            пластиковых карт</p>
+                    </div>
+                    <div class="work-ex__point">
+                        <h3>Инженер технической поддержки S.R.L. “Netto Pro M”</h3>
+                        <h4>Февраль 2009 - Август 2011</h4>
+                        <ul>
+                            <li>Устранение неполадок связанной с работой терминалов моментальных платежей</li>
+                            <li>Профилактика оборудования и терминалов оплаты</li>
+                            <li>Выезд к неисправным терминалам.</li>
+                        </ul>
+                    </div>
+                </div><!-- /.sv__item -->
+                <div class="sv__item certificate">
+                    <h2>Сертификаты</h2>
+                    <a class="certificate__link" target="_blank" href="https://geekbrains.ru/go/DfhjQU"><img
+                            src="css/img/certificate/basic_program.jpg" alt=""></a>
+                    <a class="certificate__link" target="_blank" href="https://geekbrains.ru/go/f1arpY"><img
+                            src="css/img/certificate/testing.jpg" alt=""></a>
+                </div><!-- /.sv__item -->
+                <div class="sv__item education">
+                    <h2>ОБРАЗОВАНИЕ</h2>
+                    <div class="h4">Сентябрь 2007 - Июнь 2011</div>
+                    <p class="bold">Universitatea Tehnică a Moldovei</p>
+                    <p class="bold">Departamentul Microelectronică şi Inginerie Biomedicală</p>
+                </div><!-- /.sv__item -->
+                <div class="sv__item languages">
+                    <h2>ЯЗЫКИ</h2>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Русский</td>
+                                <th>Родной язык</th>
+                            </tr>
+                            <tr>
+                                <td>Английский</td>
+                                <th>A2</th>
+                            </tr>
+                            <tr>
+                                <td>Румынский</td>
+                                <th>A2</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><!-- /.sv__item -->
+                <div class="sv__item qualities">
+                    <h2>ЛИЧНЫЕ КАЧЕСТВА</h2>
                     <ul>
-                        <li>Верстка крупных проектов (Интернет магазины, Игровые сайты)</li>
-                        <li>Создание landing page с подключением CMS WordPress</li>
-                        <li>Создание landing page в конструкторе Tilda</li>
-                        <li>Верстка писем (Foundation for Emails 2)</li>
+                        <li>Амбициозный</li>
+                        <li>Ответственный</li>
+                        <li>Пунктуальный</li>
+                        <li>Аналитические навыки</li>
+                        <li>Самомотивированный</li>
+                        <li>Способность работать под давлением</li>
                     </ul>
-                </div>
-                <div class="work_ex__point">
-                    <h3>Руководитель отдела арбитража S.R.L. “Sport Fortune”</h3>
-                    <h4>Февраль 2013 - Октябрь 2017</h4>
-                    <ul>
-                        <li>Анализ спортивной биржи</li>
-                        <li>Координация действий сотрудников</li>
-                        <li>Активная торговля</li>
-                        <li>Расчет рисков</li>
-                        <li>Написание калькуляционных программ на базе Google docs</li>
-                    </ul>
-                    <p>Внедрил систему подсчета рабочих смен и премий на базе Google docs. Координировал разработку проекта новостного
-                        спортивного портала. Осуществляю техническую поддержку оборудования и софта. Профилактика и upgreat рабочих станций.</p>
-                </div>
-                <div class="work_ex__point">
-                    <h3>Директор S.R.L. “Sant”</h3>
-                    <h4>Январь 2012 - Январь 2013</h4>
-                    <ul>
-                        <li>дизайн и производство пластиковых карт</li>
-                        <li>работа с клиентами, заключение контрактов</li>
-                        <li>контроль и профилактика производственного оборудования</li>
-                        <li>закупка сырья, работа с поставщиками</li>
-                    </ul>
-                    <p>Внедрил новую систему просушки краски, сократив сроки получения готовой продукции с трех до одного дня. Разработал метод
-                        получения текстурированных пластиковых карт. Сократил стоимость производных материалов для получения матовой поверхности
-                        пластиковых карт</p>
-                </div>
-                <div class="work_ex__point">
-                    <h3>Инженер технической поддержки S.R.L. “Netto Pro M”</h3>
-                    <h4>Февраль 2009 - Август 2011</h4>
-                    <ul>
-                        <li>Устранение неполадок связанной с работой терминалов моментальных платежей</li>
-                        <li>Профилактика оборудования и терминалов оплаты</li>
-                        <li>Выезд к неисправным терминалам.</li>
-                    </ul>
-                </div>
-            </div><!-- /.sv__item -->
-            <div class="sv__item certificate">
-                <h2>Сертификаты</h2>
-                <a class="certificate__link" target="_blank" href="https://geekbrains.ru/go/DfhjQU"><img src="css/img/certificate/basic_program.jpg" alt=""></a>
-                <a class="certificate__link" target="_blank" href="https://geekbrains.ru/go/f1arpY"><img src="css/img/certificate/testing.jpg" alt=""></a>
-            </div><!-- /.sv__item -->
-            <div class="sv__item education">
-                <h2>ОБРАЗОВАНИЕ</h2>
-                <div class="h4">Сентябрь 2007 - Июнь 2011</div>
-                <p class="bold">Universitatea Tehnică a Moldovei</p>
-                <p class="bold">Departamentul Microelectronică şi Inginerie Biomedicală</p>
-            </div><!-- /.sv__item -->
-            <div class="sv__item languages">
-                <h2>ЯЗЫКИ</h2>
-                <table>
-                    <tbody>
-                    <tr>
-                        <td>Русский</td>
-                        <th>Родной язык</th>
-                    </tr>
-                    <tr>
-                        <td>Английский</td>
-                        <th>A2</th>
-                    </tr>
-                    <tr>
-                        <td>Румынский</td>
-                        <th>A2</th>
-                    </tr>
-                    </tbody>
-                </table>
-            </div><!-- /.sv__item -->
-            <div class="sv__item qualities">
-                <h2>ЛИЧНЫЕ КАЧЕСТВА</h2>
-                <ul>
-                    <li>Амбициозный</li>
-                    <li>Ответственный</li>
-                    <li>Пунктуальный</li>
-                    <li>Аналитические навыки</li>
-                    <li>Самомотивированный</li>
-                    <li>Способность работать под давлением</li>
-                </ul>
-            </div><!-- /.sv__item -->
-        </div><!-- /.sv__box -->
-    </div><!-- /.wrapper -->
-</main>
+                </div><!-- /.sv__item -->
+            </div><!-- /.sv__box -->
+        </div><!-- /.wrapper -->
+    </main>
 </body>
+
 </html>

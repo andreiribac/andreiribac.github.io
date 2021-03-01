@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="14" viewBox="0 0 8 14">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Контур_27" data-name="Контур 27" d="M1.707-13.707a1,1,0,0,0-1.414,0,1,1,0,0,0,0,1.414L5.586-7,.293-1.707a1,1,0,0,0,0,1.414,1,1,0,0,0,1.414,0l6-6a1,1,0,0,0,0-1.414Z" fill="none" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Контур_26" data-name="Контур 26" d="M-1227,203H213V-837H-1227Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group" transform="translate(0 14)">
+    <g id="Сгруппировать_62" data-name="Сгруппировать 62" clip-path="url(#clip-path)">
+      <g id="Сгруппировать_61" data-name="Сгруппировать 61" clip-path="url(#clip-path-2)">
+        <path id="Контур_25" data-name="Контур 25" d="M-5-19H13V5H-5Z" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
