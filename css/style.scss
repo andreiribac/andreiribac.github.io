@@ -160,14 +160,20 @@ h3,
         background-size: cover;
         border-radius: 25px;
         transition: background-position 0.6s linear;
+        &.gamerevenue {
+            background-image: url("img/portfolio/gamerevenue.jpg");
+            transition: background-position 2.6s linear;
+        }
         &.argocasino {
             background-image: url("img/portfolio/argocasino.jpg");
+            transition: background-position 2.6s linear;
         }
         &.cleveron {
             background-image: url("img/portfolio/cleveron.jpg");
         }
         &.natalia_corneeva {
             background-image: url("img/portfolio/natalia_corneeva.jpg");
+            transition: background-position 2.6s linear;
         }
         &.mini {
             background-image: url("img/portfolio/mini.jpg");
