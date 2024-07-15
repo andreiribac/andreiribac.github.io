@@ -1,0 +1,191 @@
+.rules {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 50px;
+  max-width: 980px;
+  width: 100vw;
+  color: $black;
+  z-index: 1;
+  &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $white;
+    border-top: 3px solid #fff;
+    border-bottom: 5px solid $black;
+    transform: skew(0, -1deg);
+    z-index: -1;
+  }
+
+  ol {
+    counter-reset: item;
+    li {
+      margin-bottom: 15px;
+      &:before {
+        counter-increment: item;
+        content: counter(item) ". ";
+        display: inline-block;
+        margin-right: 15px;
+        color: $colorRed;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      ol li:before {
+        content: counters(item,".") ". ";
+        counter-increment: item;
+        color: $colorRed;
+        font-size: 14px;
+      }
+    }
+  }
+  ul li ul {
+    margin-left: 20px;
+    li {
+      list-style-type: disc;
+      &:before {
+        content: '';
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__nav {
+    margin-bottom: 50px;
+  }
+  &__nav_link {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $black;
+    &:hover {
+      color: $colorRed;
+    }
+  }
+  &__content_item {
+    margin-top: -120px;
+    padding-top: 135px;
+    a {
+      color: $colorRed;
+    }
+    ol {
+      margin-left: 15px;
+    }
+  }
+  &__content_heading {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+  }
+  &__faq_label {
+    position: relative;
+    display: block;
+    margin-bottom: 25px;
+  }
+  &__faq_input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-appearance: none;
+    opacity: 0;
+  }
+  &__faq_question {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    &:hover {
+      color: $colorRed;
+      .rules__faq_question_img {
+        background: transparent url("img/casino_icons/ico_Plus_Hover.svg") center center no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+  &__faq_question_img {
+    display: block;
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    background: transparent url("img/casino_icons/ico_Plus_Normal.svg") center center no-repeat;
+    background-size: 100%;
+  }
+  &__faq_answer {
+    display: block;
+    padding-left: 80px;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.2s ease-in-out;
+    a {
+      color: $colorRed;
+    }
+    ul {
+      padding-left: 15px;
+      li {
+        list-style-type: disc;
+      }
+    }
+  }
+  &__info {
+    white-space: pre-wrap;
+  }
+}
+.rules__faq_input:checked ~ .rules {
+  &__faq_question {
+    color: $colorRed;
+    .rules__faq_question_img {
+      background: transparent url("img/casino_icons/ico_Minus_Normal.svg") center center no-repeat;
+      background-size: 100%;
+    }
+    &:hover {
+      .rules__faq_question_img {
+        background: transparent url("img/casino_icons/ico_Minus_Hover.svg") center center no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+  &__faq_answer {
+    visibility: visible;
+    opacity: 1;
+    max-height: unset;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+//***************//*//***************//*//***************//*//***************//*//***************//*//***************//*
+//  Responsive   //*//  Responsive   //*//  Responsive   //*//  Responsive   //*//  Responsive   //*//  Responsive   //*
+//***************//*//***************//*//***************//*//***************//*//***************//*//***************//*
+
+
+@media screen and (max-width: 600px) {
+  .rules {
+    padding: 20px;
+    ol li {
+      margin-bottom: 5px;
+      &:before {
+        margin-right: 5px;
+        font-size: 14px;
+      }
+    }
+
+    &__nav_link {
+      font-size: 14px;
+    }
+    &__content_heading {
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+    &__faq_answer {
+      padding-left: 20px;
+    }
+  }
+}
+// @media screen and (max-width: 600px) ******************************** @media screen and (max-width: 1621px) ********************************

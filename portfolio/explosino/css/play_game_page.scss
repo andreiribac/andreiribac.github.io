@@ -1,0 +1,281 @@
+.play_game {
+  color: $black;
+  &__screen {
+    min-height: 105vh;
+  }
+  &__box {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 25px;
+    max-width: 1460px;
+    width: 100%;
+    max-height: 870px;
+    height: calc(100vh - 160px);
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $colorPurple;
+      z-index: -1;
+      transform: skew(-1deg, -1deg);
+    }
+  }
+  &__nav {
+    position: absolute;
+    top: 27px;
+    left: 100%;
+    transform: translateX(-25px);
+    z-index: 1;
+  }
+  &__nav_item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 0 15px;
+    width: 70px;
+    height: 65px;
+    white-space: nowrap;
+    cursor: pointer;
+    &:before, &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 1px;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      transform: translate(0, 0);
+    }
+    &:before {
+      background: $black;
+    }
+    &:after {
+      background: $colorViolet;
+      transform: translate(-1px, -5px);
+    }
+    &:nth-child(odd) {
+      &:before, &:after {
+        -webkit-clip-path: polygon(0 0, 91% 8%, 100% 95%, 0% 100%);
+        clip-path: polygon(0 0, 91% 8%, 100% 95%, 0% 100%);
+      }
+    }
+    &:nth-child(even) {
+      &:before, &:after {
+        -webkit-clip-path: polygon(0 0, 100% 5%, 94% 95%, 0% 100%);
+        clip-path: polygon(0 0, 100% 5%, 94% 95%, 0% 100%);
+      }
+    }
+
+    &.active:after {
+      background: $colorGreen;
+    }
+    &.money_btn {
+      width: auto;
+      &:after {
+        background: $colorYellow;
+      }
+    }
+  }
+  &__item_box {
+    margin: 0 auto;
+    max-width: 1410px;
+    width: 100%;
+    max-height: 820px;
+    height: calc(100vh - 210px);
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__img_btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: 25px;
+    border-bottom: none;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      background-size: 30px;
+      transition: all 0.1s ease-in-out;
+    }
+  }
+  &__close_btn {
+    background: transparent url($imgPath + 'casino_icons/ico_Close_Normal.svg') center center no-repeat;
+    background-size: 25px;
+    &:hover {
+      background: transparent url($imgPath + 'casino_icons/ico_Close_Hover.svg') center center no-repeat;
+      background-size: 30px;
+    }
+  }
+  &__heart_btn {
+    background: transparent url($imgPath + 'casino_icons/ico_Favorite_Normal.svg') center center no-repeat;
+    background-size: 25px;
+    &:hover {
+      background: transparent url($imgPath + 'casino_icons/ico_Favorite_Delete.svg') center center no-repeat;
+      background-size: 30px;
+    }
+    &.active {
+      background: transparent url($imgPath + 'casino_icons/ico_Favorite_Delete.svg') center center no-repeat;
+      background-size: 25px;
+      &:hover {
+        background: transparent url($imgPath + 'casino_icons/ico_Favorite_Normal.svg') center center no-repeat;
+        background-size: 30px;
+      }
+    }
+  }
+  &__fullscreen_btn {
+    background: transparent url($imgPath + 'casino_icons/ico_FullScreen.svg') center center no-repeat;
+    background-size: 25px;
+    &:hover {
+      background: transparent url($imgPath + 'casino_icons/ico_FullScreenHover.svg') center center no-repeat;
+      background-size: 30px;
+    }
+  }
+  &__nav_item_text {
+    font-weight: 700;
+    transform: rotate(0);
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      transform: rotate(2deg);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+  &__description_game_box {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 50px 25px;
+    max-width: 1460px;
+    width: 100%;
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $white;
+      border-top: 3px solid #fff;
+      border-bottom: 5px solid $black;
+      z-index: -1;
+      transform: skew(0, -2deg);
+    }
+    h2 {
+      margin-top: 1.2em;
+      margin-bottom: .4em;
+      text-align: center;
+    }
+  }
+  &__recommended_games_box {
+    position: relative;
+    margin: 0 -25px;
+    text-align: center;
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #acacac;
+      z-index: -1;
+      transform: skew(0deg, -4deg);
+    }
+  }
+}
+.fullscreen_mode {
+  header {
+    transform: translateY(-100%);
+  }
+  footer {
+    transform: translateY(100%);
+  }
+  .play_game {
+    &__box {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 45px 0 0;
+      max-width: unset;
+      max-height: unset;
+      height: 100%;
+    }
+    &__item_box {
+      max-width: unset;
+      max-height: unset;
+      height: 100%;
+    }
+    &__nav {
+      top: 0;
+      left: unset;
+      right: 0;
+      transform: translate(-25px, 5px);
+    }
+    &__nav_list {
+      display: flex;
+    }
+    &__nav_item {
+      margin-bottom: 0;
+      margin-left: 5px;
+      padding: 0 5px;
+      width: 55px;
+      height: 40px;
+      &.money_btn {
+        width: auto;
+      }
+    }
+  }
+}
+
+
+
+//***************//*//***************//*//***************//*//***************//*//***************//*//***************//*
+//  Responsive   //*//  Responsive   //*//  Responsive   //*//  Responsive   //*//  Responsive   //*//  Responsive   //*
+//***************//*//***************//*//***************//*//***************//*//***************//*//***************//*
+@media screen and (max-width: 1650px) {
+  .play_game {
+    &__nav {
+      top: 0;
+      left: unset;
+      right: 0;
+      transform: translate(-25px, -15px);
+    }
+    &__nav_list {
+      display: flex;
+    }
+    &__nav_item {
+      margin-bottom: 0;
+      margin-left: 5px;
+      padding: 0 5px;
+      width: 55px;
+      height: 40px;
+    }
+  }
+}
+// @media screen and (max-width: 1650px) ******************************** @media screen and (max-width: 1650px) ********************************
+
+
+@media screen and (max-width: 560px) {
+  .play_game {
+    &__box {
+      margin-top: 10px;
+    }
+  }
+}
+// @media screen and (max-width: 560px) ******************************** @media screen and (max-width: 560px) ********************************
+
+

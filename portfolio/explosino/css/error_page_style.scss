@@ -1,0 +1,48 @@
+.error_page {
+  .logo_box {
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .rules {
+    padding: 10px 40px 30px;
+    text-align: center;
+  }
+  .input_item_label {
+    margin: 0 auto;
+  }
+  .document_input_description {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 0 30px;
+    height: 120px;
+    text-align: left;
+    z-index: 2;
+    overflow-y: auto;
+  }
+  &__main_img {
+    display: block;
+    margin: 0 auto -30px;
+    max-height: 604px;
+    max-width: 816px;
+    width: 100%;
+  }
+  &__frame_btn_box {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .error_page {
+    .h2 {
+      font-size: 18px;
+    }
+    .rules {
+      padding: 10px 20px 30px;
+    }
+  }
+}

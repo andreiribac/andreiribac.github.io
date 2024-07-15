@@ -1,0 +1,3543 @@
+//font-family: 'Open Sans', sans-serif;
+//font-family: 'Rubik Mono One', sans-serif;
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba($black, 0.6);
+  width: 6px;
+  height: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffcc00;
+  width: 6px;
+  height: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff0066;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-weight: 400;
+  color: $white;
+  font-family: 'Open Sans', sans-serif;
+  background: #4d3284 url($imgPath + "main_bg.jpg") center center no-repeat fixed;
+  background-size: cover;
+  overflow: hidden;
+  &.on_line {
+    .registration_box {
+      display: none;
+    }
+    .user_box {
+      display: flex;
+      &__avatar_img {
+        width: 95px;
+        height: 80px;
+      }
+      &__status {
+        display: block;
+      }
+      &__avatar_slider {
+        .user_box__img_box,
+        .user_box__avatar_img {
+          width: 70px;
+          height: 65px;
+        }
+      }
+    }
+  }
+  &.sport_page {
+    background: #4d3284;
+    main {
+      position: relative;
+      padding-bottom: 0;
+      //&:before {
+      //  content: '';
+      //  display: block;
+      //  position: absolute;
+      //  top: 0;
+      //  left: 0;
+      //  width: 100%;
+      //  height: 100%;
+      //  background: $colorPurple;
+      //  transform: skewY(-3deg) translateY(15vh);
+      //  z-index: -1;
+      //}
+      & > iframe {
+        width: 100vw;
+        height: calc(100vh - 150px);
+      }
+    }
+  }
+}
+.wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1920px;
+  width: 100%;
+}
+// SLICK SLIDER
+.slick-prev, .slick-next {
+  width: 50px;
+  height: 50px;
+  &:before {
+    display: block;
+    width: inherit;
+    height: inherit;
+    font-size: 0;
+    line-height: 0;
+    opacity: 1;
+  }
+}
+.slick-prev {
+  left: -50px;
+  &:before {
+    background: transparent url($imgPath + "casino_icons/ico_ArrowLeft_Normal.svg") left top no-repeat;
+    background-size: 100%;
+  }
+  &:hover:before {
+    background: transparent url($imgPath + "casino_icons/ico_ArrowLeft_Hover.svg") left top no-repeat;
+    background-size: 100%;
+  }
+}
+.slick-next {
+  right: -50px;
+  &:before {
+    background: transparent url($imgPath + "casino_icons/ico_ArrowRight_Normal.svg") left top no-repeat;
+    background-size: 100%;
+  }
+  &:hover:before {
+    background: transparent url($imgPath + "casino_icons/ico_ArrowRight_Hover.svg") left top no-repeat;
+    background-size: 100%;
+  }
+}
+
+// TOAST *=*=* TOAST *=*=* TOAST *=*=* TOAST *=*=* TOAST *=*=* TOAST *=*=* TOAST *=*=* TOAST *=*=* TOAST *=*=* TOAST *=*=*
+.toast {
+  display: none;
+  position: fixed;
+  top: 155px;
+  right: 0;
+  height: auto;
+  max-width: 600px;
+  width: 100vw;
+  z-index: 6;
+  &.active {
+    display: block;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 5px 50px 15px 75px;
+    min-height: 70px;
+    color: $black;
+    font-weight: 700;
+    &:before, &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+      z-index: -2;
+      transform: translateY(0);
+      visibility: visible;
+      opacity: 1;
+    }
+    &:before {
+      bottom: 0;
+      background: $black;
+    }
+    &:after {
+      bottom: 5px;
+      background: $colorGreen;
+    }
+    &.error {
+      color: $white;
+      &:after {
+        bottom: 5px;
+        background: $colorRed;
+      }
+    }
+  }
+  &__wow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: transparent url($imgPath + "casino_icons/warning.svg") center center no-repeat;
+    background-size: 16px;
+    border-bottom: none;
+    cursor: pointer;
+    z-index: 1;
+   pointer-events: none;
+  }
+  &__close_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: transparent url($imgPath + "casino_icons/ico_Close_Normal.svg") center center no-repeat;
+    background-size: 25px;
+    border-bottom: none;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      background: transparent url($imgPath + "casino_icons/ico_Close_Search.svg") center center no-repeat;
+      background-size: 30px;
+      transition: all 0.1s ease-in-out;
+    }
+  }
+}
+// POPUP *=*=* POPUP *=*=* POPUP *=*=* POPUP *=*=* POPUP *=*=* POPUP *=*=* POPUP *=*=* POPUP *=*=* POPUP *=*=* POPUP *=*=*
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba($colorPurple, 0.85);
+  z-index: 5;
+  &.active {
+    display: block;
+  }
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150vh);
+  //display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  z-index: 7;
+  &.active {
+    //display: block;
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-in-out;
+  }
+  &__box {
+    position: relative;
+    padding: 50px 50px 10px;
+    min-width: 600px;
+    width: auto;
+    color: $black;
+    &:before, &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      //width: 100%;
+      //height: 100%;
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 93%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0%, 100% 93%, 0% 100%);
+      z-index: -2;
+      transform: translateY(0);
+      visibility: visible;
+      opacity: 1;
+    }
+    &:before {
+      bottom: 30px;
+      background: $black;
+    }
+    &::after {
+      bottom: 35px;
+      border-top: 5px solid #fff;
+      background: $white;
+    }
+  }
+  &__close_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: transparent url(img/casino_icons/ico_Close_Normal.svg) center center no-repeat;
+    background-size: 25px;
+    border-bottom: none;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      background: transparent url(img/casino_icons/ico_Close_Hover.svg) center center no-repeat;
+      background-size: 30px;
+      transition: all 0.1s ease-in-out;
+    }
+  }
+  &__content {
+    text-align: center;
+    .btn_short {
+      margin: 0 10px 10px;
+    }
+  }
+  &__login_option_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 34px;
+    max-width: 480px;
+    width: 100%;
+    & > div {
+      width: 50%;
+    }
+  }
+  &__open_btn {
+    color: $colorRed;
+    cursor: pointer;
+  }
+  .checkbox_label_content {
+    margin-bottom: 0;
+  }
+}
+.captcha {
+  &__box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__img {
+    display: block;
+    margin-right: 15px;
+    width: 135px;
+    height: 50px;
+  }
+  &__refresh {
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: rotate(0);
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      transform: rotate(16deg);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+}
+
+// WIDGET
+.widget {
+  position: fixed;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.2s ease-in-out;
+  z-index: 6;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.2s ease-in-out;
+    &#game_widget {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+  .payment_method_btn {
+    margin-bottom: 30px;
+    min-width: 300px;
+    &:after {
+      background: #fff;
+    }
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 60px;
+      background: transparent url("img/casino_icons/ico_GreenArrow.svg") center center no-repeat;
+      background-size: 25px;
+      pointer-events: none;
+      transform: rotate(90deg);
+      transition: transform 0.2s ease-in-out;
+    }
+    .btn_img {
+      max-width: 220px;
+      max-height: 60px;
+    }
+    &:hover {
+      &:before {
+        transform: rotate(90deg) translateX(-10px);
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+  }
+  &__close_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 50px;
+    height: 40px;
+    background: transparent url(img/casino_icons/ico_Close_Normal.svg) center center no-repeat;
+    background-size: 25px;
+    border-bottom: none;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      background: transparent url(img/casino_icons/ico_Close_Hover.svg) center center no-repeat;
+      background-size: 30px;
+      transition: all 0.1s ease-in-out;
+    }
+  }
+  &__box {
+    position: relative;
+    padding: 0 10px 25px;
+    max-width: 320px;
+    width: 100vw;
+    height: 100vh;
+    color: $black;
+    text-align: center;
+    background: $white;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  &__content {
+    .h3 {
+      margin-top: 25px;
+    }
+    .widget__step_first {
+      max-height: unset;
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.2s ease-in-out;
+    }
+    .widget__step_last {
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s ease-in-out;
+      transform: translateY(100%);
+    }
+    &.active {
+      .widget__step_first {
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s ease-in-out;
+        transform: translateY(-100%);
+      }
+      .widget__step_last {
+        max-height: unset;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.2s ease-in-out;
+      }
+      .payment_method_btn {
+        &:before {
+          transform: rotate(-90deg) translateX(0);
+          transition: transform 0.2s ease-in-out;
+        }
+        &:hover:before {
+          transform: rotate(-90deg) translateX(-10px);
+          transition: transform 0.2s ease-in-out;
+        }
+      }
+    }
+    .user_box__login_line {
+      display: flex;
+      height: 43px;
+      margin: 0 -10px;
+      padding: 0 45px 0 20px;
+      color: $black;
+      background: #acacac;
+      border-bottom: 3px solid #fff;
+    }
+    .user_nav {
+      margin-left: auto;
+      margin-right: -10px;
+      width: 290px;
+    }
+  }
+
+  &__game_box {
+    margin: 0 -10px -25px;
+    padding: 40px 10px 25px;
+    min-height: 100vh;
+    font-size: 0;
+    background: #4d2f87;
+  }
+  &__form {
+  }
+  &__step_first {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__step_last {
+    text-align: left;
+    .radio__item_label {
+      justify-content: flex-start;
+      width: 49%;
+    }
+  }
+  &__submit_box {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  &__other_game_box {
+    position: relative;
+    margin: 0 -10px 25px;
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $colorPurple;
+      transform: skew(-10deg, -10deg);
+      z-index: 0;
+    }
+  }
+  .game_item {
+    z-index: 1;
+    &.game_item_short {
+      padding: 15px;
+    }
+    &__description_box {
+      position: relative;
+      margin: 0 -10px;
+      padding: 20px 10px 10px;
+      font-size: 14px;
+      h4, p {
+        position: relative;
+        z-index: 1;
+      }
+      &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $white;
+        border-top: 3px solid #fff;
+        transform: skew(0deg, -5deg);
+        z-index: 0;
+      }
+    }
+  }
+  &__game_item_box {
+    .game_item {
+      margin-bottom: 130px;
+      padding: 20px;
+      &:hover {
+        .game_item {
+          &__btn_box {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(140px);
+          }
+          &__img_box {
+            opacity: 1;
+          }
+        }
+      }
+
+      &::before {
+        bottom: 5px;
+        right: 5px;
+        background: #391f6d;
+        transform: skew(3deg, 3deg);
+      }
+      &:after {
+        background: $white;
+        transform: skew(3deg, 3deg) translate(10px, 8px);
+      }
+      &__box {
+        max-width: 250px;
+        border: 5px solid $white;
+      }
+      &__btn_box {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(140px);
+      }
+      &__favorite_btn {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+  }
+  .radio__label_circle {
+    margin-left: 10px;
+  }
+}
+.promo_code {
+  &__box {
+    display: flex;
+    align-items: flex-end;
+  }
+  &__img {
+    margin-right: 10px;
+    margin-bottom: 20px;
+    width: 60px;
+  }
+  &__input_box {
+    input.input_item {
+      font-size: 16px;
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        font-size: 16px;
+        font-weight: 400;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        font-size: 16px;
+        font-weight: 400;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        font-size: 16px;
+        font-weight: 400;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+  &__bonus_text_box {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    b {
+      margin-left: 10px;
+      font-size: 24px;
+    }
+  }
+}
+.money_value_input {
+  &__box {
+    display: flex;
+    align-items: flex-end;
+    max-width: 400px;
+    width: 100%;
+  }
+  &__bonus_text_box {
+    margin-bottom: 10px;
+    b {
+      font-size: 14px;
+    }
+  }
+}
+// HEADER *=*=* HEADER *=*=* HEADER *=*=* HEADER *=*=* HEADER *=*=* HEADER *=*=* HEADER *=*=* HEADER *=*=* HEADER *=*=* HEADER *=*=*
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  //position: relative;
+  //padding-top: 40px;
+  z-index: 3;
+}
+.header_top_section {
+  //position: fixed;
+  //top: 0;
+  //left: 0;
+  width: 100%;
+  padding: 5px 0;
+  background: $black;
+  z-index: 2;
+}
+.header_top_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_nav {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 8px;
+  }
+  &__link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 8px;
+    min-width: 60px;
+    height: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: $white;
+    z-index: 1;
+    -webkit-clip-path: polygon(2% 0, 96% 4%, 100% 100%, 0% 100%);
+    clip-path: polygon(2% 0, 96% 4%, 100% 100%, 0% 100%);
+    transform-origin: center;
+    transform: rotate(0);
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      transform: rotate(2deg);
+      transition: transform 0.2s ease-in-out;
+    }
+    &.bg_green,
+    &.bg_yellow,
+    &.bg_blue {
+      color: $black;
+    }
+    &_info {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 700;
+      border-radius: 50%;
+      pointer-events: none;
+      &.bg_yellow {
+        color: $black;
+      }
+    }
+    &_info,
+    &_img {
+      width: 18px;
+      height: 18px;
+      transform: translate(-3px, -4px);
+    }
+  }
+}
+
+.lang_nav {
+  position: relative;
+  margin-left: 5px;
+  height: 30px;
+  z-index: 1;
+  &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #e0e0e0 transparent transparent transparent;
+    pointer-events: none;
+    z-index: 2;
+    transition: all 0.19s ease-in-out;
+  }
+  &.active {
+    &:before {
+      border-width: 0 5px 5px 5px;
+      border-color: transparent transparent #e0e0e0 transparent;
+      transform: translate(105px, -50%);
+      transition: all 0.19s ease-in-out;
+    }
+    .lang_nav__list {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(-5px);
+      transition: all 0.2s ease-in-out;
+      transition-delay: 0.15s;
+    }
+  }
+  &__current {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 5px 0 10px;
+    height: 30px;
+    font-weight: 700;
+    border-radius: 50%;
+  }
+  &__img {
+    display: block;
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+  }
+  &__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 40px 20px 10px;
+    z-index: 1;
+    background: $black;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-25px);
+    transition: all 0.2s ease-in-out;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 98%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 98%, 0 100%);
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #302e37;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 98%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 98%, 0 100%);
+      transform: translateY(-6px);
+      z-index: -1;
+    }
+  }
+  &__item {
+    order: 2;
+    &.active {
+      order: 1;
+      width: calc(100% + 40px);
+      margin-right: -40px;
+      .lang_nav__link {
+        color: $colorYellow;
+        animation-delay: 0.05s;
+      }
+    }
+  }
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 30px;
+    color: $white;
+    font-weight: 700;
+    overflow: hidden;
+    &:hover {
+      color: $colorYellow;
+    }
+  }
+}
+
+.client_box {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  user-select: none;
+}
+//.registration_box,
+//.user_box {
+//  display: none;
+//  &.active {
+//    display: flex;
+//  }
+//}
+.registration_box {
+  display: flex;
+  justify-content: flex-end;
+}
+.user_box {
+  display: none;
+  &__status {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    transform: translate(15px, 10px) rotate(15deg);
+  }
+  &__status_img {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+  &__user_status {
+    display: block;
+    margin: 0 auto 5px;
+    width: 200px;
+    color: $black;
+    font-weight: 700;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-transform: lowercase;
+    text-overflow: ellipsis;
+  }
+}
+.registration_box {
+  &__login_btn {
+    display: flex;
+    align-items: center;
+    color: $white;
+    cursor: pointer;
+    &:hover {
+      color: $colorYellow;
+      .registration_box__login_line_img {
+        transform: translateX(-3px);
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+    span {
+      margin-right: 5px;
+      //width: 102px;
+      //overflow: hidden;
+      //white-space: nowrap;
+      //text-overflow: ellipsis;
+    }
+    &_img {
+      display: block;
+      width: 18px;
+      height: 20px;
+      transform: translateX(0);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+}
+.registration_form .btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.user_box {
+  &__info {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__bonus_line {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    opacity: 0.5;
+    &.active {
+      opacity: 1;
+      &:hover {
+        .user_box__bonus_progress_info {
+          visibility: visible;
+          opacity: 1;
+          transition: 0.2s ease-in-out;
+          transform: translateY(5px);
+        }
+      }
+      .user_box__bonus_progress_info {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        display: block;
+        padding: 5px;
+        width: 130px;
+        color: $black;
+        font-size: 12px;
+        text-transform: capitalize;
+        background: $colorGreen;
+        border-bottom: 4px solid $black;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.2s ease-in-out;
+        transform: translateY(15px);
+        z-index: 1;
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          display: block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 5px 5px 5px;
+          border-color: transparent transparent #33cc00 transparent;
+        }
+      }
+    }
+    &_img {
+      display: block;
+      margin-right: 8px;
+      width: 14.5px;
+      height: 20px;
+    }
+    .user_box__bonus_progress_info {
+      visibility: hidden;
+    }
+  }
+  &__bonus_progress_box {
+    position: relative;
+    width: 140px;
+    height: 20px;
+    background: #302e37;
+    &:after {
+      display: block;
+      content: attr(data-progress);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 14px;
+      font-weight: 700;
+      color: $white;
+      white-space: nowrap;
+      mix-blend-mode: difference;
+      z-index: 0;
+    }
+  }
+  &__bonus_progress_line {
+    width: 45%;
+    height: inherit;
+    background: $colorGreen;
+  }
+  &__cash_line {
+    margin-right: 20px;
+    color: $colorYellow;
+    white-space: nowrap;
+  }
+  &__login_line {
+    display: flex;
+    align-items: center;
+    color: $white;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+      color: $colorYellow;
+      .user_box__login_line_img {
+        transform: translateX(-3px);
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+    span {
+      text-align: left;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    &_img {
+      display: block;
+      width: 18px;
+      height: 20px;
+      transform: translateX(0);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+  &__avatar_box {
+    display: flex;
+    margin-top: 5px;
+    z-index: 1;
+    cursor: pointer;
+  }
+  &__btn {
+    width: 280px;
+    padding: 0 20px 5px;
+    margin-right: 20px;
+    transform: translateY(20px);
+    &:hover {
+      transform: translateY(20px) scaleX(1.03);
+    }
+  }
+  &__img_box {
+    position: relative;
+    width: 95px;
+    height: 80px;
+    transform-origin: left;
+    transform: rotate(0);
+    transition: transform 0.2s ease-in-out;
+    z-index: 2;
+    &:hover {
+      transform: rotate(4deg);
+      transition: transform 0.2s ease-in-out;
+    }
+    &:after, &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      -webkit-clip-path: polygon(89% 6%, 100% 45%, 91% 100%, 14% 94%, 0 60%, 19% 0);
+      clip-path: polygon(89% 6%, 100% 45%, 91% 100%, 14% 94%, 0 60%, 19% 0);
+    }
+    &:after {
+      background: $black;
+      z-index: -2;
+      transform: translate(5px, 5px);
+    }
+    &:before {
+      background: #fff;
+      z-index: -1;
+    }
+  }
+  &__avatar_img {
+    position: relative;
+    display: block;
+    width: 95px;
+    height: 80px;
+    background: $colorGreen;
+    -webkit-clip-path: polygon(89% 6%, 100% 45%, 91% 100%, 14% 94%, 0 60%, 19% 0);
+    clip-path: polygon(89% 6%, 100% 45%, 91% 100%, 14% 94%, 0 60%, 19% 0);
+    z-index: 1;
+  }
+  &__progress_box {
+    display: flex;
+    align-items: flex-end;
+    margin: 5px auto 25px;
+  }
+  &__progress_level_box {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  &__progress_level_img_box {
+    display: flex;
+    justify-content: flex-end;
+    //margin-bottom: 25px;
+  }
+  &__level_img {
+    display: block;
+    width: 20px;
+    margin-left: 20px;
+    filter: grayscale(1);
+    &.active {
+      filter: grayscale(0);
+    }
+  }
+  &__level_progress_box {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background: #fff;
+    &:after {
+      display: block;
+      content: attr(data-progress);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 14px;
+      font-weight: 700;
+      color: $black;
+      white-space: nowrap;
+      z-index: 0;
+    }
+  }
+  &__level_progress_line {
+    width: 60%;
+    height: inherit;
+    background: $colorGreen;
+  }
+  &__next_status {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(10px, -10px);
+  }
+  &__avatar_slider {
+    display: flex;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    .slick-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 110px;
+    }
+    .user_box {
+      &__img_box, &__avatar_img {
+        width: 70px;
+        height: 65px;
+      }
+      &__img_box:after {
+        background: #acacac;
+      }
+    }
+    .slick-current {
+      .user_box {
+        &__img_box, &__avatar_img {
+          width: 95px;
+          height: 80px;
+        }
+        &__img_box:after {
+          background: $black;
+        }
+      }
+    }
+  }
+  &__user_data_fields_box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    a {
+      color: $colorRed;
+    }
+  }
+  &__user_data_fields_part {
+    width: calc(50% - 25px);
+  }
+  &__user_data_btn_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+.user_nav {
+  &__item {
+    &:nth-child(odd) .user_nav__link {
+      &:before, &:after {
+        -webkit-clip-path: polygon(93% 0, 100% 50%, 93% 100%, 0 100%, 5% 8%);
+        clip-path: polygon(93% 0, 100% 50%, 93% 100%, 0 100%, 5% 8%);
+      }
+    }
+    &:nth-child(even) .user_nav__link {
+      &:before, &:after {
+        -webkit-clip-path: polygon(93% 0, 100% 50%, 93% 100%, 3% 100%, 0 8%);
+        clip-path: polygon(93% 0, 100% 50%, 93% 100%, 3% 100%, 0 8%);
+      }
+    }
+  }
+  &__link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 8px;
+    width: 290px;
+    height: 60px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $black;
+    cursor: pointer;
+    z-index: 1;
+    cursor: pointer;
+    transform-origin: center;
+    transform: translateX(21px);
+    transition: transform 0.2s ease-in-out;
+    &:before, &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 1px;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      transform: translate(0,0);
+
+    }
+    &:before {
+      background: $black;
+    }
+    &::after {
+      background: $colorBlue;
+      transform: translate(-1px, -5px);
+    }
+    &:hover {
+      transform: translateX(31px);
+      &::after {
+        background: $colorYellow;
+      }
+    }
+    &.active {
+      transform: translateX(0);
+      &::after {
+        background: $colorYellow;
+      }
+    }
+    &.red_link {
+      color: $white;
+      &::after {
+        background: $colorRed;
+      }
+      &:hover {
+        transform: translateX(31px);
+      }
+    }
+    &.exit_link {
+      width: 200px;
+      color: $white;
+      &::after {
+        background: $colorViolet;
+      }
+    }
+  }
+  &__shape_1 {
+    &:before, &:after {
+      -webkit-clip-path: polygon(93% 0, 100% 50%, 93% 100%, 0 100%, 5% 8%);
+      clip-path: polygon(93% 0, 100% 50%, 93% 100%, 0 100%, 5% 8%);
+    }
+  }
+  &__shape_2 {
+    &:before, &:after {
+      -webkit-clip-path: polygon(93% 0, 100% 50%, 93% 100%, 3% 100%, 0 8%);
+      clip-path: polygon(93% 0, 100% 50%, 93% 100%, 3% 100%, 0 8%);
+    }
+  }
+
+}
+
+.header_bottom_section {
+  position: relative;
+  //position: fixed;
+  //top: 40px;
+  //left: 0;
+  width: 100%;
+  border-top: 3px solid #fff;
+  transform: translateY(0);
+  transition: transform 0.2s ease-in-out;
+  //&.hide {
+  //  transform: translateY(-100%);
+  //  transition: transform 0.2s ease-in-out;
+  //}
+
+  &:after, &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
+    z-index: -1;
+  }
+  &:before {
+    background: $black;
+  }
+  &:after {
+    background: $white;
+    transform: translateY(-5px);
+  }
+  &__decor {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1960px;
+    height: 100px;
+    z-index: -1;
+    pointer-events: none;
+    .st0 {
+       animation: color-change-1 2s linear infinite;
+       @keyframes color-change-1 {
+         0%, 24% {
+           fill:#FFCC35;
+         }
+         25%, 49% {
+           fill:#FF0065;
+         }
+         50%, 74% {
+           fill:#16CC31;
+         }
+         75%, 100% {
+           fill:#00CDFD;
+         }
+       }
+     }
+    .st1 {
+      animation: color-change-2 2s linear infinite;
+      @keyframes color-change-2 {
+        0%, 24% {
+          fill:#FF0065;
+        }
+        25%, 49% {
+          fill:#16CC31;
+        }
+        50%, 74% {
+          fill:#00CDFD;
+        }
+        75%, 100% {
+          fill:#FFCC35;
+        }
+      }
+    }
+    .st2 {
+      animation: color-change-3 2s linear infinite;
+      @keyframes color-change-3 {
+        0%, 24% {
+          fill:#16CC31;
+        }
+        25%, 49% {
+          fill:#00CDFD;
+        }
+        50%, 74% {
+          fill:#FFCC35;
+        }
+        75%, 100% {
+          fill:#FF0065;
+        }
+      }
+    }
+    .st3 {
+      animation: color-change-4 2s linear infinite;
+      @keyframes color-change-4 {
+        0%, 24% {
+          fill:#00CDFD;
+        }
+        25%, 49% {
+          fill:#FFCC35;
+        }
+        50%, 74% {
+          fill:#FF0065;
+        }
+        75%, 100% {
+          fill:#16CC31;
+        }
+      }
+    }
+  }
+}
+.header_bottom_box {
+  display: flex;
+}
+.logo_box {
+  display: flex;
+  min-width: 142px;
+}
+.logo_link_img {
+  width: 100%;
+}
+.mobile_menu {
+  position: fixed;
+  top: 0;
+  right: 100%;
+  width: 320px;
+  color: $white;
+  background: $black;
+  transform: translateX(0);
+  transition: transform 0.2s ease-in-out;
+  z-index: 6;
+  &.active {
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in-out;
+  }
+  &__btn {
+    display: none;
+    visibility: hidden;
+    margin-right: 10px;
+    width: 30px;
+    height: 75px;
+    cursor: pointer;
+    transform: rotate(0);
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      transform: rotate(15deg);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+  &__btn_img {
+    width: 30px;
+    height: 75px;
+  }
+  &__box {
+    position: relative;
+    padding: 40px 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  &__nav {
+    margin-bottom: 70px;
+  }
+  &__close_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+  }
+  &__close_btn_img {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+  &__link {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 0 0 0 20px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+    cursor: pointer;
+    z-index: 1;
+    &:hover,
+    &.active {
+      color: $colorYellow;
+    }
+    &:after, &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 1px;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      transform: translate(0, 0);
+    }
+    &[class *= "shape"] {
+      justify-content: center;
+      width: 290px;
+      height: 60px;
+      color: $black;
+      transform: translateX(-21px);
+      transition: transform 0.2s ease-in-out;
+      &:before {
+        background: #000;
+      }
+      &:after {
+        background: $white;
+        transform: translate(-1px, -5px);
+      }
+      &:hover {
+        transform: translateX(-30px);
+        transition: transform 0.2s ease-in-out;
+      }
+      &.active {
+        transform: translateX(0);
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+    &.red_link {
+      color: $white;
+      &:after {
+        background: $colorRed;
+      }
+    }
+    &.green_link:after {
+      background: $colorGreen;
+    }
+    &.yellow_link:after {
+      background: $colorYellow;
+    }
+    &.blue_link:after {
+      background: $colorBlue;
+    }
+
+    .main_nav__link_info, .main_nav__link_img {
+      transform: translate(4px, -4px);
+    }
+  }
+  &__shape_1 {
+    &:after, &:before {
+      -webkit-clip-path: polygon(7% 0, 98% 8%, 100% 100%, 7% 100%, 0 50%);
+      clip-path: polygon(7% 0, 98% 8%, 100% 100%, 7% 100%, 0 50%);
+    }
+
+  }
+  &__shape_2 {
+    &:after, &:before {
+      -webkit-clip-path: polygon(7% 0, 100% 8%, 97% 100%, 7% 100%, 0 50%);
+      clip-path: polygon(7% 0, 100% 8%, 97% 100%, 7% 100%, 0 50%);
+    }
+  }
+
+  .lang_nav {
+    max-height: 30px;
+    overflow: hidden;
+    &:before {
+      right: 20px;
+    }
+    &.active {
+      max-height: unset;
+      overflow: visible;
+      &:before {
+        transform: translate(0, -50%);
+      }
+    }
+
+    &__list {
+      width: 310px;
+    }
+    &__current,
+    &__link {
+      text-transform: uppercase;
+    }
+  }
+}
+.header_nav {
+  flex: 100%;
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  &__link {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    height: 80px;
+    font-size: 16px;
+    color: $black;
+    font-family: 'Rubik Mono One', 'rubikmonoone' , sans-serif;
+    z-index: 1;
+    transform-origin: center;
+    transform: rotate(0);
+    transition: transform 0.2s ease-in-out;
+    //&:before, &:after {
+    //  display: block;
+    //  content: '';
+    //  position: absolute;
+    //  top: 3px;
+    //  left: 0;
+    //  width: 100%;
+    //  height: 100%;
+    //  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 91%, 0% 100%);
+    //  clip-path: polygon(0 0, 100% 0%, 100% 91%, 0% 100%);
+    //  z-index: -1;
+    //  //visibility: hidden;
+    //  //opacity: 0;
+    //  transform-origin: top;
+    //  transform: scaleY(0);
+    //  transition: all 0.2s ease-in-out;
+    //}
+    //&:before {
+    //  background: $black;
+    //}
+    //&::after {
+    //  background: $colorYellow;
+    //}
+
+    &:hover {
+      transform: rotate(2deg);
+      transition: transform 0.2s ease-in-out;
+      //&:before, &:after {
+      //  visibility: visible;
+      //  opacity: 1;
+      //  transition: all 0.2s ease-in-out;
+      //}
+      //&:before {
+      //  transform:  scaleY(1) translateY(0);
+      //}
+      //&::after {
+      //  transform: scaleY(1) translateY(-5px);
+      //}
+    }
+
+    &.active {
+      height: 95px;
+      &:before, &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 91%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0%, 100% 91%, 0% 100%);
+        z-index: -1;
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+      }
+      &:before {
+        background: $black;
+      }
+      &::after {
+        background: $colorYellow;
+        transform: translateY(-5px);
+      }
+      &:hover {
+        transform: rotate(0);
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+  }
+}
+.search_game {
+  position: relative;
+  &.active {
+    .search_game__result_popup {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.2s ease-in-out;
+    }
+    .search_game__result_box {
+      display: block;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 30px;
+    width: 100px;
+    height: 65px;
+    cursor: pointer;
+    z-index: 1;
+    transform-origin: left;
+    transform: rotate(0);
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      transform: rotate(4deg);
+      transition: transform 0.2s ease-in-out;
+    }
+    &:after, &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      -webkit-clip-path: polygon(89% 6%, 100% 45%, 91% 100%, 14% 94%, 0 60%, 19% 0);
+      clip-path: polygon(89% 6%, 100% 45%, 91% 100%, 14% 94%, 0 60%, 19% 0);
+    }
+    &:after {
+      background: $black;
+      z-index: -2;
+      transform: translate(5px, 5px);
+    }
+    &:before {
+      background: $colorBlue;
+      z-index: -1;
+    }
+    img {
+      position: relative;
+      display: block;
+      width: 30px;
+      height: 30px;
+      -webkit-clip-path: polygon(89% 6%, 100% 45%, 91% 100%, 14% 94%, 0 60%, 19% 0);
+      clip-path: polygon(89% 6%, 100% 45%, 91% 100%, 14% 94%, 0 60%, 19% 0);
+      z-index: 1;
+    }
+  }
+  &__result_popup {
+    position: absolute;
+    top: 65px;
+    right: 30px;
+    max-width: 720px;
+    width: 100vw;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: all 0.2s ease-in-out;
+  }
+  &__result_box {
+    display: none;
+    position: relative;
+    padding: 20px 20px 40px;
+    &:before, &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      //width: 100%;
+      //height: 100%;
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 93%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0%, 100% 93%, 0% 100%);
+      z-index: -2;
+      transform: translateY(0);
+      visibility: visible;
+      opacity: 1;
+    }
+    &:before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $black;
+    }
+    &::after {
+      top: 3px;
+      left: 3px;
+      right: 5px;
+      bottom: 5px;
+      background: $colorBlue;
+    }
+
+    label {
+      width: 100%;
+    }
+  }
+  &__close_btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    transform: rotate(0);
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      transform: rotate(10deg);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+  &__close_img {
+    width: 30px;
+    height: 30px;
+  }
+  &__result_list {
+    max-height: 265px;
+    overflow-y: auto;
+  }
+  &__result_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 20px);
+  }
+  &__result_game {
+    display: flex;
+    align-items: center;
+  }
+  &__result_title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $black;
+    transform: rotate(0);
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      transform: rotate(2deg);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+  &__show_more_btn {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+  }
+}
+input.search_game__input {
+  margin-bottom: 15px;
+  padding: 0 60px 0 0;
+  height: 30px;
+  font-size: 24px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: $black;
+  font-weight: 700;
+  text-transform: uppercase;
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $black;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $black;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $black;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $black;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  &:focus {
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      opacity: .8;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      opacity: .8;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      opacity: .8;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      opacity: .8;
+    }
+  }
+}
+
+// MAIN *=*=* MAIN *=*=* MAIN *=*=* MAIN *=*=* MAIN *=*=* MAIN *=*=* MAIN *=*=* MAIN *=*=* MAIN *=*=* MAIN *=*=* MAIN *=*=*
+main {
+  padding-top: 160px;
+  padding-bottom: 140px;
+}
+// Main Slider ****** Main Slider ****** Main Slider ****** Main Slider ****** Main Slider ****** Main Slider ****** Main Slider ******
+.main_slider {
+  margin-top: -60px;
+  &__item {
+    position: relative;
+    padding-top: 60px;
+    min-height: 670px;
+  }
+  &__item_bg {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 91%, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 91%, 0 85%);
+    z-index: -1;
+  }
+  &__item_bg_img {
+    width: 100%;
+    object-fit: cover;
+  }
+  &__item_bg_border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $black;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 91%, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 91%, 0 85%);
+    z-index: -2;
+  }
+  &__main_content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: calc(100% - 40px);
+  }
+  &__main_img {
+    width: 50%;
+    max-width: 640px;
+  }
+  &__main_info {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 55px;
+    width: 50%;
+    min-height: calc(100% - 40px);
+    letter-spacing:-0.2em;
+    font-family: 'Rubik Mono One', 'rubikmonoone' , sans-serif;
+    background: transparent url("img/main_slider/Cloud.svg") center center no-repeat;
+    background-size: contain;
+    user-select: none;
+    h2 {
+      margin-bottom: 5px;
+      position: relative;
+      font-size: 90px;
+      line-height: 1;
+      text-align: center;
+      -webkit-text-stroke: 3px $black;
+      z-index: 1;
+      &:after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        color: $black;
+        -webkit-text-stroke: 15px $black;
+        z-index: -1;
+        transform:  translateY(8px);
+      }
+    }
+    .title {
+      position: relative;
+      font-size: 46px;
+      line-height: 1;
+      -webkit-text-stroke: 2px $black;
+      z-index: 1;
+      &.title_big {
+        margin: -25px 0;
+        font-size: 180px;
+        letter-spacing:-0.1em;
+        -webkit-text-stroke: 3px $black;
+        &:after {
+          -webkit-text-stroke: 20px $black;
+        }
+      }
+      &:after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        color: $black;
+        -webkit-text-stroke: 10px $black;
+        z-index: -1;
+        transform:  translateY(8px);
+      }
+    }
+    .btn {
+      margin-top: 15px;
+      height: 95px;
+      letter-spacing: 0;
+    }
+  }
+  &__info_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform-origin: center;
+    transform: rotate(-20deg);
+  }
+}
+
+.start_section {
+  margin-bottom: 15px;
+}
+// Game Company ****** Game Company ****** Game Company ****** Game Company ****** Game Company ****** Game Company ******
+.game_company {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 100%;
+  &__list {
+    position: relative;
+    display: flex;
+    width: calc(100% - 100px);
+    text-align: left;
+    //overflow-x: auto;
+  }
+  &__item {
+    padding: 13px;
+    &.active {
+      .game_company__filter::after {
+        background: $colorYellow;
+      }
+    }
+    &:hover {
+      .game_company__filter:before {
+        transform: skew(5deg, 5deg) translate(-2px, -5px);
+      }
+    }
+  }
+  &__filter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 50px;
+    background: $item_color2;
+    &:before, &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    &:before {
+      top: 0;
+      left: 0;
+      background: $item_color2;
+      transform: skew(4deg, 4deg) translate(-1px, -4px);
+      z-index: -2;
+    }
+    &:after {
+      bottom: 0;
+      right: 0;
+      background: $item_color1;
+      transform: skew(5deg, 4deg) translate(2px, 5px);
+      z-index: -1;
+    }
+  }
+  &__img {
+    display: block;
+    max-width: 130px;
+    width: 100%;
+    max-height: 50px;
+  }
+}
+
+// Tournament Section ****** Tournament Section ****** Tournament Section ****** Tournament Section ****** Tournament Section ******
+.tournament_section {
+  position: relative;
+  margin-top: 25px;
+  &:before, &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+  }
+  &:before {
+    background: #242229;
+    z-index: -2;
+  }
+  &:after {
+    border-top: 5px solid #fff;
+    background: $white;
+    transform: translateY(-5px);
+    z-index: -1;
+  }
+
+  .slick-prev, .slick-next {
+    top: 5px;
+    transform: translate(0);
+    z-index: 1;
+  }
+  .slick-prev {
+    left: 50%;
+  }
+  .slick-next {
+    right: unset;
+    left: calc(50% + 526px);
+  }
+
+  &__page_item {
+    position: relative;
+    margin: 0 auto 25px;
+    padding: 0 10px 20px;
+    max-width: 980px;
+    width: 100vw;
+    color: $black;
+    &:before, &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+    }
+    &:before {
+      background: $black;
+      z-index: -2;
+    }
+    &:after {
+      bottom: 5px;
+      border-top: 5px solid #fff;
+      background: $white;
+      z-index: -1;
+    }
+    .tournament_section {
+      &__item {
+        min-height: 420px;
+      }
+      &__img_box {
+        width: 100%;
+      }
+      &__tournament_games {
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
+  }
+  &__item {
+    display: block;
+    margin-left: 50%;
+    max-width: 576px;
+    min-height: 440px;
+    color: $black;
+    text-align: center;
+    .btn {
+      margin-top: 15px;
+    }
+  }
+  &__img_box {
+    //position: relative;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    max-width: 576px;
+    width: 50%;
+    max-height: 400px;
+    .btn {
+      position: absolute;
+      bottom: -20px;
+      right: 0;
+    }
+  }
+  &__tournament_img {
+    max-width: 576px;
+    width: 100%;
+    max-height: 400px;
+  }
+  &__info_box {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 0 30px;
+    max-width: 576px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  &__countdown_box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  &__timer_item{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+    box-shadow: 8px 5px 0px -5px rgba(36,34,41,1);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__timer_count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 40px;
+    font-size: 24px;
+    font-family: 'Rubik Mono One', 'rubikmonoone' , sans-serif;
+  }
+  &__timer_count_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 20px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: $white;
+    background: rgba($black, 0.3);
+  }
+  &__heading {
+    color: $black;
+    &:hover {
+      color: $colorRed;
+      //text-shadow: 0 2px 0 #242229;
+    }
+  }
+  &__date {
+    display: block;
+  }
+  &__last_result {
+    display: block;
+    color: $colorRed;
+    margin-top: 15px;
+  }
+  &__players_list_box {
+    user-select: none;
+    .btn {
+      display: none;
+      visibility: hidden;
+      &:before {
+        content: attr(data-show);
+        display: block;
+        font-size: 14px;
+      }
+    }
+    &.hide {
+      .tournament_section__players_list {
+        visibility: hidden;
+        opacity: 0;
+        max-height: 0;
+      }
+      .btn {
+        &:before {
+          content: attr(data-hide);
+          display: block;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  &__players_list {
+    counter-reset: item;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 15px auto 10px;
+    max-height: 160px;
+  }
+  &__player_item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    width: 240px;
+    font-size: 14px;
+    text-align: left;
+    &:before {
+      counter-increment: item;
+      content: counters(item, ".");
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fff;
+    }
+  }
+  &__player_login {
+    width: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &__player_win {
+    width: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 700;
+  }
+  &__tournament_games {
+    position: relative;
+    color: $black;
+    z-index: 1;
+    &.fullsize_games {
+      margin: 20px -10px 50px;
+      padding-top: 10px;
+      &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-top: 5px solid #c9c9c9;
+        background: #fff;
+        transform: skew(0, -3deg);
+        //-webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+        //clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+        z-index: -2;
+      }
+    }
+  }
+  &__rules_box {
+    margin-top: 30px;
+    padding: 0 50px 50px;
+  }
+  &__rules_list {
+    counter-reset: item;
+  }
+  &__rules_item {
+    margin-bottom: 10px;
+    &:before {
+      counter-increment: item;
+      content: counters(item,".");
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fff;
+    }
+  }
+}
+.bonus_section {
+  &__page_item {
+    margin-top: -65px;
+    margin-bottom: 80px;
+    padding-top: 85px;
+    &.active {
+      .tournament_section__rules_box {
+        margin-top: 30px;
+        padding-bottom: 50px;
+        max-height: unset;
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+      }
+      .tournament_section__rules_list {
+        display: block;
+      }
+      .bonus_btn:before {
+        content: attr(data-hide);
+      }
+    }
+    .tournament_section__item {
+      min-height: 335px;
+    }
+    .tournament_section__rules_box {
+      margin-top: 0;
+      padding-bottom: 0;
+      max-height: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+      table {
+        margin-bottom: 2em;
+      }
+    }
+    .tournament_section__rules_list {
+      display: none;
+    }
+    .bonus_btn:before {
+      content: attr(data-show);
+      display: block;
+      font-size: 14px;
+    }
+  }
+}
+
+.game_section {
+  text-align: center;
+}
+
+
+// FOOTER *=*=* FOOTER *=*=* FOOTER *=*=* FOOTER *=*=* FOOTER *=*=* FOOTER *=*=* FOOTER *=*=* FOOTER *=*=* FOOTER *=*=* FOOTER *=*=*
+footer {
+  //position: fixed;
+  //bottom: 0;
+  //left: 0;
+  width: 100%;
+}
+.live_chat_btn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 114px;
+  height: 84px;
+  z-index: 4;
+  cursor: pointer;
+  transform: translate(0, 0);
+  transition: transform 0.2s ease-in-out;
+  &:hover {
+    transform: translate(-5px, -5px);
+    transition: transform 0.2s ease-in-out;
+  }
+  &_img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+.win_now_fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  transform: translateY(0);
+  transition: transform 0.2s ease-in-out;
+  &.hide {
+    transform: translateY(100%);
+    transition: transform 0.2s ease-in-out;
+    .win_now__close_btn {
+      background: #4d2f87 url(img/casino_icons/ico_TopArrowOpen.svg) center 14px no-repeat;
+      background-size: 25px;
+      transform: rotate(6deg) translate(-135px, -67%);
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        background: #4d2f87 url(img/casino_icons/ico_TopArrowOpen.svg) center 8px no-repeat;
+        background-size: 25px;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+}
+.win_now {
+  position: relative;
+  &:before, &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+  }
+  &:before {
+    background: $colorPurple;
+    z-index: -4;
+  }
+  &:after {
+    background: #4d2f87;
+    transform: translateY(5px);
+    z-index: -3;
+  }
+  &__close_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #4d2f87 url("img/casino_icons/ico_Close_Normal.svg") center center no-repeat;
+    background-size: 25px;
+    border: 5px solid $colorPurple;
+    border-bottom: none;
+    //border-right: none;
+    cursor: pointer;
+    z-index: 1;
+    transform: rotate(6deg) translate(0, -83%);
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background: #4d2f87 url("img/casino_icons/ico_Close_Hover.svg") center center no-repeat;
+      background-size: 30px;
+    }
+  }
+  &__slider {
+    display: flex;
+    overflow-x: auto;
+  }
+  &__item {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 5px;
+    &:before, &:after {
+      display: block;
+      content: '';
+      position: absolute;
+    }
+    &:before {
+      top: 35px;
+      left: 40px;
+      right: 0;
+      bottom: 23px;
+      background: $colorPurple;
+      z-index: -1;
+    }
+    &:after {
+      right: -3px;
+      bottom: 20px;
+      width: 88%;
+      height: 65%;
+      background: $colorPurple;
+      z-index: -2;
+      transform: skew(3deg, 3deg);
+    }
+  }
+  &__info_box {
+    display: flex;
+    flex-direction: column;
+    font-size: 11px;
+    text-transform: uppercase;
+    background: $colorPurple;
+    user-select: none;
+  }
+  &__game_title {
+    display: block;
+    width: 100px;
+    color: $white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &:hover {
+      color: $colorYellow;
+    }
+  }
+  &__player_login {
+    display: block;
+    width: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    color: rgba($white, 0.6);
+  }
+  &__money_win {
+    display: block;
+    width: 100px;
+    font-size: 15px;
+    font-weight: 700;
+    color: $colorYellow;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+.footer_section {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: $white;
+  background: $black;
+  z-index: 3;
+  transform: translateY(100%);
+  transition: transform 0.2s ease-in-out;
+  &.active {
+    transform: translateY(0);
+    transition: transform 0.2s ease-in-out;
+    .footer_section {
+      &__footer_btn {
+        background: #fff url($imgPath + "casino_icons/ico_TopArrowClose.svg") center 10px no-repeat;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          background: #fff url($imgPath + "casino_icons/ico_TopArrowClose.svg") center 15px no-repeat;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+      &__nav {
+        transform: translateY(0);
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+  }
+
+  &__box {
+    position: relative;
+    padding-bottom: 40px;
+  }
+  &__box_overflow {
+    overflow-y: auto;
+    max-height: calc(100vh - 280px);
+    border-top: 5px solid #fff;
+  }
+  &__footer_btn {
+    position: absolute;
+    top: -45px;
+    left: 15px;
+    display: block;
+    width: 100px;
+    height: 45px;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    background: $black url($imgPath + "casino_icons/ico_Info.svg") center 14px no-repeat;
+    background-size: 25px;
+    z-index: 1;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background: $black url($imgPath + "casino_icons/ico_TopArrowOpen.svg") center 10px no-repeat;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+  &__rss {
+    position: relative;
+    color: $black;
+    padding-bottom: 25px;
+    &:after, &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+      z-index: 0;
+    }
+    &:before {
+      background: #000;
+    }
+    &:after {
+      //border-top: 5px solid #fff;
+      background: $white;
+      transform: translateY(-5px);
+    }
+  }
+  &__rss_box {
+    position: relative;
+    padding-top: 30px;
+    text-align: center;
+    z-index: 1;
+  }
+  &__rss_text {
+    text-align: center;
+  }
+  &__rss_form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .input_item_label {
+      margin-top: 5px;
+    }
+    .btn {
+      margin-left: -40px;
+    }
+  }
+
+  &__payment_list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__payment_item {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  &__payment_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    width: 105px;
+    height: 45px;
+    &:hover {
+      .footer_section__payment_link_img {
+        filter: grayscale(0);
+      }
+    }
+  }
+  &__payment_link_img {
+    display: block;
+    max-width: 95px;
+    width: 100%;
+    max-height: 35px;
+    height: auto;
+    filter: grayscale(1);
+  }
+
+  &__rights {
+    background: #302e37;
+  }
+  &__rights_box {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0 5px;
+  }
+  &__rights_license_box {
+    display: flex;
+  }
+  &__rights_license_img_box {
+    margin-right: 25px;
+  }
+  &__rights_license_img {
+    display: block;
+    width: 100%;
+    &.big {
+      max-width: 70px;
+    }
+    &.small {
+      margin-bottom: 8px;
+      max-width: 50px;
+    }
+  }
+  &__rights_text_box {
+    max-width: 940px;
+    width: 100%;
+    font-size: 10px;
+    text-transform: uppercase;
+    * {
+      line-height: 1.4;
+    }
+    a {
+      font-weight: 700;
+      color: $colorBlue;
+      text-decoration: none;
+      &:hover {
+        color: $colorYellow;
+      }
+    }
+  }
+
+  &__partners_list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+  }
+  &__partners_item {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  &__partners_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    &:hover {
+      .footer_section__partners_link_img {
+        filter: grayscale(0);
+      }
+    }
+  }
+  &__partners_link_img {
+    display: block;
+    max-width: 140px;
+    max-height: 35px;
+    filter: grayscale(1);
+  }
+
+  &__nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #17161a;
+    transform: translateY(100%);
+    transition: transform 0.2s ease-in-out;
+    z-index: 4;
+  }
+  &__nav_list {
+    display: flex;
+    justify-content: center;
+  }
+  &__nav_link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    height: 40px;
+    color: $white;
+    font-size: 11px;
+    text-transform: uppercase;
+    &:hover,
+    &.active {
+      color: $colorYellow;
+    }
+  }
+}
+.social_nav {
+  margin: 25px auto 10px;
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__item {
+    margin-right: 15px;
+    margin-bottom: 15px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+
+    &:hover .social_nav__link_img {
+      transform: translateY(-10px);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    &_img {
+      width: 44px;
+      height: 44px;
+      transform: translateY(0);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+}
+
+//***************//*//***************//*//***************//*//***************//*//***************//*//***************//*
+//  Responsive   //*//  Responsive   //*//  Responsive   //*//  Responsive   //*//  Responsive   //*//  Responsive   //*
+//***************//*//***************//*//***************//*//***************//*//***************//*//***************//*
+@media screen and (min-width: 1921px) {
+  .footer_section__footer_btn {
+    left: calc(((100vw - 1920px) / 2) - 100px);
+  }
+  .live_chat_btn {
+    right: calc(((100vw - 1920px) / 2) - 114px);
+  }
+  .win_now__close_btn {
+    right: calc(((100vw - 1920px) / 2) - 55px);
+    transform: rotate(6deg) translate(0, -73%);
+  }
+}
+// @media screen and (min-width: 1921px) ******************************** @media screen and (min-width: 1921px) ********************************
+
+
+@media screen and (max-width: 1621px) {
+  .search_game__btn {
+    margin-right: 15px;
+  }
+  .user_box__btn {
+    margin-right: 10px;
+  }
+  .header_nav__link {
+    padding: 0 15px;
+  }
+}
+// @media screen and (max-width: 1621px) ******************************** @media screen and (max-width: 1621px) ********************************
+
+
+@media screen and (max-width: 1550px) {
+  .logo_box {
+    margin-right: 5px;
+  }
+  .header_nav__link {
+    padding: 0 10px;
+  }
+  .search_game__btn {
+    width: 75px;
+  }
+  .user_box__btn {
+    padding: 0 10px 5px;
+    width: 225px;
+    font-size: 20px;
+    transform: translateY(10px);
+  }
+
+}
+// @media screen and (max-width: 1550px) ********************************
+
+
+@media screen and (max-width: 1390px) {
+  .logo_box {
+    min-width: 125px;
+  }
+  .user_box__bonus_progress_box {
+    width: 100px;
+  }
+  .user_box__bonus_line.active .user_box__bonus_progress_info {
+    padding: 5px 0;
+  }
+  .user_box__btn {
+    width: 200px;
+    font-size: 18px;
+  }
+  header .user_box__img_box,
+  header .user_box__avatar_img,
+  body.on_line header .user_box__avatar_img {
+    width: 76px;
+    height: 64px;
+  }
+  .main_nav__item {
+    margin-right: 4px;
+  }
+  .main_nav__link {
+    padding: 0 6px;
+  }
+  .header_nav__link {
+    height: 65px;
+    &.active {
+      height: 80px;
+    }
+  }
+  .header_bottom_section:after, .header_bottom_section:before {
+    height: 70px;
+  }
+  .main_slider {
+    margin-top: -70px;
+    &__main_img {
+      max-width: 460px;
+    }
+    &__item {
+      min-height: 460px;
+    }
+    &__main_info {
+      h2 {
+        font-size: 70px;
+      }
+      .title {
+        font-size: 30px;
+        &.title_big {
+          font-size: 100px;
+        }
+      }
+    }
+  }
+  .search_game__result_popup {
+    position: fixed;
+    top: 95px;
+    right: 50%;
+    transform: translate(50%, -30px);
+    z-index: 3;
+  }
+  .search_game.active .search_game__result_popup {
+    transform: translate(50%, 0);
+  }
+  main {
+    padding-top: 150px;
+  }
+}
+// @media screen and (max-width: 1390px) ******************************** @media screen and (max-width: 1390px) ********************************
+
+
+@media screen and (max-width: 1350px) {
+  .header_nav__link {
+    font-size: 15px;
+  }
+}
+// @media screen and (max-width: 1350px) ******************************** @media screen and (max-width: 1350px) ********************************
+
+
+@media screen and (max-width: 1300px) {
+  .header_nav__link {
+    font-size: 14px;
+  }
+  .search_game__btn {
+    width: 65px;
+    height: 50px;
+  }
+  .user_box__btn {
+    transform: translateY(0px);
+  }
+  .main_slider {
+    &__main_content {
+      align-items: center;
+    }
+    &__main_img {
+      width: 40%;
+    }
+  }
+
+}
+// @media screen and (max-width: 1300px) ******************************** @media screen and (max-width: 1300px) ********************************
+
+@media screen and (max-width: 1250px) {
+  .main_nav__item:nth-child(7),
+  .header_nav__list li:nth-last-child(2),
+  .header_nav__list li:last-child,
+  .footer_section__nav {
+    display: none;
+    visibility: hidden;
+  }
+  .mobile_menu__btn {
+    display: flex;
+    visibility: visible;
+  }
+  .logo_link {
+    min-width: 125px;
+  }
+  .user_nav__link {
+    margin-bottom: 8px;
+  }
+  .footer_section__box {
+    padding-bottom: 0;
+  }
+}
+// @media screen and (max-width: 1250px) ******************************** @media screen and (max-width: 1250px) ********************************
+
+
+@media screen and (max-width: 1200px) {
+  .game_company__list {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .widget.active#game_widget {
+    visibility: visible;
+    opacity: 1;
+  }
+  .footer_section__footer_btn {
+    top: -40px;
+    width: 80px;
+    height: 40px;
+  }
+  .live_chat_btn {
+    width: 90px;
+    height: 70px;
+  }
+  .win_now_fixed.hide .win_now__close_btn {
+    transform: rotate(6deg) translate(-110px, -67%);
+  }
+}
+// @media screen and (max-width: 1200px) ********************************
+
+@media screen and (max-width: 1150px) {
+  .main_nav__item {
+    &:last-child {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  .user_box__bonus_line,
+  .user_box__cash_line {
+    margin-right: 10px;
+  }
+  .tournament_section {
+    margin-bottom: 25px;
+    &:before, &:after {
+      top: 60px;
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+    }
+    .slick-prev, .slick-next {
+      left: 50%;
+    }
+    .slick-prev {
+      transform: translate(-190px, 0);
+    }
+    .slick-next {
+      transform: translate(140px, 0);
+    }
+    &__page_item {
+      padding-bottom: 35px;
+      .tournament_section__item {
+        padding-bottom: 0;
+      }
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 50px;
+      .btn {
+        order: 4;
+      }
+    }
+    &__countdown_box,
+    &__heading,
+    &__date,
+    &__last_result {
+      order: 1;
+      margin-bottom: 5px;
+    }
+    &__img_box {
+      position: relative;
+      top: unset;
+      right: unset;
+      order: 2;
+      margin-bottom: 25px;
+      width: 100%;
+    }
+    &__tournament_games,
+    &__info_box {
+      order: 3;
+    }
+    &__players_list_box {
+      width: 100%;
+      order: 4;
+    }
+  }
+  .bonus_section__page_item {
+    margin-bottom: 30px;
+  }
+
+}
+// @media screen and (max-width: 1150px) ******************************** @media screen and (max-width: 1150px) ********************************
+
+
+@media screen and (max-width: 1100px) {
+  .header_nav__list,
+  .main_nav__item:nth-child(5),
+  .main_nav__item:nth-child(6) {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .main_slider {
+    &__item {
+      padding-top: 39px;
+      min-height: 630px;
+    }
+    &__info_content {
+      transform: rotate(-15deg);
+    }
+    &__main_content {
+      align-items: flex-start;
+    }
+    &__main_img {
+      margin-top: 30px;
+      width: 35%;
+    }
+  }
+}
+// @media screen and (max-width: 1100px) ******************************** @media screen and (max-width: 1100px) ********************************
+
+
+@media screen and (max-width: 1025px) {
+  .main_slider__main_img {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0;
+  }
+  .main_slider__main_info {
+    width: 100%;
+  }
+}
+// @media screen and (max-width: 1025px) ********************************
+
+@media screen and (max-width: 860px) {
+  main {
+    padding-bottom: 120px;
+  }
+  .wrapper {
+    padding: 0 10px;
+  }
+  .header_top_box {
+    justify-content: flex-end;
+  }
+  .main_nav {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .user_box {
+    &__user_data_fields_box {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    &__user_data_fields_part {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+  .checkbox_label_content {
+    width: 360px;
+  }
+}
+// @media screen and (max-width: 860px) ******************************** @media screen and (max-width: 860px) ********************************
+
+
+@media screen and (max-width: 769px) {
+  .footer_section__rss_form .btn {
+    margin-top: -25px;
+    margin-left: 0;
+  }
+}
+// @media screen and (max-width: 769px) ******************************** @media screen and (max-width: 769px) ********************************
+
+
+@media screen and (max-width: 740px) {
+  .win_now_fixed {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+// @media screen and (max-width: 740px) ******************************** @media screen and (max-width: 740px) ********************************
+
+
+@media screen and (max-width: 680px) {
+  //.main_slider {
+  //  &__item {
+  //    min-height: 520px;
+  //  }
+  //  &__main_info {
+  //    h2 {
+  //      font-size: 80px;
+  //    }
+  //    .title {
+  //      font-size: 34px;
+  //      &.title_big {
+  //        font-size: 140px;
+  //      }
+  //    }
+  //  }
+  //}
+  .tournament_section__img_box .btn {
+    right: 15px;
+  }
+  .search_game__result_popup {
+    top: 0;
+  }
+}
+// @media screen and (max-width: 680px) ******************************** @media screen and (max-width: 680px) ********************************
+
+@media screen and (max-width: 600px) {
+  .popup {
+    top: 0;
+    left: 0;
+    transform: translate(0, -150vh);
+    &.active {
+      transform: translate(0, 0);
+    }
+    &__box {
+      padding: 50px 10px;
+      max-width: 600px;
+      width: 100vw;
+      min-width: unset;
+      height: 100vh;
+      overflow-y: auto;
+      &:before, &:after {
+        transform: skew(0deg, -5deg);
+      }
+      &:before {
+        bottom: -45px;
+      }
+      &:after {
+        bottom: -40px;
+      }
+    }
+  }
+  .client_box,
+  .user_box__info {
+    width: 100%;
+  }
+  .user_box__info {
+    justify-content: space-between;
+  }
+  .start_section.wrapper,
+  .game_section.wrapper {
+    padding: 0;
+  }
+  .search_game__result_item {
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .search_game__show_more_btn .btn{
+    font-size: 18px;
+  }
+  .user_box__avatar_slider {
+    width: calc(100% - 60px);
+  }
+}
+// @media screen and (max-width: 600px) ******************************** @media screen and (max-width: 600px) ********************************
+
+@media screen and (max-width: 560px) {
+  .user_box__btn {
+    min-width: 120px;
+    width: 160px;
+    height: 60px;
+    font-size: 14px;
+    transform: translateY(10px);
+  }
+  .search_game__btn {
+    width: 50px;
+    height: 41px;
+    &:after {
+      transform: translate(3px, 3px);
+    }
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .header_bottom_section:after, .header_bottom_section:before,
+  .mobile_menu__btn,
+  .mobile_menu__btn_img {
+    height: 50px;
+  }
+  .logo_link {
+    min-width: 90px;
+  }
+  main {
+    padding-top: 115px;
+  }
+  //.main_slider {
+  //  margin-top: -50px;
+  //  &__item {
+  //    min-height: 460px;
+  //  }
+  //  &__main_info {
+  //    h2 {
+  //      font-size: 70px;
+  //    }
+  //    .title {
+  //      font-size: 30px;
+  //      &.title_big {
+  //        font-size: 100px;
+  //      }
+  //    }
+  //  }
+  //}
+  .footer_section {
+    &__rss_form .btn {
+      font-size: 18px;
+    }
+    &__partners_link {
+      width: 120px;
+      height: 30px;
+    }
+    &__partners_link_img {
+      max-width: 100px;
+      max-height: 25px;
+    }
+  }
+  .popup__login_option_box {
+    flex-direction: column;
+  }
+  .popup__open_btn {
+    margin-top: 25px;
+  }
+}
+// @media screen and (max-width: 560px) ******************************** @media screen and (max-width: 560px) ********************************
+
+
+@media screen and (max-width: 480px) {
+  .client_box_bottom .user_box__img_box {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .search_game {
+    order: 6;
+    &__btn {
+      margin-right: 0;
+    }
+  }
+  .tournament_section {
+    &__img_box {
+      margin-bottom: 50px;
+      .btn {
+        bottom: -50px;
+        font-size: 20px;
+      }
+    }
+    &__players_list_box {
+      .btn {
+        display: inline-flex;
+        visibility: visible;
+      }
+    }
+    &__players_list {
+      max-height: unset;
+    }
+    &__tournament_games {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      overflow-x: auto;
+      &.fullsize_games {
+        display: block;
+        width: 100vw;
+        overflow-x: unset;
+      }
+    }
+    &__rules_box {
+      padding: 0 10px 50px;
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+  .footer_section__rights_box {
+    flex-wrap: wrap;
+  }
+}
+// @media screen and (max-width: 480px) ******************************** @media screen and (max-width: 480px) ********************************
+
+
+@media screen and (max-width: 440px) {
+  .main_slider {
+    &__item {
+      padding-top: 20px;
+      min-height: 390px;
+    }
+    &__main_info {
+      .btn {
+        height: 70px;
+      }
+      h2 {
+        font-size: 55px;
+      }
+      .title {
+        font-size: 24px;
+        &.title_big {
+          margin: -15px 0;
+          font-size: 75px;
+        }
+      }
+    }
+  }
+}
+// @media screen and (max-width: 440px) ******************************** @media screen and (max-width: 440px) ********************************
+
+@media screen and (max-width: 410px) {
+  .user_box__cash_line .cash_type {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .user_box__login_line span {
+    width: 55px;
+  }
+  .logo_link {
+    min-width: 80px;
+  }
+  .user_box__btn {
+    min-width: 120px;
+    width: 150px;
+    height: 50px;
+    padding: 0 0 5px;
+    font-size: 14px;
+    transform: translateY(10px);
+  }
+  .main_slider {
+    &__item {
+      padding-top: 0;
+      max-height: 350px;
+      min-height: 300px;
+    }
+    &__main_info {
+      .btn {
+        margin-top: 5px;
+        height: 60px;
+      }
+      h2 {
+        font-size: 45px;
+      }
+      .title {
+        font-size: 22px;
+        &:after {
+          -webkit-text-stroke: 6px #242229;
+          transform: translateY(4px);
+        }
+        &.title_big {
+          margin: -15px 0;
+          font-size: 65px;
+        }
+      }
+    }
+  }
+  .checkbox_label_content {
+    width: 290px;
+  }
+}
+// @media screen and (max-width: 410px) ******************************** @media screen and (max-width: 410px) ********************************
+
+
+@media screen and (max-width: 360px) {
+  .logo_link {
+    min-width: 70px;
+    width: 75px;
+  }
+  .user_box__avatar_box {
+    margin-top: 0;
+  }
+  .user_box__btn {
+    margin-right: 5px;
+    min-width: 120px;
+    width: 125px;
+    height: 45px;
+    padding: 0 0 5px;
+    font-size: 12px;
+    transform: translateY(10px);
+  }
+  .search_game__btn {
+    width: 41px;
+  }
+}
+// @media screen and (max-width: 360px) ********************************
+

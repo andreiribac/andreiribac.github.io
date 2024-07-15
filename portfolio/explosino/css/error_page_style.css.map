@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,WAAY,CACV,MAAM,CAAE,MAAM",
+"sources": ["error_page_style.scss"],
+"names": [],
+"file": "error_page_style.css"
+}
