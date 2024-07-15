@@ -1,0 +1,287 @@
+.game_item {
+  position: relative;
+  display: block;
+  width: 286px;
+  max-height: 214px;
+  border: 2px solid $gray3;
+  &.new_game::after {
+    display: block;
+    content: 'new';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 36px;
+    height: 20px;
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0 0 8px 0;
+    background: #33cc33;
+    z-index: 1;
+  }
+  &.hot_game::before {
+    display: block;
+    content: 'hot';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 36px;
+    height: 20px;
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0 0 0 8px;
+    background: $second_color;
+    z-index: 1;
+  }
+  &.game_item_small {
+    width: 206px;
+    max-height: 164px;
+    .game_item_img_box {
+     //height: 132px;
+    }
+    .btn_money_play {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  &.game_item_middle {
+    max-width: 230px;
+    max-height: 178px;
+    .game_item_img_box {
+      //height: 148px;
+    }
+    .btn_money_play {
+      width: 90px;
+      height: 90px;
+    }
+  }
+  .btn_money_play {
+    width: 120px;
+    height: 120px;
+  }
+  .btn.btn-small {
+    max-width: 85px;
+    height: 25px;
+  }
+  &:hover {
+    border: 2px solid $white;
+    .game_item_remove_favourite,
+    .btn_money_play {
+      display: block;
+    }
+    .btn.btn-small {
+      display: flex;
+    }
+    .game_item_img {
+      opacity: 0.4;
+    }
+    .game_item_title_box {
+      background: $white;
+    }
+  }
+}
+.game_item_load_more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 286px;
+  height: 214px;
+  //width: 206px;
+  //height: 164px;
+  order: 99999;
+  border: 2px solid transparent;
+  &.game_item_small {
+    width: 206px;
+    //height: 164px;
+  }
+  .load_more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    svg {
+      width: 206px;
+      height: 164px;
+      --color3: #eee;
+    }
+  }
+  &:hover {
+    border: 2px solid transparent;
+    .load_more svg {
+      --color3: #0f3;
+    }
+  }
+}
+.game_item_remove_favourite {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: none;
+  width: 30px;
+  height: 30px;
+  --color7: #808080;
+  opacity: 0.6;
+  z-index: 2;
+  &:hover {
+    opacity: 1;
+    --color7: #09f;
+  }
+}
+.game_item_img_box {
+  position: relative;
+  padding-bottom: 65.71428%;
+  width: 100%;
+  //height: 183px;
+  height: 0;
+  background: $black;
+  .btn_money_play {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    display: none;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  .btn.btn-small {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    display: none;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+}
+.game_item_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.game_item_title_box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 28px;
+  background: $gray3;
+}
+.provider_link {
+  display: block;
+  height: 20px;
+  margin-right: 15px;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+.game_item_game_title {
+  font-weight: 400;
+  color: $gray;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+.game_item_star_rating_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 4px;
+  .ivi-Star_icon {
+    height: 14px;
+    width: 14px;
+    margin: 0;
+    &.empty_star {
+      --color1: transparent;
+    }
+  }
+}
+
+//***************//
+//  Responsive   //******************************************************************************
+//***************//
+
+@media screen and (max-width: 1700px) {
+  .game_item {
+    max-width: 220px;
+    //max-height: 168px;
+  }
+  .game_item_img_box {
+    //height: 142px;
+  }
+  .game_item_load_more {
+    max-width: 220px;
+    max-height: 168px;
+  }
+  .game_item_title_box {
+    height: 24px;
+  }
+  .game_item .btn_money_play {
+    width: 80px;
+    height: 80px;
+  }
+  .game_item.game_item_small .btn_money_play {
+    width: 60px;
+    height: 60px;
+  }
+  .game_item.game_item_small {
+    width: 180px;
+    //height: 143px;
+  }
+  .game_item.game_item_small .game_item_img_box {
+    //height: 115px;
+  }
+}
+// @media screen and (max-width: 1700px) *********************************************************
+
+
+@media screen and (max-width: 720px) {
+  .game_item:hover .game_item_remove_favourite,
+  .game_item:hover .btn_money_play,
+  .game_item:hover .btn.btn-small {
+    display: none;
+  }
+  .game_item:hover .game_item_img {
+    opacity: 1;
+  }
+}
+// @media screen and (max-width: 720px) *********************************************************
+
+
+@media screen and (max-width: 450px) {
+  .game_item,
+  .game_item_load_more {
+    max-width: 174px;
+  }
+  .game_item_load_more .load_more svg {
+    width: 130px;
+    height: 130px;
+  }
+  .game_popup .game_popup_title + .game_item {
+    max-width: unset;
+    width: 286px;
+    //height: 214px;
+  }
+}
+// @media screen and (max-width: 450px) *********************************************************
+
+
+@media screen and (max-width: 359px) {
+  .game_item,
+  .game_item_load_more {
+    max-width: 154px;
+  }
+}
+// @media screen and (max-width: 359px) *********************************************************
+
+
+
+
+
+

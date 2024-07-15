@@ -1,0 +1,76 @@
+// Variables
+$white: #fff;
+$black: #000;
+$pink: #9933ff;
+$gray: #333333;
+$gray2: #eeeeee;
+$gray3: #c0c1c2;
+$alert: #fc6769;
+$acive: #ffaf00;
+$main_color: #ffcc00;
+$active_main_color: #ffff00;
+$second_color: #ff33ff;
+$acive_second_color: #00ffde;
+$three_color: #01b6b4;
+$font_color: #fff;
+$menu_color: #363c43;
+$menu_sec_color: #e8ebef;
+
+
+// Libs
+@import "reset.css";
+@import "slick-theme.css";
+@import "slick.css";
+@import "animate.css";
+@import "jquery-ui.css";
+
+// Components
+@import "animation";
+@import "elements";
+@import "event_item";
+@import "lang_box";
+@import "user_box";
+@import "main_nav";
+@import "win_now";
+@import "social_box";
+
+// First Style CSS
+@import "basic";
+
+// Bonus Page
+@import "bonus_page";
+
+// Home Page
+@import "main_slider";
+@import "tournament_slider";
+@import "game_item";
+
+// Account Page
+@import "account_page";
+
+// Tournament Page
+@import "tournament_page";
+
+
+
+// Rules Page
+@import "rules_style";
+
+// Games Page
+@import "games_page";
+
+// Play Game Page
+@import "play_game_page";
+
+// Error Page
+@import "error_page";
+
+
+
+
+
+
+
+
+
+

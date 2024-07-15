@@ -1,0 +1,354 @@
+.game_filter_box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 0;
+    width: 100%;
+    min-height: 40px;
+    color: $gray;
+    background: rgba($black, 0.6);
+}
+.game_filter_theme_box {
+    align-self: flex-start;
+    max-width: 590px;
+    width: auto;
+    min-width: 50px;
+    color: $white;
+}
+.game_filter_theme_list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 46px;
+    //overflow: hidden;
+    &.is-active {
+        height: auto;
+        overflow: unset;
+    }
+}
+.game_filter_theme_item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    height: 46px;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    user-select: none;
+    text-transform: capitalize;
+    &.is-active {
+        background: rgba($white, 0.2);
+        border-bottom: 3px solid $white;
+        .game_filter_theme_sub_list {
+            display: flex;
+            transform: scale(1, 1);
+        }
+    }
+    &.theme_sub_item:after {
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        margin-left: 8px;
+        border-style: solid;
+        border-width: 4px 4px 0 4px;
+        border-color: #9933ff transparent transparent transparent;
+    }
+    &:hover {
+        background: rgba($white, 0.15);
+    }
+}
+.game_filter_theme_sub_list {
+    position: absolute;
+    top: calc(100% + 3px);
+    right: 0;
+    display: none;
+    flex-wrap: wrap;
+    width: 360px;
+    color: $black;
+    background: $gray2;
+    transform-origin: top;
+    transform: scale(1, 0);
+    transition: 0.3s ease-in-out;
+    z-index: 2;
+    .game_filter_theme_item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right: 0;
+        width: 50%;
+        height: 30px;
+        &:hover {
+            background: $white;
+        }
+        &.is-active {
+            background: $white;
+            border-bottom: 3px solid transparent;
+            &:before {
+                border-color: transparent transparent transparent #9933ff;
+            }
+        }
+        &:before {
+            display: block;
+            content: '';
+            margin-right: 8px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 4px 0 4px 4px;
+            border-color: transparent transparent transparent transparent;
+        }
+    }
+}
+//game_filter_provider_box
+.game_filter_provider_box {
+    flex: 1 1 100%;
+    margin: 5px 0 0;
+    padding-bottom: 5px;
+    overflow-x: auto;
+}
+.game_filter_provider_list {
+    display: flex;
+    align-items: center;
+}
+.game_filter_provider_item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4px;
+    width: 36px;
+    height: 36px;
+    border: 3px solid transparent;
+    &.is-active {
+        border: 3px solid $white;
+    }
+    svg {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        &:hover + .game_filter_provider_name {
+            display: flex;
+        }
+    }
+    &:nth-of-type(1),
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+        &:hover {
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 100%;
+                transform: translateY(-50%);
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 6px 6px 6px 0;
+                border-color: transparent #eeeeee transparent transparent;
+            }
+        }
+        svg:hover + .game_filter_provider_name {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            right: unset;
+            transform: translateX(5px);
+            display: flex;
+        }
+    }
+    &:hover {
+        z-index: 1;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 0 6px 6px;
+            border-color: transparent transparent transparent #eeeeee;
+        }
+    }
+}
+.game_filter_provider_name {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    transform: translateX(-5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    height: 30px;
+    white-space: nowrap;
+    background: $gray2;
+    border-radius: 3px;
+}
+.provider_game_count {
+    padding-left: 5px;
+}
+.close_filter_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    svg {
+        width: 30px;
+        height: 30px;
+        --color7: #000;
+        opacity: 0.5;
+    }
+    &:hover {
+        svg {
+            --color7: #09f;
+            opacity: 1;
+        }
+    }
+}
+.game_filter_box_show_more {
+    display: none;
+}
+//slots_game_box
+.slots_game_box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 45px;
+    .game_item {
+        margin-bottom: 30px;
+    }
+}
+//***************//
+//  Responsive   //******************************************************************************
+//***************//
+
+@media screen and (max-width: 1700px) {
+    .slots_game_box {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .game_item {
+            margin-bottom: 10px;
+            width: 220px;
+        }
+        .game_item_img_box {
+            //height: 142px;
+        }
+        .game_item_load_more {
+            width: 220px;
+        }
+    }
+}
+// @media screen and (max-width: 1700px) ********************************************************
+
+
+//@media screen and (max-width: 1310px) {
+//    .game_filter_box {
+//        margin-top: 0;
+//    }
+//}
+// @media screen and (max-width: 1310px) ********************************************************
+
+
+@media screen and (max-width: 1060px) {
+    .game_filter_box {
+        padding-right: 44px;
+    }
+    .game_filter_theme_box {
+        max-width: 100%;
+        width: 100%;
+    }
+    .game_filter_provider_list {
+        position: relative;
+        overflow: hidden;
+        height: 44px;
+        flex-wrap: wrap;
+        &.is-active {
+            overflow: unset;
+            height: auto;
+        }
+    }
+    .game_filter_provider_item {
+        margin: 5px;
+    }
+    .game_filter_box_show_more {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        &.is-active {
+            svg {
+                transform: rotate(90deg);
+            }
+        }
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+// @media screen and (max-width: 1060px) ********************************************************
+
+
+@media screen and (max-width: 1000px) {
+    .slots_game_box {
+        .game_item {
+            width: 206px;
+        }
+        .game_item_img_box {
+            //height: 132px;
+        }
+        .game_item_load_more {
+            width: 206px;
+        }
+    }
+}
+// @media screen and (max-width: 1000px) ********************************************************
+
+
+@media screen and (max-width: 768px) {
+    .game_filter_theme_item.theme_sub_item {
+        order: 99;
+        flex: 1 1 100%;
+    }
+    .game_filter_theme_sub_list {
+        right: unset;
+        left: 0;
+    }
+    .game_filter_theme_list {
+        overflow-y: hidden;
+    }
+}
+// @media screen and (max-width: 768px) ********************************************************
+
+
+@media screen and (max-width: 450px) {
+    .slots_game_box .game_item {
+        margin-bottom: 10px;
+    }
+}
+// @media screen and (max-width: 450px) ********************************************************
+
+
+@media screen and (max-width: 370px) {
+    .game_filter_theme_sub_list {
+        max-width: 310px;
+    }
+    .slots_game_box {
+        margin: 20px -5px;
+    }
+}
+// @media screen and (max-width: 370px) ********************************************************

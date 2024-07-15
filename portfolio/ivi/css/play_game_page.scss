@@ -1,0 +1,434 @@
+@charset "UTF-8";
+.play_game_box {
+  padding-bottom: 40px;
+  min-height: calc(100vh - 120px);
+  height: 100%;
+
+  .play_game_item_box {
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+    max-height: 810px;
+    height: calc(100vh - 280px);
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .game_item_title_box {
+    height: 30px;
+    background: transparent;
+  }
+  .provider_link {
+    margin-right: 10px;
+    height: 30px;
+    svg {
+      width: 30px;
+      height: 30px;
+      --color1: #333366;
+    }
+  }
+  .game_item_game_title {
+    display: inline-block;
+    max-width: 120px;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    color: $gray2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .game_item_star_rating_box {
+    margin-right: 20px;
+    .ivi-Star_icon {
+      width: 17px;
+      height: 18px;
+    }
+  }
+}
+.window_wrapper {
+  height: calc(100vh - 120px);
+}
+.game_box {
+  margin: 20px auto;
+  max-width: 1460px;
+  width: 100%;
+  max-height: 870px;
+  height: calc(100vh - 220px);
+  background: rgba($black, 0.6);
+  border: 10px solid transparent;
+  &.game_box_mini {
+    position: fixed;
+    bottom: 80px;
+    margin-bottom: 0;
+    left: 0;
+    max-width: 470px;
+    max-height: 300px;
+    border: 3px solid transparent;
+    z-index: 1;
+    .play_game_nav_list {
+      padding-bottom: 3px;
+      justify-content: flex-end;
+      li:not(:last-child) {
+        display: none;
+      }
+    }
+    .play_game_item_box {
+      max-height: 261px;
+    }
+  }
+}
+.play_game_nav_list {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  .flex100 {
+    flex: 1;
+  }
+}
+.fast_deposit_form {
+  display: none;
+  margin: 0 auto;
+  &.is-active {
+    display: block;
+  }
+  .input_box {
+    display: inline-block;
+    flex-direction: unset;
+    margin-bottom: 0;
+    input[type="radio"] {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      &:checked ~ .fast_deposit_label {
+        background: $pink;
+        font-weight: 700;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+  input[type="text"] {
+    max-width: 145px;
+    width: 100%;
+    height: 28px;
+    font-size: 16px;
+    border-radius: 5px;
+    background: transparent;
+  }
+  input[type="submit"] {
+    display: inline-block;
+    margin-left: -15px;
+    width: 115px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: $white;
+    text-align: center;
+    line-height: 30px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #0066ff, #9833cc, #ffeb3b, #0066ff);
+    background-size: 400%;
+    z-index: unset;
+  }
+}
+.fast_deposit_label {
+  margin: 0 4px;
+  padding: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background: $gray2;
+    color: $gray;
+  }
+}
+.switch_box {
+  position: relative;
+  margin-right: 40px;
+  input[type="checkbox"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    &:checked ~ .demo_money_label {
+      background: #0099ff;
+      &:before {
+        content: "На деньги";
+      }
+      &:after {
+        left: calc(100% - 28px);
+        background: #ffffff;
+      }
+    }
+  }
+}
+.demo_money_label {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background: rgba($black, 0.6);
+  transition: all 0.4s ease-in-out;
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #c0c0c1;
+    transition: all 0.4s ease-in-out;
+  }
+  &:before {
+    display: block;
+    content: "Демо режим";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100%;
+    margin-right: 10px;
+    white-space: nowrap;
+    transition: all 0.4s ease-in-out;
+  }
+}
+.operation_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  svg {
+    width: 30px;
+    height: 30px;
+    --color7: #000;
+    opacity: 0.6;
+  }
+  &.is-active,
+  &:hover {
+    svg {
+      --color7: #09f;
+      opacity: 1;
+    }
+  }
+}
+.description_game_box {
+  margin: 20px auto 0;
+  padding: 40px;
+  max-width: 1460px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+
+.fullscreen_mode {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  .main_header {
+    transform: translateY(-100%);
+    transition: transform 0.2s ease-in-out;
+  }
+  .left_menu_box {
+    transform: translateX(-100%);
+  }
+  .top_players_footer_slider {
+    transform: translateY(100%);
+    transition: transform 0.2s ease-in-out;
+  }
+  .social_nav {
+    transform: translate(100%, -50%);
+    transition: transform 0.2s ease-in-out;
+  }
+  .game_box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    max-width: unset;
+    max-height: unset;
+    height: 100vh;
+  }
+  .play_game_box .play_game_item_box {
+    max-width: unset;
+    max-height: unset;
+    height: calc(100vh - 60px);
+  }
+}
+
+
+//***************//
+//  Responsive   //*****************************************************
+//***************//
+@media screen and (max-width: 1700px) {
+  .game_box {
+    margin-top: 0;
+    height: calc(100vh - 190px);
+  }
+  .play_game_box .play_game_item_box {
+    height: calc(100vh - 250px);
+  }
+  .description_game_box {
+    margin-top: 40px;
+  }
+}
+// @media screen and (max-width: 1700px) ********************************
+
+@media screen and (max-width: 1550px) {
+  .play_game_box {
+    padding: 0 30px 40px;
+  }
+}
+// @media screen and (max-width: 1550px) ********************************
+
+
+@media screen and (max-width: 1430px) {
+  .play_game_box .play_game_nav_box {
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+  }
+  .play_game_box .play_game_list {
+    margin-bottom: 20px;
+    margin-left: 0;
+  }
+  .description_game_box {
+    margin: 40px auto 0;
+    //width: auto;
+  }
+}
+// @media screen and (max-width: 1430px) ********************************
+
+
+@media screen and (max-width: 1366px) {
+
+}
+// @media screen and (max-width: 1366px) ********************************
+
+
+@media screen and (max-width: 1280px) {
+  .play_game_box .game_nav_list {
+    padding: 0;
+  }
+  .play_game_box .game_nav_list li:not(.no_border) {
+    display: none;
+  }
+  .play_game_box .game_nav_deposit {
+    margin-left: 3px;
+  }
+}
+// @media screen and (max-width: 1280px) ********************************
+
+
+@media screen and (max-width: 1199px) {
+  .play_game_box {
+    padding: 0 0 40px;
+  }
+}
+// @media screen and (max-width: 1199px) ********************************
+
+
+@media screen and (max-width: 1080px) {
+  .play_game_box {
+    margin: 0;
+  }
+  .description_game_box h2 {
+    text-align: center;
+  }
+}
+// @media screen and (max-width: 1080px) ********************************
+
+
+@media screen and (max-width: 1090px) {
+  .switch_box {
+    margin-right: 0;
+  }
+  .game_item_star_rating_box {
+    display: none;
+  }
+}
+// @media screen and (max-width: 1090px) ********************************
+
+
+@media screen and (max-width: 940px) {
+  .play_game_box .game_item_game_title {
+    display: none;
+  }
+}
+// @media screen and (max-width: 940px) ********************************
+
+
+@media screen and (max-width: 800px) {
+  .fast_deposit_form.is-active {
+    display: none;
+  }
+}
+// @media screen and (max-width: 800px) ********************************
+
+
+@media screen and (max-width: 700px) {
+  .play_game_box .game_nav_deposit_box {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .play_game_box .demo_money_play_box div[class*="_box"] {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  .description_game_box {
+    padding: 40px 10px;
+  }
+}
+// @media screen and (max-width: 700px) ********************************
+
+
+@media screen and (max-width: 500px) {
+  .rating_box {
+    margin-right: auto;
+    transform: translate(0, -60px);
+  }
+  .play_game_box .game_nav_list {
+    margin-right: 0;
+  }
+  .play_game_box .demo_money_play_box div[class*="_box"] {
+    margin-right: 0;
+  }
+}
+// @media screen and (max-width: 500px) ********************************
+
+
+@media screen and (max-width: 450px) {
+  .play_game_box .btn.btn-second {
+    margin-left: 0;
+  }
+  .play_game_box .game_nav_list {
+    flex-direction: column;
+    height: auto;
+    margin-right: auto;
+  }
+  .game_nav_list li.no_border {
+    margin: 5px;
+  }
+  .play_game_box .game_nav_deposit_box {
+    justify-content: center;
+  }
+  .play_game_box .game_item_title_box {
+    display: none;
+  }
+}
+// @media screen and (max-width: 450px) ********************************
