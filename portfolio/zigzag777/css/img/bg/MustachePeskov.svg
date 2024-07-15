@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="lineSlider" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="2400px" height="580px" viewBox="0 0 2400 580" style="enable-background:new 0 0 2400 580;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#19172B;}
+	.st1{fill:#1D1B33;}
+	.st2{fill:#22203D;}
+</style>
+<g id="MustachePeskov">
+	<polygon class="st0" points="2392,0 1970.5,524.5 1714.5,556.5 1586.5,497.5 813.5,497.5 685.5,556.5 429.5,524.5 8,0 0,0 0,580 
+		2400,580 2400,0 	"/>
+	<path id="l2" class="st1" d="M1201,496l-387.5,1.5l-128,59l-256-32L8,0H0l412.5,554.5L688,580l124.5-68.5L1201,502V496z"/>
+	<path id="r2" class="st1" d="M1199,496l387.5,1.5l128,59l256-32L2392,0h8l-412.5,554.5L1712,580l-124.5-68.5L1199,502V496z"/>
+	<path id="l1" class="st2" d="M1201,495H814l-128.5,59.5l-252-34L8,0H5l418.5,534.5l263,32L815,504l386-5V495z"/>
+	<path id="r1" class="st2" d="M1199,495h387l128.5,59.5l252-34L2392,0h3l-418.5,534.5l-263,32L1585,503l-386-4V495z"/>
+</g>
+</svg>

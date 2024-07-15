@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="lineSlider" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="2286px" height="520px" viewBox="0 0 2286 520" style="enable-background:new 0 0 2286 520;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#1D1B33;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#22203D;}
+</style>
+<g id="MustachePeskov">
+	<path id="l2" class="st0" d="M1144,436l-387.5,1.5l-128,59l-256-32L8,0H0l355.5,494.5L631,520l124.5-68.5L1144,442V436z"/>
+	<path id="r2" class="st0" d="M1142,436l387.5,1.5l128,59l256-32L2278,0h8l-355.5,494.5L1655,520l-124.5-68.5L1142,442V436z"/>
+	<path id="l1" class="st1" d="M1144,435H757l-128.5,59.5l-252-34L8,0H5l361.5,474.5l263,32L758,444l386-5V435z"/>
+	<path id="r1" class="st1" d="M1142,435h387l128.5,59.5l252-34L2278,0h3l-361.5,474.5l-263,32L1528,443l-386-4V435z"/>
+</g>
+</svg>

@@ -1,0 +1,111 @@
+// Variables
+//path
+$s3ImgPath: "img/";
+//colors
+:root {
+	--white: #ffffff;
+	--black: #14121f;
+	--darkBlue: #19172b;
+	--lightGray: #9f9db5;
+	--yellow: #fece00;
+	--lightYellow: #ffe600;
+	--orange: #ff9a00;
+	--orange_07: rgba(255, 154, 0, 0.7);
+	--green: #339933;
+	--green_new: #00cc00;
+	--lightGreen: #23b123;
+	--darkGreen: #0c7415;
+	--peorple: #663399;
+	--lightPeorple: #7939b9;
+	--darkPeorple: #4f1a94;
+	--pink: #cc0066;
+	--lightPink: #eb005e;
+	--darkPink: #990066;
+	--blue: #0066ff;
+	--lightBlue: #0099ff;
+	--headingColor: #eeeeee;
+	--decorColor: #ffcc00;
+
+	// Btn
+	--btnFontColor: var(--black);
+	--btnTextShadow: var(--black);
+	--btnBg: var(--yellow);
+	--btnBorder: var(--orange);
+	--btnShadowIsert: var(--lightYellow);
+	--btnShadow: var(--orange_07);
+
+	--preFooterBg: #13121f;
+	--preFooterColor: #595773;
+	--preFooterPink: #ca0f67;
+
+	--subskrb_bg: #d8d6db;
+
+	--inputBorder: #c9c7e4;
+	--inputColor: #222037;
+
+	--selectBoxColor: var(--peorple);
+	--bg_color: var(--darkBlue, #19172b);
+	--font_color: var(--lightGray);
+
+	--footer-font-color: #9c9ab3;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--white: #ffffff;
+		--black: #14121f;
+		--darkBlue: #1a162d;
+		--lightGray: #9f9db5;
+		--yellow: #fece00;
+		--lightYellow: #ffe600;
+		--orange: #ff9a00;
+		--orange_07: rgba(255, 154, 0, 0.7);
+		--green: #339933;
+		--green_new: #00cc00;
+		--lightGreen: #23b123;
+		--darkGreen: #0c7415;
+		--peorple: #663399;
+		--lightPeorple: #7939b9;
+		--darkPeorple: #4f1a94;
+		--pink: #cc0066;
+		--lightPink: #eb005e;
+		--darkPink: #990066;
+		--headingColor: #eeeeee;
+		--decorColor: #ffcc00;
+
+		// Btn
+		--btnFontColor: var(--black);
+		--btnTextShadow: var(--black);
+		--btnBg: var(--yellow);
+		--btnBorder: var(--orange);
+		--btnShadowIsert: var(--lightYellow);
+		--btnShadow: var(--orange_07);
+
+		--selectBoxColor: var(--peorple);
+		--bg_color: var(--darkBlue, #1a162d);
+		--font_color: var(--lightGray);
+	}
+}
+
+// Libs
+@import "./libs/reset";
+@import "./libs/slick";
+@import "./libs/slick-theme";
+
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+// Components
+@import "./elements";
+
+// Home Page
+@import "./basic";
+
+// All Rules Page
+@import "./rules_style";
+
+// Account Pages
+@import "./account_style";
+
+// Error Pages
+@import "./error_page_style";
