@@ -1,0 +1,40 @@
+.contacts_page {
+  ul {
+    list-style-type: none;
+    li {
+      margin-bottom: 10px;
+      a {
+        display: flex;
+        align-items: center;
+        padding: 0 30px;
+        height: 80px;
+        border-radius: 10px;
+        background: $gray;
+        &:hover {
+          background: $bg_white;
+          box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+        }
+        img {
+          display: block;
+          margin-right: 30px;
+          width: 70px;
+          height: 70px;
+        }
+        span {
+          display: flex;
+          flex-direction: column;
+        }
+        b {
+          color: $black;
+        }
+      }
+    }
+  }
+  &__feedback_box {
+    background: $gray;
+  }
+  .text_area_big_box label,
+  .textarea_text_review {
+    height: 100%;
+  }
+}

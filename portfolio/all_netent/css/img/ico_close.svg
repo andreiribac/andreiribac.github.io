@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="ico_close" transform="translate(-10 -10)">
+    <path id="close" d="M30,12l-2-2-8,8-8-8-2,2,8,8-8,8,2,2,8-8,8,8,2-2-8-8Z" fill="#262626"/>
+  </g>
+</svg>

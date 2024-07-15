@@ -1,0 +1,10 @@
+.select_testimonials_box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  select {
+    width: 260px;
+    height: 40px;
+    border: none;
+  }
+}

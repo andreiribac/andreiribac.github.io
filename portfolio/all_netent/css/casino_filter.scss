@@ -1,0 +1,557 @@
+.casino_filter_page {
+  position: relative;
+  .casino_link_side {
+    display: flex;
+    flex-direction: column;
+    .btn {
+      margin-bottom: 10px;
+    }
+  }
+  .casino_img_link {
+    min-width: 70px;
+  }
+  .casino_title_box {
+    h3, h2 {
+      display: inline-block;
+      font-size: 22px;
+    }
+  }
+  .left_box {
+    width: 100%;
+  }
+}
+.filter_casino_box {
+  position: relative;
+  margin-bottom: 30px;
+  &.active {
+    .filter_casino_heading {
+      background: $bg_active;
+      border-radius: 10px 10px 0 0 ;
+    }
+    .filter_trigger_img_box {
+      border-radius: 10px 0 0 0;
+    }
+    .filter_trigger_box .h3:after {
+      border-width: 0 10px 10px 10px;
+      border-color: transparent transparent #ffffff transparent;
+    }
+    .filter_casino_option_box {
+      top: 100%;
+      visibility: visible;
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+.filter_casino_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background: $gray;
+  border-radius: 10px;
+}
+.filter_trigger_box {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  .h3 {
+    position: relative;
+    display: block;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      margin-left: 10px;
+      transform: translateY(-50%);
+      display: block;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 10px 0 10px;
+      border-color: #79bd31 transparent transparent transparent;
+    }
+  }
+}
+.filter_trigger_img_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  width: 80px;
+  height: inherit;
+  background: $bg_active;
+  border-radius: 10px 0 0 10px;
+}
+.filter_casino_search {
+  margin-right: 20px;
+  max-width: 440px;
+  width: 100%;
+  label {
+    position: relative;
+    display: block;
+    width: 100%;
+    img {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      pointer-events: none;
+    }
+  }
+  input[type='text'] {
+    padding: 0 40px 0 20px;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #ccc;
+  }
+}
+
+.filter_casino_option_box {
+  position: absolute;
+  top: 100%;
+  left: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px;
+  width: calc(100% - 30px);
+  background: $gray;
+  border-radius: 0 0 10px 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  z-index: 9;
+}
+.filter_casino_option_item {
+  position: relative;
+  margin-bottom: 20px;
+  max-width: 410px;
+  width: 31%;
+  &.active {
+    .filter_casino_option_item_heading:after {
+      border-width: 0 7px 7px 7px;
+      border-color: transparent transparent #3c3c3c transparent;
+    }
+    .filter_casino_option_item_chose_box {
+      top: 100%;
+      visibility: visible;
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
+      z-index: 9;
+    }
+  }
+}
+.filter_casino_option_item_heading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 0 40px 0 20px;
+  background: $bg_white;
+  border-radius: 20px;
+  border: 2px solid #ccc;
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 7px 0 7px;
+    border-color: #3c3c3c transparent transparent transparent;
+  }
+}
+.filter_casino_option_item_chose_box {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  padding: 20px;
+  width: 100%;
+  max-height: 260px;
+  background: $bg_white;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.filter_chose_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 45%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+  &.active {
+    .square {
+      background: $bg_active;
+    }
+  }
+  .square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    color: $bg_white;
+    background: $bg_white;
+    border-radius: 5px;
+    border: 2px solid $bg_active;
+  }
+}
+.remove_filter_btn {
+  padding-right: 10px;
+  background: $dark_gray;
+  img {
+    width: 15px;
+    height: 15px;
+    margin-left: 20px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(17deg) brightness(119%) contrast(115%);
+  }
+  &:hover {
+    background: $bg_active;
+    color: $bg_white;
+  }
+}
+
+.casino_rating_list {
+  padding: 0;
+  list-style-type: none;
+}
+.casino_rating_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 0 15px;
+  background: $gray;
+  border-radius: 10px;
+  &.active {
+    .square {
+      background: $bg_active;
+      border: 2px solid $bg_active;
+    }
+  }
+  &:hover {
+    background: $bg_white;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+  }
+}
+.casino_info_side {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 0;
+  width: 100%;
+  .square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    color: #fff;
+    background: #fff;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+  }
+  .casino_position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50px;
+    min-width: 50px;
+    img {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+    .number_box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    .last_position {
+      position: relative;
+      color: transparent;
+      &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+      }
+      &.last_position_up {
+        color: $bg_active;
+        &:after {
+          bottom: 100%;
+          border-width: 0 7px 7px 7px;
+          border-color: transparent transparent #79bd31 transparent;
+        }
+      }
+      &.last_position_down {
+        color: #cc6633;
+        &:after {
+          top: 100%;
+          border-width: 7px 7px 0 7px;
+          border-color: #cc6633 transparent transparent transparent;
+        }
+      }
+    }
+  }
+  .casino_item_box {
+    //max-width: 520px;
+    width: 100%;
+    .right_box {
+      margin-left: auto;
+    }
+  }
+  .casino_item_box:hover .rating_value_box {
+    display: block;
+  }
+}
+
+.compare_link_box {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  max-width: 270px;
+  width: 100%;
+  &.active {
+    .compare_link_list_box {
+      transform: translateY(0);
+      visibility: visible;
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+.compare_link_heading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  height: 60px;
+  color: $bg_white;
+  background: $bg_active;
+  border-radius: 10px 10px 0 0;
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 7px 7px 7px;
+    border-color: transparent transparent #ffffff transparent;
+    pointer-events: none;
+  }
+}
+.compare_link_list_box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px 20px;
+  width: 100%;
+  background: $bg_black;
+  color: $bg_white;
+  border-radius: 10px 10px 0 0;
+  transform: translateY(100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.compare_link_list {
+  margin-bottom: 15px;
+  padding: 0;
+  list-style-type: none;
+}
+.compare_link_list_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  border-bottom: 1px solid $gray;
+}
+.remove_link_list_item {
+  cursor: pointer;
+  img {
+    width: 15px;
+    height: 15px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(17deg) brightness(119%) contrast(115%);
+  }
+}
+.compare_link_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.hide_compare_link_list_box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: $dark_gray;
+  cursor: pointer;
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 7px 0 7px;
+    border-color: #ffffff transparent transparent transparent;
+  }
+}
+
+
+// *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=*
+// *= RESPONSIVE  =* // *= RESPONSIVE  =* // *= RESPONSIVE  =* // *= RESPONSIVE  =* // *= RESPONSIVE  =* // *= RESPONSIVE  =*
+// *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=*
+@media screen and (max-width: 810px) {
+  .filter_casino_heading {
+    height: 60px;
+  }
+  .filter_casino_search {
+    max-width: 300px;
+  }
+  .filter_casino_option_item {
+    width: 45%;
+  }
+}
+
+// @media screen and (max-width: 810px) ***** @media screen and (max-width: 810px) ***** @media screen and (max-width: 810px) *****
+
+
+@media screen and (max-width: 680px) {
+  .filter_casino_heading {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .filter_trigger_box {
+    width: 100%;
+    height: 40px;
+  }
+  .filter_trigger_img_box img {
+    max-height: 30px;
+  }
+  .filter_casino_search {
+    margin: 5px auto;
+  }
+  .casino_rating_item {
+    flex-wrap: wrap;
+  }
+  .casino_info_side {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .casino_filter_page .casino_link_side {
+    flex-direction: row;
+    margin: 0 auto 5px;
+  }
+  .casino_info_side .casino_item_box .right_box {
+    margin-left: 20px;
+  }
+  .casino_filter_page .casino_link_side .btn {
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+// @media screen and (max-width: 680px) ***** @media screen and (max-width: 680px) ***** @media screen and (max-width: 680px) *****
+
+
+@media screen and (max-width: 640px) {
+  .filter_casino_option_box {
+    justify-content: center;
+  }
+  .filter_casino_option_item {
+    width: 100%;
+  }
+  .filter_trigger_box {
+    justify-content: center;
+    margin-top: 5px;
+  }
+  .filter_trigger_img_box {
+    display: none;
+    //border-radius: 10px;
+    //margin-right: 5px;
+  }
+}
+// @media screen and (max-width: 640px) ***** @media screen and (max-width: 640px) ***** @media screen and (max-width: 640px) *****
+
+
+@media screen and (max-width: 500px) {
+  .casino_info_side .square {
+    margin-right: 5px;
+  }
+  .casino_info_side .casino_position {
+    width: 25px;
+    min-width: 25px;
+  }
+  .casino_filter_page .left_box {
+    align-items: flex-start;
+  }
+}
+// @media screen and (max-width: 500px) ***** @media screen and (max-width: 500px) ***** @media screen and (max-width: 500px) *****
+
+
+@media screen and (max-width: 400px) {
+  .casino_info_side {
+    flex-wrap: wrap;
+  }
+  .casino_info_side .casino_position {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .casino_info_side .square {
+    margin-right: 15px;
+  }
+  .filter_casino_box.active .filter_casino_option_box {
+    padding: 15px;
+  }
+}
+// @media screen and (max-width: 400px) ***** @media screen and (max-width: 400px) ***** @media screen and (max-width: 400px) *****
+
+

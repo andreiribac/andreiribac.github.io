@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Conv_PFDinDisplayPro-Bold';
+    src: url('fonts/PFDinDisplayPro-Bold/PFDinDisplayPro-Bold.eot');
+    src: local('☺'),
+    url('fonts/PFDinDisplayPro-Bold/PFDinDisplayPro-Bold.woff') format('woff'),
+    url('fonts/PFDinDisplayPro-Bold/PFDinDisplayPro-Bold.ttf') format('truetype'),
+    url('fonts/PFDinDisplayPro-Bold/PFDinDisplayPro-Bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conv_PFDinDisplayPro-BoldItalic';
+    src: url('fonts/PFDinDisplayPro-BoldItalic/PFDinDisplayPro-BoldItalic.eot');
+    src: local('☺'),
+    url('fonts/PFDinDisplayPro-BoldItalic/PFDinDisplayPro-BoldItalic.woff') format('woff'),
+    url('fonts/PFDinDisplayPro-BoldItalic/PFDinDisplayPro-BoldItalic.ttf') format('truetype'),
+    url('fonts/PFDinDisplayPro-BoldItalic/PFDinDisplayPro-BoldItalic.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conv_PFDinDisplayPro-Italic';
+    src: url('fonts/PFDinDisplayPro-Italic/PFDinDisplayPro-Italic.eot');
+    src: local('☺'),
+    url('fonts/PFDinDisplayPro-Italic/PFDinDisplayPro-Italic.woff') format('woff'),
+    url('fonts/PFDinDisplayPro-Italic/PFDinDisplayPro-Italic.ttf') format('truetype'),
+    url('fonts/PFDinDisplayPro-Italic/PFDinDisplayPro-Italic.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conv_PFDinDisplayPro-Regular';
+    src: url('fonts/PFDinDisplayPro-Regular/PFDinDisplayPro-Regular.eot');
+    src: local('☺'),
+    url('fonts/PFDinDisplayPro-Regular/PFDinDisplayPro-Regular.woff') format('woff'),
+    url('fonts/PFDinDisplayPro-Regular/PFDinDisplayPro-Regular.ttf') format('truetype'),
+    url('fonts/PFDinDisplayPro-Regular/PFDinDisplayPro-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

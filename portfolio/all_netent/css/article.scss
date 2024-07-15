@@ -1,0 +1,222 @@
+.adv_item_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.popular_game_box {
+  .game_item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .game_img_box,
+  .game_img_box img {
+    border-radius: 0;
+  }
+
+  .game_img_box:after {
+    display: none;
+  }
+}
+
+.article_box {
+  a {
+    color: $main_color;
+  }
+  .btn {
+    width: auto;
+    color: $bg_white;
+  }
+
+  img {
+    width: 100%;
+  }
+  .btn_row {
+    margin-bottom: 10px;
+    a img {
+      width: auto;
+      filter: invert(65%) sepia(64%) saturate(431%) hue-rotate(46deg) brightness(88%) contrast(100%);
+    }
+  }
+  figure {
+    margin-bottom: 25px;
+  }
+
+  figcaption {
+    font-size: 14px;
+    color: $dark_gray;
+    font-style: italic;
+    text-align: center;
+  }
+
+  .adv_row {
+    margin-bottom: 25px;
+  }
+  ol {
+    margin-bottom: 15px;
+    padding-left: 15px;
+    li {
+      text-indent: 10px;
+    }
+  }
+}
+
+img.float_img {
+  float: left;
+  display: block;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  max-width: 420px;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.news_row {
+  .text_box {
+    padding-bottom: 30px;
+    p {
+      max-height: 101px;
+      overflow: hidden;
+    }
+  }
+  .adv_row {
+    margin-bottom: 25px;
+  }
+  .col > .adv_slider_link {
+    max-width: 100%;
+  }
+}
+.show_more_btn_box {
+  margin: 25px 0;
+  text-align: center;
+}
+.netent_pagination_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .page-item:last-child .page-link,
+  .page-item:first-child .page-link {
+    color: $bg_white;
+    background: $dark_gray;
+    border-radius: 50%;
+    &:hover {
+      color: $bg_white;
+      background: $bg_active;
+    }
+  }
+  .page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    color: $black;
+    border: none;
+    border-radius: 10px;
+    &:hover {
+      color: $bg_white;
+      background: $bg_active;
+    }
+  }
+  .page-item.active .page-link {
+    background: transparent;
+    color: $bg_active;
+    &:hover {
+      border: 1px solid $bg_active;
+    }
+  }
+}
+.float_box {
+  float: left;
+  display: block;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: $gray;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
+}
+.header_casino_box {
+  display: flex;
+  .casino_brand_link {
+    margin-right: 15px;
+    .casino_logo_img_box{
+      background: #999999;
+    }
+  }
+}
+.rating_value_number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 110px;
+  height: 60px;
+  color: $bg_white;
+  font-size: 32px;
+  text-shadow: 2px 2px 0px #000000;
+  background: $bg_active;
+  border-radius: 10px;
+}
+.people_rating_value {
+  text-align: center;
+}
+.btn_row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  a {
+    width: 50%;
+  }
+  a + a {
+    color: $bg_black;
+    text-align: center;
+  }
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+.grid_row {
+  padding-top: 25px;
+  padding-bottom: 50px;
+  justify-content: center;
+
+  .list {
+    height: auto;
+    padding-bottom: 10px;
+  }
+
+  .casino_item_box {
+    box-shadow: none;
+  }
+
+  .key_link_col {
+    max-height: unset;
+  }
+}
+
+
+// *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=*
+// *= RESPONSIVE  =* // *= RESPONSIVE  =* // *= RESPONSIVE  =* // *= RESPONSIVE  =* // *= RESPONSIVE  =* // *= RESPONSIVE  =*
+// *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=*
+@media screen and (max-width: 991px) {
+  .sidebar_col {
+    .casino_item_box {
+      padding: 5px 0;
+    }
+  }
+}
+
+// @media screen and (max-width: 991px) *****
+
+
+@media screen and (max-width: 770px) {
+  .sidebar_col {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+// @media screen and (max-width: 770px) ***** @media screen and (max-width: 770px) ***** @media screen and (max-width: 770px) *****

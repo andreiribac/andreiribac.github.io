@@ -1,0 +1,132 @@
+.filter_game_option_list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  list-style-type: none;
+  .active {
+    color: $second_color;
+    text-decoration: none;
+  }
+}
+.demo_game_section .key_link_col {
+  color: $black;
+}
+.game_float_box {
+  font-size: 0;
+  .game_item {
+    display: inline-block;
+  }
+  .float-right {
+    padding-top: 10px;
+  }
+}
+.casino_bonus_filter_box {
+  padding: 5px 0;
+  background: $dark_gray;
+}
+.casino_bonus_filter_list {
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  list-style-type: none;
+  overflow-x: auto;
+}
+.casino_bonus_filter_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+  &.active {
+    background: $bg_black;
+    border: 5px solid $bg_active;
+  }
+  &:hover {
+    background: $bg_black;
+  }
+}
+.casino_bonus_filter_img {
+  display: block;
+  width: 70px;
+}
+.play_game_item_box iframe{
+  max-width: 100%;
+  width: 100%;
+}
+.play_game_row {
+  .key_link_col {
+    max-height: 720px;
+  }
+  .rating_list.list {
+    height: calc(100% - 56px);
+  }
+}
+.description_game_item {
+  position: relative;
+  margin: 10px auto;
+  padding: 10px 35px;
+  color: $black;
+  background: $dark_gray;
+  border-left: 20px solid $bg_active;
+  &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: -13px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 0 7px 7px;
+    border-color: transparent transparent transparent #ffffff;
+  }
+  h4 {
+    color: $gray;
+    cursor: pointer;
+    margin-bottom: 0;
+    transition: all 0.2s ease-in-out;
+  }
+  p {
+    columns: 2;
+    padding-left: 15px;
+    max-height: 0;
+    margin-bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+  }
+  &.active {
+    background: $gray;
+    &:before {
+      transform: rotate(90deg);
+    }
+    h4 {
+      color: $green;
+      margin-bottom: 1rem;
+      transition: all 0.2s ease-in-out;
+    }
+    p {
+      max-height: unset;
+      margin-bottom: 0.5rem;
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+// *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=*
+// *= RESPONSIVE  =* // *= RESPONSIVE  =* // *= RESPONSIVE  =* // *= RESPONSIVE  =* // *= RESPONSIVE  =* // *= RESPONSIVE  =*
+// *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=* // *=*=*=*=*=*=*=*=*
+
+@media screen and (max-width: 768px) {
+  .description_game_item p {
+    columns: 1;
+  }
+}
+// @media screen and (max-width: 768px) ***** @media screen and (max-width: 768px) ***** @media screen and (max-width: 768px) *****
+

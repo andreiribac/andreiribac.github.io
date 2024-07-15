@@ -1,0 +1,64 @@
+// Variables *=*=*  Variables *=*=* Variables *=*=* Variables *=*=* Variables *=*=* Variables *=*=* Variables *=*=* Variables
+// Color
+$green: #7abd31;
+$black: #262626;
+$gray: #eeeeee;
+$dark_gray: #3c3c3c;
+$blue: #0099ff;
+
+$main_color: $green;
+$second_color: $blue;
+
+$bg_white: #fff;
+$bg_black: $black;
+$bg_active: $green;
+$bg_gray: $gray;
+
+// Service variable
+$path: 'css/img/';
+$time: 0.2s;
+$obj: all;
+
+// Mixin
+@mixin trans {
+  transition: all 0.2s ease-in-out;
+}
+
+// Fonts
+@import "font_style.css";
+
+// Libs
+@import "bootstrap.min.css";
+@import "animate.css";
+@import "slick.css";
+@import "slick-theme.css";
+@import "magnific-popup.css";
+
+// index
+@import "basic";
+
+// article
+@import "article";
+
+// casino_page
+@import "casino_page";
+
+// testimonials_page
+@import "testimonials_page";
+
+// compare_page
+@import "compare_page";
+
+// game_page
+@import "game_page";
+
+// casino_filter
+@import "casino_filter";
+
+// new_top_casino
+@import "new_top_casino";
+
+// contacts
+@import "contacts";
+
+

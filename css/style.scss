@@ -160,6 +160,10 @@ h3,
         background-size: cover;
         border-radius: 25px;
         transition: background-position 0.6s linear;
+        &.all_netent {
+            background-image: url("img/portfolio/all_netent.jpg");
+            transition: background-position 2.6s linear;
+        }
         &.zigzag777 {
             background-image: url("img/portfolio/zigzag777.jpg");
             transition: background-position 2.6s linear;
