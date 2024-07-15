@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAW,CACT,OAAO,CAAE,YAAY,CACrB,OAAO,CAAE,IAAI,CACb,SAAS,CAAE,KAAK,CAChB,KAAK,CAAE,IAAI,CACX,UAAU,CAAE,KAAK,CACjB,MAAM,CAAE,IAAI",
+"sources": ["game_item.scss"],
+"names": [],
+"file": "game_item.css"
+}

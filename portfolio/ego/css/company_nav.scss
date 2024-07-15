@@ -1,0 +1,164 @@
+.game_company_box {
+  position: absolute;
+  top: 458px;
+  left: 30px;
+  margin: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1560px;
+  width: calc(100% - 160px);
+  z-index: 3;
+  .game_company_list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .slick-slide {
+      width: 100px;
+    }
+    .slick-prev, .slick-next {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #e8ebef;
+      transition: all 0.3s ease-in-out;
+      z-index: 1;
+      &:before {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        content: '';
+      }
+      &:hover {
+        background: var(--second_color, #0080ff);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+    .slick-prev {
+      left: -30px;
+      &:before {
+        left: 11.5px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 5px 5px 0;
+        border-color: transparent var(--font_color, #242527) transparent transparent;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover:before {
+        border-color: transparent var(--white, #fff) transparent transparent;
+      }
+    }
+    .slick-next {
+      right: -30px;
+      &:before {
+        right: 12.5px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 0 5px 5px;
+        border-color: transparent transparent transparent var(--font_color, #242527);
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover:before {
+        border-color: transparent transparent transparent var(--white, #fff);
+      }
+    }
+  }
+  .game_filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100px;
+    border-bottom: 3px solid transparent;
+    &:hover,
+    &:focus {
+      .icon {
+        opacity: .6;
+      }
+    }
+    &.active {
+     border-bottom: 3px solid var(--second_color, #0080ff);
+      .icon {
+        opacity: 1;
+      }
+    }
+  }
+  .icon {
+    max-width: 96px;
+    //max-height: 32px;
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+    //-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    //filter: grayscale(100%);
+  }
+}
+
+
+
+//***************//
+//  Responsive   //******************************************************************************
+//***************//
+@media screen and (max-width: 1599px) {
+  .game_company_box {
+    top: 335px;
+  }
+}
+// @media screen and (max-width: 1599px) ********************************************************
+
+
+@media screen and (max-width: 1350px) {
+  .game_company_box {
+    margin: 0 45px;
+    width: calc(100% - 130px);
+  }
+}
+// @media screen and (max-width: 1350px) ********************************************************
+
+
+@media screen and (max-width: 1199px) {
+  .game_company_box .game_company_list {
+    overflow-x: scroll;
+  }
+  .game_company_box .game_filter {
+    margin: 0 15px;
+  }
+}
+// @media screen and (max-width: 1199px) ********************************************************
+
+
+
+@media screen and (max-width: 1023px) {
+  .game_company_box {
+    top: 385px;
+    margin: 0 auto;
+    width: calc(100% - 60px);
+  }
+}
+// @media screen and (max-width: 1023px) ********************************************************
+
+
+@media screen and (max-width: 750px) {
+  .game_company_box {
+    top: 290px;
+  }
+}
+// @media screen and (max-width: 750px) ********************************************************
+
+
+@media screen and (max-width: 500px) {
+  .game_company_box {
+    top: 230px;
+  }
+}
+// @media screen and (max-width: 500px) ********************************************************
+
+
+@media screen and (max-width: 400px) {
+  .game_company_box {
+    left: 0;
+    width: 100%;
+  }
+}
+// @media screen and (max-width: 400px) ********************************************************

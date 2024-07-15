@@ -1,0 +1,404 @@
+h1 {
+    margin-top: 35px;
+    text-align: center;
+}
+.bonus_items_box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.bonus_item_wrap {
+    margin:0 2.08333333vw 60px;
+    max-width: 520px;
+    width: 100%;
+    //new
+    min-height: 445px;
+    height: auto;
+}
+.bonus_item {
+    margin:0 auto 60px;
+    max-width: 520px;
+    width: 100%;
+    .event_list_box {
+        top: 277px;
+    }
+    .event_item_info_box {
+        position: relative;
+        overflow: hidden;
+        //new
+        min-height: 165px;
+        h2 {
+            margin-bottom: 10px;
+        }
+    }
+    .btn {
+        margin-bottom: 30px;
+    }
+    &.active_popup {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: -120px;
+        padding: 0 0 0 20px;
+        max-width: 560px;
+        height: calc(100vh - 60px);
+        background: var(--white, #fff);
+        border-radius: 20px;
+        z-index: 6;
+        -webkit-box-shadow: 0 0 200px 40px rgba(0,0,0,0.7);
+        -moz-box-shadow: 0 0 200px 40px rgba(0,0,0,0.7);
+        box-shadow: 0 0 200px 40px rgba(0,0,0,0.7);
+        .event_item {
+            padding-top: 30px;
+        }
+        .bonus_item_inner_wrap {
+            height: calc(100vh - 80px);
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+            position: relative;
+            &::after {
+                position: fixed;
+                left: 0;
+                bottom: 18px;
+                content: '';
+                display: block;
+                width: calc(100% - 20px);
+                height: 70px;
+                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+80&0+0,1+80 */
+                background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+            }
+            &::before {
+                position: fixed;
+                left: 0;
+                top: 0;
+                content: '';
+                display: block;
+                width: calc(100% - 20px);
+                height: 30px;
+                border-radius: 20px 0 0 0;
+                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+30,ffffff+100&1+30,0+100 */
+                background: -moz-linear-gradient(top, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, rgba(255,255,255,1) 30%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom, rgba(255,255,255,1) 30%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+                z-index: 5;
+            }
+        }
+        .bonus_popup_info {
+            display: block;
+        }
+        .event_list_box {
+            top: 307px;
+        }
+        .event_item_info_box {
+            width: 100%;
+            height: auto;
+            box-shadow: none;
+            overflow: visible;
+        }
+        .bonus_popup_btn_open {
+            display: none;
+        }
+        .bonus_popup_btn_close {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            display: block;
+            z-index: 7;
+        }
+        .btn {
+            margin-bottom: 0;
+            position: fixed;
+            bottom: 21px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 8;
+        }
+    }
+}
+.bonus_title_info,
+.bonus_money_value {
+    display: block;
+    margin-bottom: 16px;
+}
+.bonus_money_value {
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--second_color, #0080ff);
+}
+.bonus_popup_btn_open {
+    position: absolute;
+    bottom: 27px;
+    right: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--font_color, #242527);
+    transition: color 0.3s ease-in-out;
+    span {
+        padding-bottom: 2px;
+    }
+    svg {
+        width: 10px;
+        height: 10px;
+        --color1: #0080ff;
+    }
+    &:hover,
+    &:focus {
+        color: var(--second_color, #0080ff);
+        transition: color 0.3s ease-in-out;
+    }
+    &:active {
+        color: var(--active_second_color);
+        svg {
+            --color1: #00FFDE;
+        }
+    }
+}
+.bonus_popup_info {
+    display: none;
+}
+.bonus_item_list {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    max-width: 480px;
+    width: 100%;
+    text-align: left;
+    counter-reset: item_dot;
+    li {
+        margin-bottom: 20px;
+        &::before {
+            display: inline-block;
+            font-weight: 700;
+            counter-increment: item_dot;
+            content: counter(item_dot)".";
+        }
+    }
+}
+.bonus_item_table {
+    margin: 0 auto;
+    max-width: 380px;
+}
+.bonus_main_table {
+    margin: 15px auto 30px;
+    max-width: 480px;
+    width: 95%;
+    text-align: left;
+    border-collapse: collapse;
+    border: 1px solid var(--gray, #e8ebef);
+    tr {
+        border-bottom: 1px solid var(--gray, #e8ebef);
+        &:nth-child(2n) {
+            background: #f3f3f3;
+        }
+    }
+    td {
+        padding: 5px;
+        width: 50%;
+    }
+}
+.column_1 {
+    width: 130px;
+}
+.bonus_popup_btn_close {
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+.tab-content {
+    .bonus_items_box {
+        margin: 0 -262px;
+    }
+    .bonus_item_wrap {
+        min-height: unset;
+    }
+    .bonus_item {
+        position: relative;
+        .event_item_info_box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .btn {
+            margin-bottom: 20px;
+        }
+        .icon {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            display: block;
+            z-index: 7;
+        }
+    }
+    .event_list_box {
+        position: unset;
+        margin: 0 auto;
+    }
+}
+
+
+
+//***************//
+//  Responsive   //******************************************************************************
+//***************//
+@media screen and (max-width: 1484px) {
+    .bonus_item_wrap {
+        margin: 0 10px 60px;
+        max-width: 440px;
+    }
+    .bonus_item .event_list_box {
+        top: 236px;
+    }
+}
+// @media screen and (max-width: 1484px) ***********************************************************
+
+
+@media screen and (max-width: 1319px) {
+    .bonus_items_box {
+        &.active_popup {
+            .event_list_box {
+                top: 307px;
+            }
+        }
+    }
+}
+// @media screen and (max-width: 1319px) ***********************************************************
+
+
+@media screen and (max-width: 1199px) {
+    .bonus_item_wrap {
+        max-width: 520px;
+    }
+    .bonus_item .event_list_box {
+        top: 277px;
+    }
+    .tab-content .bonus_items_box {
+        margin: 0;
+    }
+}
+// @media screen and (max-width: 1199px) ***********************************************************
+
+
+@media screen and (max-width: 1023px) {
+    .bonus_item_wrap {
+        max-width: 440px;
+    }
+    .bonus_item .event_list_box {
+        top: 236px;
+    }
+    .bonus_item.active_popup {
+        margin-left: 0;
+    }
+}
+// @media screen and (max-width: 1023px) ***********************************************************
+
+
+@media screen and (max-width: 919px) {
+    .bonus_item_wrap {
+        max-width: 520px;
+    }
+    .bonus_item .event_list_box {
+        top: 277px;
+    }
+}
+// @media screen and (max-width: 919px) ***********************************************************
+
+
+@media screen and (max-width: 600px) {
+    .bonus_item.active_popup {
+        top: 0;
+        padding-top: 30px;
+        padding-left: 0;
+        max-width: 600px;
+        height: 100vh;
+        border-radius: 0;
+    }
+    .bonus_item.active_popup .bonus_popup_btn_close {
+        top: 10px;
+        right: 10px;
+    }
+}
+// @media screen and (max-width: 600px) ***********************************************************
+
+
+@media screen and (max-width: 540px) {
+    .bonus_item_inner_wrap .event_item {
+        margin: 0 auto;
+        .event_link,
+        .event_link img {
+            max-width: 340px;
+        }
+    }
+    .bonus_item .event_list_box {
+        top: 182px;
+    }
+    .bonus_item .event_item_info_box {
+        min-height: 180px;
+    }
+    .bonus_popup_btn_open {
+        bottom: 0;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    .bonus_item_wrap {
+        min-height: 390px;
+    }
+    .bonus_item.active_popup .event_list_box {
+        top: 211px;
+    }
+    .bonus_item .event_item_info_box {
+        min-height: 170px;
+        h2 {
+            font-size: 18px;
+        }
+        .bonus_title_info {
+            font-size: 12px;
+        }
+        .bonus_money_value {
+            font-size: 30px;
+        }
+    }
+    .bonus_item .btn {
+        margin-bottom: 50px;
+    }
+}
+// @media screen and (max-width: 540px) ***********************************************************
+
+
+@media screen and (max-width: 359px) {
+    .bonus_item_wrap {
+        margin: 0 auto 30px;
+        max-width: 320px;
+    }
+    .bonus_item .event_list_box {
+        top: 170px;
+    }
+    .bonus_item_table {
+        max-width: 320px;
+    }
+    .column_1 {
+        width: 90px;
+    }
+    .bonus_item.active_popup .event_list_box {
+        top: 200px;
+    }
+    .bonus_item.active_popup .event_item_info_box {
+        max-width: 300px;
+    }
+
+}
+// @media screen and (max-width: 359px) ***********************************************************
+
+
+

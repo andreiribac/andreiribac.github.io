@@ -1,0 +1,85 @@
+.payments_box {
+  margin-bottom: 30px;
+}
+.payments_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  .pay_sis-iconPay_VisaElectron,
+  .pay_sis-iconPay_MasterCard,
+  .pay_sis-iconPay_Maestro,
+  .pay_sis-iconPay_Sofort,
+  .pay_sis-iconPay_Skrill,
+  .pay_sis-iconPay_Poli,
+  .pay_sis-iconPay_Neteller,
+  .pay_sis-iconPay_Qiwi,
+  .pay_sis-iconPay_WebMoney,
+  .pay_sis-iconPay_YandexMoney,
+  .pay_sis-iconPay_EcoPayz {
+    --color14: #a7adb2;
+    --color7: #d0d5db;
+
+    --color1: #a7adb2;
+    --color4: #eee;
+
+    --color3: #a7adb2;
+
+    --color22: #a7adb2;
+
+    --color8: #bdc2c8;
+  }
+}
+.payments_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100px;
+  max-height: 30px;
+  &:hover,
+  &:focus,
+  &.active {
+    .pay_sis-iconPay_VisaElectron {
+      --color14: #06c;
+      --color7: #f90;
+    }
+    .pay_sis-iconPay_MasterCard {
+      --color1: #f33;
+      --color7: #f90;
+      --color4: #eee;
+    }
+    .pay_sis-iconPay_Maestro {
+      --color3: #09f;
+      --color1: #f33;
+      --color4: #eee;
+    }
+    .pay_sis-iconPay_Sofort {
+      --color7: #f90;
+    }
+    .pay_sis-iconPay_Skrill {
+      --color22: #93c;
+    }
+    .pay_sis-iconPay_Poli {
+      --color14: #06c;
+    }
+    .pay_sis-iconPay_Neteller {
+      --color8: #0c0;
+    }
+    .pay_sis-iconPay_Qiwi {
+      --color7: #f90;
+    }
+    .pay_sis-iconPay_WebMoney {
+      --color14: #06c;
+    }
+    .pay_sis-iconPay_YandexMoney {
+      --color1: #f33;
+    }
+    .pay_sis-iconPay_EcoPayz {
+      --color8: #0c0;
+    }
+  }
+}
+.icon {
+  max-width: 100px;
+  max-height: 30px;
+}

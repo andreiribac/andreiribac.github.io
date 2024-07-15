@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAOA,IAAK,CACH,OAAO,CAAE,KAAK,CACd,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,SAAS,CAAE,KAAK,CAChB,KAAK,CAAE,IAAI,CACX,aAAa,CAAE,GAAG,CAClB,KAAK,CAbM,OAAO,CAclB,cAAc,CAAE,SAAS,CACzB,UAAU,CAhBK,IAAO",
+"sources": ["elements.scss"],
+"names": [],
+"file": "elements.css"
+}

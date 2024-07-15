@@ -1,0 +1,111 @@
+
+.basic_box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100%;
+  min-height: 100vh;
+  & * {
+    box-sizing: border-box;
+  }
+  &.full_screen {
+    max-width: 100vw;
+    .up_btn,
+    .sidebar,
+    .chat_btn,
+    .position_box,
+    .description_game_box {
+      display: none;
+    }
+    .site_body {
+      padding: 0;
+      width: 100vw;
+      main {
+        padding: 0;
+      }
+    }
+    .play_game_box {
+      margin: 0;
+      padding-bottom: 0;
+      width: 100%;
+    }
+    .window_wrapper {
+      max-width: 100vw;
+    }
+    .play_game_box .play_game_nav_box {
+      padding-top: 25px;
+    }
+    .play_game_box .play_game_item_box {
+      max-width: 100vw;
+      max-height: calc(100vh - 100px);
+      height: calc(100vh - 100px);
+    }
+  }
+}
+
+
+//***************//
+//  Responsive   //*****************************************************
+//***************//
+
+
+@media screen and (max-width: 1620px) {
+  .hot_game_box {
+    max-width: 520px;
+    .display_switch {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  .site_body main {
+    min-height: 110vh;
+  }
+  .basic_box.full_screen {
+    .site_body main {
+      min-height: 100vh;
+    }
+  }
+}
+// @media screen and (max-width: 1620px) ********************************
+
+@media screen and (max-height: 775px) {
+  .site_body main {
+    min-height: 110vh;
+  }
+  .basic_box.full_screen {
+    .site_body main {
+      min-height: 100vh;
+    }
+  }
+  .nav_sidebar {
+    padding: 0 0 0 20px;
+  }
+  .main_box_fixed {
+    position: unset;
+    margin: 0 auto;
+    border-bottom: none;
+  }
+}
+// @media screen and (max-height: 775px) ********************************
+
+
+@media screen and (max-width: 1430px) {
+  .basic_box.full_screen {
+    .play_game_box .game_nav_deposit_box {
+      margin-bottom: 20px;
+    }
+    .play_game_box .play_game_nav_box {
+      margin-bottom: 5px;
+    }
+    .play_game_options {
+      margin-left: 20px;
+    }
+  }
+}
+// @media screen and (max-width: 1430px) ********************************
+
+
+

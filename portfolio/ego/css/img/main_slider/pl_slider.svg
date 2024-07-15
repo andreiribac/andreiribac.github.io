@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="pl_x5F_slider" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 460 500" style="enable-background:new 0 0 460 500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);}
+	.st2{fill:#FFFFFF;}
+</style>
+<g id="_x33_">
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="232.5" y1="500" x2="232.5" y2="0" gradientTransform="matrix(1 0 0 -1 0 500)">
+		<stop  offset="0" style="stop-color:#B5C0CB"/>
+		<stop  offset="1" style="stop-color:#FFFFFF"/>
+	</linearGradient>
+	<path class="st0" d="M460,500c-59,0-455,0-455,0V0h10C132,247,460,63,460,500z"/>
+</g>
+<g id="_x32_">
+	
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="4" y1="250" x2="460" y2="250" gradientTransform="matrix(1 0 0 -1 0 500)">
+		<stop  offset="0" style="stop-color:#E8EBEF"/>
+		<stop  offset="1" style="stop-color:#FFFFFF"/>
+	</linearGradient>
+	<path class="st1" d="M460,500c-59,0-456,0-456,0V0h7C86,260,460,82,460,500z"/>
+</g>
+<g id="_x31_">
+	<path class="st2" d="M460,500c-59,0-460,0-460,0V0h6C56,292,460,127,460,500z"/>
+</g>
+</svg>

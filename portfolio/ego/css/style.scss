@@ -1,0 +1,142 @@
+// Variables
+:root {
+    --white: #ffffff;
+    --gray: #e8ebef;
+    --alert: #fc6769;
+    --active: #ffaf00;
+    --main_color: #ffcc00;
+    --main_color_06: rgba(255, 204, 0, 0.6);
+    --main_color_04: rgba(255, 204, 0, 0.4);
+    --main_color_03: rgba(255, 204, 0, 0.3);
+    --main_color_00: rgba(255, 204, 0, 0);
+    --active_main_color: #ffff00;
+    --second_color: #0080ff;
+    --second_color_06: rgba(0, 128, 255, 0.6);
+    --second_color_04: rgba(0, 128, 255, 0.4);
+    --second_color_03: rgba(0, 128, 255, 0.3);
+    --second_color_00: rgba(0, 128, 255, 0);
+    --active_second_color: #00ffde;
+    --three_color: #01b6b4;
+    --font_color: #242527;
+    --menu_color: #363c43;
+    --menu_color_02: rgba(54, 60, 67, 0.2);
+    --menu_sec_color: #e8ebef;
+}
+
+@media (prefers-color-scheme: no-preference) {
+    :root {
+        --white: #ffffff;
+        --gray: #e8ebef;
+        --alert: #fc6769;
+        --active: #ffaf00;
+        --main_color: #ffcc00;
+        --main_color_06: rgba(255, 204, 0, 0.6);
+        --main_color_04: rgba(255, 204, 0, 0.4);
+        --main_color_03: rgba(255, 204, 0, 0.3);
+        --main_color_00: rgba(255, 204, 0, 0);
+        --active_main_color: #ffff00;
+        --second_color: #0080ff;
+        --second_color_06: rgba(0, 128, 255, 0.6);
+        --second_color_04: rgba(0, 128, 255, 0.4);
+        --second_color_03: rgba(0, 128, 255, 0.3);
+        --second_color_00: rgba(0, 128, 255, 0);
+        --active_second_color: #00ffde;
+        --three_color: #01b6b4;
+        --font_color: #242527;
+        --menu_color: #363c43;
+        --menu_color_02: rgba(54, 60, 67, 0.2);
+        --menu_sec_color: #e8ebef;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --white: #ffffff;
+        --gray: #e8ebef;
+        --alert: #fc6769;
+        --active: #ffaf00;
+        --main_color: #ffcc00;
+        --main_color_06: rgba(255, 204, 0, 0.6);
+        --main_color_04: rgba(255, 204, 0, 0.4);
+        --main_color_03: rgba(255, 204, 0, 0.3);
+        --main_color_00: rgba(255, 204, 0, 0);
+        --active_main_color: #ffff00;
+        --second_color: #0080ff;
+        --second_color_06: rgba(0, 128, 255, 0.6);
+        --second_color_04: rgba(0, 128, 255, 0.4);
+        --second_color_03: rgba(0, 128, 255, 0.3);
+        --second_color_00: rgba(0, 128, 255, 0);
+        --active_second_color: #00ffde;
+        --three_color: #01b6b4;
+        --font_color: #242527;
+        --menu_color: #363c43;
+        --menu_color_02: rgba(54, 60, 67, 0.2);
+        --menu_sec_color: #e8ebef;
+    }
+}
+$white: #fff;
+$gray: #e8ebef;
+$alert: #fc6769;
+$acive: #ffaf00;
+$main_color: #ffcc00;
+$active_main_color: #ffff00;
+$second_color: #0080ff;
+$acive_second_color: #00ffde;
+$three_color: #01b6b4;
+$font_color: #242527;
+$menu_color: #363c43;
+$menu_sec_color: #e8ebef;
+
+// Libs
+@import "reset.css";
+@import "slick-theme.css";
+@import "slick.css";
+@import "animate.css";
+@import "jquery-ui.css";
+
+// Components
+@import "animation";
+@import "elements";
+@import "event_item";
+@import "lang_box";
+@import "user_box";
+@import "main_nav";
+@import "win_now";
+@import "social_box";
+
+// Home Page
+@import "main_slider";
+@import "game_nav_box";
+@import "company_nav";
+@import "game_item";
+@import "tournament_slider";
+
+// Account Page
+@import "account_page";
+
+// Registration Page
+@import "registration_page";
+
+// Tournament Page
+@import "tournament_page";
+
+// Bonus Page
+@import "bonus_page";
+
+// Rules Page
+@import "rules_style";
+
+// Play Game Page
+@import "play_game_page";
+
+// Play Game Page
+@import "page_403";
+
+// Footer section
+@import "footer_nav";
+@import "payments_box";
+@import "rights_box";
+
+// Last Style CSS
+@import "basic";
+
+

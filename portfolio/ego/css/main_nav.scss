@@ -1,0 +1,224 @@
+.main_nav {
+  max-width: 200px;
+  width: 100%;
+  a {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--font_color, #242527);
+    text-transform: capitalize;
+    //&:focus,
+    &:hover {
+      i {
+        transform: translateX(10px);
+        transition: transform 0.3s ease-in-out;
+      }
+      span {
+        color: var(--second_color, #0080ff);
+        transition: color 0.3s ease-in-out;
+      }
+    }
+  }
+  i {
+    position: relative;
+    display: block;
+    margin: 0 20px;
+    width: 30px;
+    //width: 100%;
+    height: 30px;
+    //height: 100%;
+    background-size: 100%;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      animation: none;
+      z-index: -1;
+    }
+  }
+  .img_sport {
+    background: url("../css/img/main_nav/ico30_Sport.svg") center center no-repeat;
+    background-size: 100%;
+  }
+  .img_virtual_sport {
+    background: url("../css/img/main_nav/ico30_VirtualSport.svg") center center no-repeat;
+    background-size: 100%;
+  }
+  .img_live_dealers {
+    background: url("../css/img/main_nav/ico30_LiveDealers.svg") center center no-repeat;
+    background-size: 100%;
+  }
+  .img_slots {
+    background: url("../css/img/main_nav/ico30_SlotsGames.svg") center center no-repeat;
+    background-size: 100%;
+  }
+  .img_new_slots {
+    background: url("../css/img/main_nav/ico30_NewGames.svg") center center no-repeat;
+    background-size: 100%;
+  }
+  .img_hot_slots {
+    background: url("../css/img/main_nav/ico30_PopularGames.svg") center center no-repeat;
+    background-size: 100%;
+  }
+  .img_table {
+    background: url("../css/img/main_nav/ico30_TableGames.svg") center center no-repeat;
+    background-size: 100%;
+  }
+  .img_other {
+    background: url("../css/img/main_nav/ico30_OtherGames.svg") center center no-repeat;
+    background-size: 100%;
+  }
+  .img_themed {
+    background: url("../css/img/main_nav/ico30_ThemedGames.svg") center center no-repeat;
+    background-size: 100%;
+  }
+  .img_settings {
+    background: url("../css/img/main_nav/ico30_Account.svg") center center no-repeat;
+    background-size: 100%;
+  }
+  .img_casino {
+    background: url("../css/img/main_nav/ico30_Casino.svg") center center no-repeat;
+    background-size: 100%;
+  }
+  .img_tournament {
+    background: url("../css/img/main_nav/ico30_Tournament.svg") center center no-repeat;
+    background-size: 100%;
+  }
+  .img_bonus {
+    background: url("../css/img/main_nav/ico30_Bonus.svg") center center no-repeat;
+    background-size: 100%;
+  }
+  .img_favorite {
+    background: url("../css/img/main_nav/ico30_Favorites.svg") center center no-repeat;
+    background-size: 100%;
+  }
+
+}
+.decktop_hidden {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+.sub_menu_box {
+  position: relative;
+  &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--gray, #e8ebef);
+  }
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-180deg);
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent #363c43 transparent;
+  }
+
+  &.is-active {
+    color: var(--gray, #e8ebef);
+    background: #0066cc;
+    &:after {
+      transform: translateY(-50%) rotate(0deg);
+    }
+    &:focus span,
+    &:hover span,
+    span{
+      color: var(--gray, #e8ebef);
+    }
+  }
+}
+.them_list_mobile {
+  display: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  max-height: 0;
+  height: 0;
+  background: var(--second_color, #0080ff);
+  //transform: scale(1, 1);
+  //transform-origin: top;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  li {
+    flex: 50%;
+  }
+  a.them_link {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+    border-radius: 20px;
+    color: #eeeeee;
+    &:focus span,
+    &:hover,
+    span {
+      color: #eeeeee;
+      z-index: 2;
+    }
+    &.is-active {
+      &:focus span,
+      &:hover,
+      span {
+        color: #eeeeee;
+        z-index: 2;
+      }
+    }
+  }
+  &.is-active {
+    display: flex;
+    padding: 15px 10px;
+    max-height: unset;
+    height: auto;
+    //transform: scale(1, 1);
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+//***************//
+//  Responsive   //************************************************************************************
+//***************//
+@media screen and (max-width: 1025px) {
+  //.main_nav a:focus i,
+  .main_nav a:hover i {
+    transform: translateX(0);
+  }
+  .main_nav a:hover span {
+    color: var(--font_color, #242527);
+  }
+}
+// @media screen and (max-width: 1025px) *********************************************************
+
+
+@media screen and (max-width: 750px) {
+  .decktop_hidden {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+// @media screen and (max-width: 750px) *********************************************************
+

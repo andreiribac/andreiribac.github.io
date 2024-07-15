@@ -1,0 +1,48 @@
+.social_box {
+  position: absolute;
+  bottom: 0;
+  right: 320px;
+  z-index: 4;
+  transition: bottom 0.3s ease-in-out;
+  ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .social_icon {
+    //position: relative;
+    display: block;
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    transition: opacity 0.3s ease-in-out;
+    .icon {
+      width: 40px;
+      height: 40px;
+      opacity: 0.5;
+      transition: all 0.3s ease-in-out;
+    }
+    &:focus,
+    &:hover {
+      .icon {
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}
+.social_box_fixed {
+  display: none;
+}
+
+
+//***************//
+//  Responsive   //************************************************************************************
+//***************//
+@media screen and (max-width: 1600px) {
+  .social_box {
+    right: 230px;
+  }
+}
+// @media screen and (max-width: 1600px) **************************************************************
+

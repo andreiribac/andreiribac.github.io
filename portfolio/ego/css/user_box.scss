@@ -1,0 +1,266 @@
+.user_box {
+  nav {
+    display: none;
+  }
+  .active{
+    display: block;
+  }
+  .enter_nav {
+    margin-top: 10px;
+  }
+  .enter_nav .btn-big {
+    margin-bottom: 20px;
+  }
+  .user_data {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 200px;
+    width: 100%;
+    height: 70px;
+    background: var(--white, #fff);
+    border-radius: 35px;
+    box-shadow: 0 5px 0 0 var(--gray, #e8ebef);
+  }
+}
+.user_img {
+  display: block;
+  margin-right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow:
+          0 0 0 4px #b5c0cb,   // top
+          0 0 0 8px var(--gray, #e8ebef);     // bottom
+  transition: background-size 0.3s linear;
+  &:focus,
+  &:hover {
+    animation: pulse 1s infinite;
+    //back-size 40s infinite;
+  }
+  &:active {
+    animation: pulse_click 1s;
+    animation-iteration-count: 1;
+  }
+}
+.user_nav li:first-child{
+  position: relative;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+.user_info {
+  &:hover {
+    & ~ .progress_bar_box.active .progress_bar .progress_bar__info {
+      visibility: visible;
+      transform: translateY(0);
+      opacity: 1;
+      transition: 0.2s;
+    }
+  }
+  a {
+    position: relative;
+    display: block;
+    color: var(--font_color, #242527);
+    font-weight: 700;
+    &:hover {
+      opacity: 0.7;
+      transition: opacity 0.3s ease-in-out;
+    }
+    &.user_login {
+      color: var(--second_color, #0080ff);
+      font-size: 12px;
+      text-decoration: underline;
+    }
+    & .sup  {
+      display: inline-block;
+      font-size: 8px;
+    }
+    &.user_balance {
+      font-size: 14px;
+      &::before {
+        display: inline-block;
+        margin-right: 3px;
+        text-transform: uppercase;
+      }
+    }
+    &.user_bonus {
+      color: var(--gray, #e8ebef);
+      font-size: 12px;
+      &::before {
+        display: inline-block;
+        content: 'bonus:';
+        margin-right: 3px;
+        text-transform: capitalize;
+      }
+      &.active {
+        color: var(--second_color, #0080ff);
+      }
+    }
+  }
+}
+.rub::before {
+  content: 'Rub';
+}
+.eu::before {
+  content: 'eur';
+}
+.alert {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -8px;
+  margin-top: -8px;
+  width: 16px;
+  height: 16px;
+  color: var(--white, #fff);
+  background: var(--alert, #fc6769);
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 50%;
+}
+.progress_bar_box {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 140px;
+  height: 5px;
+  .progress_bar {
+    position: relative;
+    display: block;
+    height: 5px;
+    width: 80%;
+    background: url("../css/img/user_img/ico_Progressbar.svg") center left repeat-x;
+    background-size: contain;
+    &__info {
+      position: absolute;
+      top: 125%;
+      left: 0;
+      display: block;
+      padding: 5px 10px;
+      width: 140px;
+      color: #fff;
+      font-size: 12px;
+      background: var(--second_color, #0080ff);
+      border-radius: 6px;
+      visibility: hidden;
+      transform: translateY(9px);
+      opacity: 0;
+      transition: 0.2s;
+      td {
+        text-transform: capitalize;
+      }
+    }
+  }
+  &.active {
+    .progress_bar {
+      &::before,
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+      }
+      &::before {
+        margin-top: -7px;
+        margin-right: -3px;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 3px 3px 0 3px;
+        border-color: #242527 transparent transparent transparent;
+      }
+      &::after {
+        content: attr(data-width);
+        font-size: 10px;
+        font-weight: 700;
+        margin-top: -13px;
+        margin-right: -25px;
+      }
+      &:hover {
+        .progress_bar__info {
+          visibility: visible;
+          transform: translateY(0);
+          opacity: 1;
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+}
+
+.enter_nav.enter_nav_mobile {
+  display: none;
+  visibility: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding-top: 15px;
+  width: 100%;
+  background: -moz-linear-gradient(88deg, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(80%, rgba(255,255,255,1))); /* safari4+,chrome */
+  background: -webkit-linear-gradient(88deg, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(88deg, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(88deg, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 100%); /* ie10+ */
+  background: linear-gradient(2deg, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#FFFFFF',GradientType=0 ); /* ie6-9 */
+  z-index: 1;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    li {
+      max-width: 200px;
+      width: 100%;
+    }
+  }
+  .btn.btn-second,
+  .btn.btn-big {
+    max-width: 170px;
+    height: 60px;
+    border-radius: 30px;
+  }
+}
+
+
+
+//***************//
+//  Responsive   //*****************************************************
+//***************//
+@media screen and (max-width: 1023px) {
+  .enter_nav.enter_nav_mobile.active {
+    display: block;
+    visibility: visible;
+    z-index: 3;
+
+  }
+}
+// @media screen and (max-width: 1023px) ********************************
+
+
+@media screen and (max-width: 520px) {
+  .enter_nav.enter_nav_mobile .btn.btn-second,
+  .enter_nav.enter_nav_mobile .btn.btn-big {
+    height: 40px;
+  }
+}
+// @media screen and (max-width: 520px) ********************************
+
+
+@media screen and (max-width: 359px) {
+  .enter_nav.enter_nav_mobile .btn.btn-second,
+  .enter_nav.enter_nav_mobile .btn.btn-big {
+    max-width: 140px;
+    height: 30px;
+  }
+}
+// @media screen and (max-width: 359px) ********************************

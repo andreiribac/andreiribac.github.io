@@ -1,0 +1,481 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--font_color, #242527);
+  background-color: var(--white, #fff);
+  overflow: hidden;
+}
+.basic_box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100%;
+  min-height: 100vh;
+  & * {
+    box-sizing: border-box;
+  }
+}
+.display_switch {
+  display: none;
+  visibility: hidden;
+}
+//************//
+//  Sidebar   //
+//************//
+.sidebar {
+  width: 240px;
+}
+.nav_sidebar {
+  padding: 500px 20px 0;
+  width: 240px;
+  min-height: 100vh;
+  height: 100%;
+  z-index: 1;
+}
+.sidebar_search {
+  display: none;
+  visibility: hidden;
+}
+.close_button_box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  display: none;
+  width: 100%;
+  height: 50px;
+  background: var(--white, #fff);
+  text-align: right;
+  z-index: 7;
+  visibility: hidden;
+}
+.icon.menu_btn_close {
+  display: inline-block;
+  max-width: 30px;
+  z-index: 7;
+  cursor: pointer;
+}
+.main_box_fixed {
+  position: fixed;
+  top: 0;
+  left: calc(((100% - 1920px)/2) + 20px);
+  padding-bottom: 40px;
+  width: 200px;
+  background: var(--white, #fff);
+  z-index: 2;
+  //border-bottom: 2px solid var(--gray, #e8ebef);
+}
+.user_box {
+  margin-bottom: 30px;
+}
+
+//.win_now {
+//  margin-bottom: 20px;
+//}
+//**************//
+//  Site_body   //
+//**************//
+.site_body {
+  position: relative;
+  padding: 0 20px;
+  width: calc(100% - 240px);
+  height: auto;
+  main {
+    padding: 0 20px;
+    min-height: 100vh;
+    //height: 100%;
+  }
+
+}
+.info_content_box {
+  display: flex;
+  justify-content: center;
+  font-size: 0;
+}
+  .hot_game_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    line-height: 1;
+  }
+.hot_game_box,
+.new_game_box {
+  .game_item {
+    width: 50%;
+  }
+}
+.basic_content_box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  font-size: 0;
+  .game_item {
+    width: 16.666666%;
+  }
+}
+.load_more {
+  margin-bottom: 50px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  &:hover,
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+//***************//
+//  Responsive   //*****************************************************
+//***************//
+@media screen and (max-width: 1919px) {
+  .main_box_fixed {
+    left: 20px;
+  }
+}
+// @media screen and (max-width: 1919px) ********************************
+
+
+@media screen and (max-width: 1880px) {
+  .info_content_box {
+    flex-wrap: wrap;
+  }
+  .hot_game_box {
+    flex-basis: 780px;
+    .display_switch {
+      display: inline-block;
+      visibility: visible;
+    }
+  }
+  .tournament_slider_box {
+    flex-basis: 520px;
+  }
+  .new_game_box {
+    text-align: center;
+    flex-basis: 100%;
+    .display_switch {
+      display: inline-block;
+      visibility: visible;
+    }
+  }
+  .basic_content_box {
+    .game_item {
+      width: 100%;
+    }
+  }
+}
+// @media screen and (max-width: 1880px) ********************************
+
+
+@media screen and (max-width: 1620px) {
+  .hot_game_box {
+    flex-basis: 520px;
+    .display_switch {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  .new_game_box {
+    text-align: center;
+    flex-basis: 100%;
+    .display_switch {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  
+}
+// @media screen and (max-width: 1620px) ********************************
+
+
+@media screen and (max-width: 1366px) {
+  .site_body main {
+    padding: 0;
+  }
+  //.hot_game_box {
+  //  justify-content: center;
+  //  flex-basis: 100%;
+  //}
+  //.tournament_slider_box {
+  //  order: -1;
+  //}
+  //.hot_game_box,
+  //.new_game_box {
+  //  .game_item:nth-child(4) {
+  //    display: none;
+  //    visibility: hidden;
+  //  }
+  //}
+}
+// @media screen and (max-width: 1360px) ********************************
+
+
+@media screen and (max-width: 1335px) {
+  .hot_game_box {
+    justify-content: center;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .tournament_slider_box {
+    flex-basis: 50%;
+    max-width: 520px;
+  }
+  .hot_game_box .game_item,
+  .new_game_box .game_item {
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+}
+// @media screen and (max-width: 1335px) ***********************************************************
+
+
+@media screen and (max-width: 1319px) {
+  .hot_game_box {
+    flex-basis: 50%;
+    max-width: 480px;
+  }
+  .tournament_slider_box {
+    flex-basis: 50%;
+    max-width: 480px;
+  }
+  .hot_game_box .game_item,
+  .new_game_box .game_item {
+    &:nth-child(3) {
+      display: inline-block;
+    }
+  }
+}
+// @media screen and (max-width: 1319px) ***********************************************************
+
+
+@media screen and (max-width: 1257px) {
+  .hot_game_box {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .tournament_slider_box {
+    order: 2;
+    max-width: 520px;
+  }
+  .hot_game_box .game_item,
+  .new_game_box .game_item {
+    &:nth-child(4) {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
+// @media screen and (max-width: 1257px) ***********************************************************
+
+
+@media screen and (max-width: 1240px) {
+  .hot_game_box {
+    justify-content: center;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .tournament_slider_box {
+    order: 2;
+    max-width: 520px;
+  }
+}
+// @media screen and (max-width: 1240px) ***********************************************************
+
+
+@media screen and (max-width: 1160px) {
+  .hot_game_box .game_item,
+  .new_game_box .game_item {
+    &:nth-child(4) {
+      display: inline-block;
+      visibility: visible;
+    }
+  }
+}
+// @media screen and (max-width: 1160px) ***********************************************************
+
+
+@media screen and (max-width: 1097px) {
+  .hot_game_box .game_item,
+  .new_game_box .game_item {
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+}
+// @media screen and (max-width: 1097px) ***********************************************************
+
+
+@media screen and (max-width: 1080px) {
+  .nav_sidebar {
+    padding: 500px 0 0 20px;
+    width: 220px;
+  }
+  .site_body {
+    padding: 0;
+    width: calc(100% - 220px);
+  }
+}
+// @media screen and (max-width: 1080px) ***********************************************************
+
+
+@media screen and (max-width: 1023px) {
+  .basic_box {
+    flex-wrap: wrap;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: var(--menu_color);
+    z-index: 4;
+  }
+  .close_button_box {
+    display: block;
+    visibility: visible;
+  }
+  .sidebar_search {
+    display: block;
+    visibility: visible;
+    max-height: 38px;
+  }
+  .site_body_search {
+    display: none;
+    visibility: hidden;
+  }
+  .site_body {
+    padding-top: 50px;
+    width: 100%;
+  }
+  .nav_sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -280px;
+    padding: 60px 10px 10px;
+    width: 280px;
+    min-height: 100vh;
+    background: white;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  .nav_sidebar.active {
+    margin-left: 0;
+    -webkit-box-shadow: 15px 15px 25px 15px rgba(0,0,0,0.75);
+    -moz-box-shadow: 15px 15px 25px 15px rgba(0,0,0,0.75);
+    box-shadow: 15px 15px 25px 15px rgba(0,0,0,0.75);
+    transition: all 0.3s ease-in-out;
+  }
+  .main_box_fixed {
+    position: unset;
+    margin: 0 auto;
+    border-bottom: none;
+  }
+  .social_box {
+    position: unset;
+  }
+  .chat_btn {
+    position: unset;
+    margin: 0 auto 30px;
+    max-width: 160px;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    background: linear-gradient(to right, $second_color, $second_color, $acive_second_color, $second_color);
+    background-size: 400%;
+    box-shadow:
+            0 0 0 4px var(--second_color_04),   // top
+            0 0 0 8px var(--second_color_03);   // bottom
+    &:focus,
+    &:hover {
+      animation: pulse-second 1s infinite,
+      back-pos 20s infinite;
+    }
+    &:active {
+      background: #00ffde;
+      animation: pulse_click-second 1s;
+      animation-iteration-count: 1;
+    }
+  }
+}
+// @media screen and (max-width: 1023px) ***********************************************************
+
+
+@media screen and (max-width: 750px) {
+  .nav_sidebar {
+    margin-left: -320px;
+    padding: 60px 0 10px;
+    width: 320px;
+  }
+  .main_box_fixed {
+    width: 320px;
+  }
+  .main_nav {
+    max-width: 320px;
+  }
+  .main_nav i {
+    margin-left: 30px;
+  }
+}
+// @media screen and (max-width: 750px) ********************************************************
+
+
+@media screen and (max-width: 720px) {
+  .hot_game_box,
+  .new_game_box {
+    .game_item:nth-child(3) {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
+// @media screen and (max-width: 720px) ********************************************************
+
+
+@media screen and (max-width: 559px) {
+  .hot_game_box,
+  .new_game_box {
+    .game_item:nth-child(4) {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
+// @media screen and (max-width: 559px) ********************************************************
+
+
+@media screen and (max-width: 540px) {
+  .hot_game_box,
+  .new_game_box {
+    .game_item:nth-child(3) {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  .tournament_slider_box {
+    max-width: 360px;
+  }
+}
+// @media screen and (max-width: 540px) ********************************************************
+
+
+@media screen and (max-width: 360px) {
+  .basic_content_box .game_item {
+    width: 50%;
+  }
+}
+// @media screen and (max-width: 360px) ********************************************************
