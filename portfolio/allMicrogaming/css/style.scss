@@ -1,0 +1,38 @@
+// Variables *=*=* Variables *=*=* Variables *=*=* Variables *=*=* Variables *=*=* Variables *=*=* Variables *=*=* Variables *=*=*
+// Color
+$black: #1f1f1f;
+$white: #fafafa;
+$headerBlack: #383838;
+$headerWhite: #bdcbd1;
+
+$colorGrey: #bdcbd1;
+$colorRed: #e72565;
+$colorGreen: #4bb275;
+$colorOrange: #fd9827;
+$colorBlue: #3bb7e7;
+$colorPurple: #9b2fae;
+$colorGradient: linear-gradient(to right, #2596b8 0%,#4bb275 100%);
+$colorGradient2: linear-gradient(to right, #97679a 0%,#2795b7 100%);
+
+// Game Item Color
+$item_color1: $colorBlue;
+$item_color2: #070707;
+
+$imgPath: 'img/';
+
+// Fonts
+@import "fonts/stylesheet.css";
+
+// Libs
+@import "libs/reset.css";
+@import "libs/animate.min.css";
+@import "libs/slick.css";
+@import "libs/slick-theme.css";
+@import "libs/magnific-popup.css";
+
+// Components
+@import "elements";
+
+// index
+@import "basic";
+

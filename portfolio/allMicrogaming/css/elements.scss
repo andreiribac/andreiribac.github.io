@@ -1,0 +1,883 @@
+//font-family: 'Rubik Mono One', 'rubikmonoone' , sans-serif;
+.dn {
+  display: none;
+}
+/* Typography
+/* ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## */
+h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,
+h6 {
+  display: block;
+  margin-bottom: 1em;
+}
+h1 {
+  font-size: 28px;
+}
+h2,
+.h2 {
+  font-size: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+h3,
+.h3 {
+  font-size: 20px;
+}
+h4 {
+  font-size: 14px;
+}
+h5 {
+  font-size: 12px;
+}
+h6 {
+  font-size: 10px;
+}
+p {
+  margin: 0 0 1em 0;
+  text-align: left;
+  line-height: 1.8;
+}
+strong,
+b,
+.bold {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+.small {
+  font-size: 0.8em;
+}
+.ttu {
+  text-transform: uppercase;
+}
+
+
+// Special Class
+.link_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.mb25 {
+  margin-bottom: 25px;
+}
+.pt45 {
+  padding-top: 45px;
+}
+.w100 {
+  width: 100%;
+}
+section,
+.section {
+  padding: 35px 0;
+}
+.wow,
+.animated {
+  animation-duration: 0.3s;
+}
+.bg_red {
+  background: $colorRed;
+}
+.bg_green {
+  background: $colorGreen;
+}
+.bg_orange {
+  background: $colorOrange;
+}
+.bg_blue {
+  background: $colorBlue;
+}
+.bg_purple {
+  background: $colorPurple;
+}
+.bg_grey {
+  background: $colorGrey;
+}
+.bg_white {
+  background: $white;
+}
+.bg_black {
+  color: $headerWhite;
+  background: $black;
+}
+.bg_gradient {
+  background: $colorGradient;
+}
+.font_red {
+  color: $colorRed;
+}
+.font_green {
+  color: $colorGreen;
+}
+.font_orange {
+  color: $colorOrange;
+}
+.font_blue {
+  color: $colorBlue;
+}
+.font_white {
+  color: $white;
+}
+.font_black {
+  color: $black;
+}
+.h_white {
+  color: $white;
+}
+
+
+
+
+// Button
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  width: auto;
+  min-width: 250px;
+  height: 50px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background: $colorGradient;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: $colorGradient2;
+    transition: all 0.2s ease-in-out;
+    &:before, &::after {
+      width: 100%;
+      height: 100%;
+      transition: all 0.2s ease-in-out;
+    }
+    &:before {
+      border-top: 2px solid #996699;
+      border-left: 2px solid #996699;
+    }
+    &::after {
+      border-bottom: 2px solid #996699;
+      border-right: 2px solid #996699;
+    }
+  }
+  &:before, &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background: transparent;
+    z-index: -1;
+    transition: all 0.2s ease-in-out;
+  }
+  &:before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid #38a497;
+    border-left: 2px solid #38a497;
+    transform: translate(-6px, -6px);
+  }
+  &::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid #38a497;
+    border-right: 2px solid #38a497;
+    transform: translate(6px, 6px);
+  }
+
+  &_short {
+    min-width: 110px;
+    height: 40px;
+  }
+  &_small {
+    min-width: 90px;
+    height: 30px;
+    font-size: 14px;
+    &:before, &::after {
+      width: 14px;
+      height: 14px;
+    }
+    &:before {
+      transform: translate(-4px, -4px);
+    }
+    &::after {
+      transform: translate(4px, 4px);
+    }
+  }
+  &_white {
+    color: $colorBlue;
+    background: $white;
+    &:hover {
+      color: $white;
+      background: $black;
+      &:before {
+        border-top: 2px solid $black;
+        border-left: 2px solid $black;
+      }
+      &::after {
+        border-bottom: 2px solid $black;
+        border-right: 2px solid $black;
+      }
+    }
+
+    &:before {
+      border-top: 2px solid $white;
+      border-left: 2px solid $white;
+    }
+    &::after {
+      border-bottom: 2px solid $white;
+      border-right: 2px solid $white;
+    }
+  }
+  &_img {
+    max-width: 120px;
+    width: 100%;
+    max-height: 45px;
+    height: auto;
+  }
+
+  &_red {
+    background: $colorRed;
+    &:hover {
+      background: $colorRed;
+      &:before {
+        border-top: 2px solid $colorRed;
+        border-left: 2px solid $colorRed;
+      }
+      &::after {
+        border-bottom: 2px solid $colorRed;
+        border-right: 2px solid $colorRed;
+      }
+    }
+    &:before {
+      border-top: 2px solid $colorRed;
+      border-left: 2px solid $colorRed;
+    }
+    &::after {
+      border-bottom: 2px solid $colorRed;
+      border-right: 2px solid $colorRed;
+    }
+  }
+}
+
+// GAME ITEM
+.game_item {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  &::before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: $colorBlue;
+    transition: all 0.2s ease-in-out;
+  }
+  &_hot {
+    .game_item__box {
+      &::before {
+        content: 'hot';
+        right: 0;
+        background: $colorRed;
+      }
+    }
+  }
+  &_new {
+    .game_item__box {
+      &::after {
+        content: 'new';
+        left: 0;
+        color: $black;
+        background: #32e231;
+      }
+    }
+  }
+  &:hover {
+    &::before {
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      transition: all 0.2s ease-in-out;
+    }
+    .game_item {
+      &__box {
+      }
+      &__img_box {
+        opacity: .4;
+      }
+      &__btn_box {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.2s ease-in-out;
+      }
+      &__casino_select {
+        transform: translateY(0);
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: $colorBlue;
+  }
+  &__box {
+    position: relative;
+    max-width: 170px;
+    max-height: 210px;
+    width: 100%;
+    height: 100%;
+    background: $item_color2;
+    &::before,
+    &::after {
+      position: absolute;
+      top: -5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+  }
+  &__img_box,
+  &__game_img {
+    width: 100%;
+    max-height: 170px;
+    height: 100%;
+  }
+  &__img_box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  &__btn_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+    transform: translateY(-15px);
+    transition: all 0.2s ease-in-out;
+  }
+  &__casino_select {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(20px);
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    transition: all 0.2s ease-in-out;
+  }
+  &__favorite_btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+    &.active {
+      visibility: visible;
+      opacity: 1;
+      &:after {
+        display: none;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 15px;
+        height: 15px;
+        background: transparent url($imgPath + "casino_icons/ico_Close_Search.svg") left top no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+  &__stats_table {
+    width: 100%;
+    background: $item_color2;
+    font-size: 12px;
+    text-align: left;
+    border-top: 1px solid $headerBlack;
+    th {
+      color: #6b7b8c;
+      font-weight: 400;
+    }
+    th,td {
+      padding-left: 7px;
+      &:nth-child(2n) {
+        padding-left: 0;
+        padding-right: 7px;
+        text-align: right;
+      }
+    }
+  }
+
+  &.game_item_short {
+    padding: 15px;
+    &:hover {
+      &::after {
+        background: $colorPurple;
+      }
+      .game_item__box {
+        border: 5px solid $colorPurple;
+      }
+    }
+
+    &:before {
+      display: none;
+    }
+    &::after {
+      transform: skew(3deg, 3deg) translate(8px, 7px);
+    }
+    .game_item__box {
+      width: 120px;
+      height: 80px;
+    }
+  }
+}
+
+// Form Area
+.input_item_label {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  max-width: 390px;
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid $headerWhite;
+  &:hover {
+    .input_item_bg:before {
+      background: $black;
+    }
+    .input_item_select_box:after {
+      border-color: $black transparent transparent transparent;
+    }
+  }
+  &.big {
+    max-width: unset;
+  }
+  &.small {
+    max-width: 170px;
+    .input_item_label_legend {
+      width: 100%;
+    }
+  }
+  &.ok {
+    background: $white;
+    input.input_item {
+      color: $headerWhite;
+    }
+  }
+}
+.view_pass {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  svg {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+}
+.input_item_label_legend {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  display: block;
+  width: calc(100% - 100px);
+  font-size: 14px;
+  color: #6b7b8c;
+  text-align: left;
+}
+.input_item_select_box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #acacac transparent transparent transparent;
+    pointer-events: none;
+  }
+}
+.input_item_select {
+  position: relative;
+  width: 85%;
+  height: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #242229;
+  background: transparent;
+  border: none;
+  -webkit-appearance: none;
+  z-index: 1;
+}
+.input_item_big_box {
+  max-width: unset;
+  width: 100%;
+}
+.input_item_small_box {
+  max-width: 140px;
+}
+.phone_code {
+  &__box {
+    position: relative;
+    width: 130px;
+    min-width: 130px;
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      //transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 10px 0 10px;
+      border-color: #acacac transparent transparent transparent;
+      pointer-events: none;
+    }
+    &.active .phone_code__list {
+      transform: translateY(0);
+      visibility: visible;
+      opacity: 1;
+      pointer-events: initial;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+  &__item, &__current {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    background: $white;
+    cursor: pointer;
+  }
+  &__current {
+    transform: translateY(5px);
+  }
+  &__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    border-left: 1px solid #fff;
+    overflow-y: auto;
+    box-shadow: 3px 5px 0 0 rgba(36,34,41,1);
+    transform: translateY(-15%);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+  }
+}
+.input_item_info_box {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+.input_item_info_img {
+  display: block;
+  width: 60px;
+  height: 85px;
+  margin-right: 10px;
+}
+.input_item_info_link {
+  color: $colorRed;
+  text-transform: uppercase;
+  &:hover {
+    opacity: .7;
+  }
+}
+input.input_item,
+textarea {
+  width: 100%;
+  height: 30px;
+  font-size: 16px;
+  color: $black;
+  background: transparent;
+  border: none;
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $black;
+    font-size: 16px;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $black;
+    font-size: 16px;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $black;
+    font-size: 16px;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $black;
+    font-size: 16px;
+  }
+
+  &:focus + .input_item_bg {
+    &:before {
+      background: $black;
+    }
+  }
+}
+textarea {
+  padding: 14px;
+  height: 150px;
+  resize: none;
+}
+input[type='file'] {
+  -webkit-appearance: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.input_item_placeholder_text {
+  display: block;
+  margin-right: auto;
+  margin-left: 40px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.submit_label {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  width: auto;
+  min-width: 250px;
+  height: 50px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background: linear-gradient(to right, #2596b8 0%, #4bb275 100%);
+  cursor: pointer;
+  user-select: none;
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: linear-gradient(to right, #97679a 0%, #2795b7 100%);
+    transition: all 0.2s ease-in-out;
+  }
+}
+input[type="submit"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-appearance: none;
+}
+
+
+.checkbox {
+  &_item_label {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+  &_input_item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-appearance: none;
+    opacity: 0;
+  }
+  &_label_content {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  &_label_square {
+    position: relative;
+    display: inline-block;
+    margin-right: 14px;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    background: $white;
+    border: 2px solid $headerWhite;
+    -webkit-box-shadow: inset 4px 4px 10px 0 rgba(189,203,209,0.5);
+    -moz-box-shadow: inset 4px 4px 10px 0 rgba(189,203,209,0.5);
+    box-shadow: inset 4px 4px 10px 0 rgba(189,203,209,0.5);
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      border: 2px solid $colorBlue;
+    }
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 1px;
+      width: 10px;
+      height: 5px;
+      background: transparent;
+      border-left: 0 solid $black;
+      border-bottom: 0 solid $black;
+      transform: rotate(-45deg);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+input.checkbox_input_item:checked + .checkbox_label_content .checkbox_label_square {
+  &:after {
+    border-left: 4px solid $black;
+    border-bottom: 4px solid $black;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.radio {
+  &__item_label {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto 20px;
+    max-width: 430px;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+    &.active {
+      .radio__label_content {
+        .btn_white:after {
+          background: #fff;
+        }
+      }
+    }
+  }
+  &__input_item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-appearance: none;
+    opacity: 0;
+  }
+  &__label_content {
+    display: flex;
+    align-items: center;
+  }
+  &__label_circle {
+    display: inline-block;
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border: 2px solid $white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #acacac;
+    transition: all 0.2s ease-in-out;
+  }
+  &__label_text {
+    font-size: 14px;
+  }
+  &__item_box {
+    b {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .radio__item_label {
+      margin-right: 20px;
+    }
+  }
+}
+input.radio__input_item:checked + .radio__label_content {
+  .btn_white:after {
+    background: #fff;
+  }
+  .radio__label_circle {
+    background: $colorBlue;
+    border: 2px solid $white;
+  }
+}
+
+//***************//*//***************//*//***************//*//***************//*//***************//*//***************//*
+//  Responsive   //*//  Responsive   //*//  Responsive   //*//  Responsive   //*//  Responsive   //*//  Responsive   //*
+//***************//*//***************//*//***************//*//***************//*//***************//*//***************//*
+@media screen and (max-width: 1621px) {
+
+}
+// @media screen and (max-width: 1621px) ******************************** @media screen and (max-width: 1621px) ********************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
