@@ -1,0 +1,27 @@
+// Font import
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,700&display=swap');
+
+// Variables *=*=* Variables *=*=* Variables *=*=* Variables *=*=* Variables *=*=* Variables *=*=* Variables *=*=* Variables *=*=*
+// Color
+$black: #3d4247;
+$bluedark: #172b3d;
+$blue: #14265e;
+$bluelight: #36a2db;
+$gray: #dfe7ee;
+$graylight: #e9eff5;
+
+$imgPath: 'img/';
+
+// Libs
+@import "libs/reset.css";
+@import "libs/bootstrap-grid.min.css";
+//@import "libs/animate.min.css";
+@import "libs/slick.css";
+@import "libs/slick-theme.css";
+//@import "libs/magnific-popup.css";
+
+// Components
+@import "elements";
+
+// index
+@import "basic";
