@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="32px" height="16px" viewBox="0 0 32 16" style="enable-background:new 0 0 32 16;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#191610;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#91250D;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FF7E00;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#2D2926;}
+</style>
+<g id="ornament_x5F_top_x5F_menu">
+	<path class="st0" d="M0,1h32v13H0V1z"/>
+	<path class="st1" d="M23,6h3c0.6,0,1,0.4,1,1v3c0,0.6-0.4,1-1,1h-3c-0.6,0-1-0.4-1-1V7C22,6.4,22.4,6,23,6z"/>
+	<path class="st2" d="M27,11h-5l5-5V11z"/>
+	<path class="st3" d="M20,14h9V5h-9V14z M21,6h7v7h-7V6z M31,15V3H18v12H3V4h11v8H6V7h5v2H8v1h4V6H5v7h10V3H2v12H0v1h2h1h15h13h1v-1
+		H31z M19,15V4h11v11H19z M0,1h32v1H0V1z"/>
+	<path class="st4" d="M20,13h9V4h-9V13z M21,5h7v7h-7V5z M31,14V2H18v12H3V3h11v8H6V6h5v2H8v1h4V5H5v7h10V2H2v12H0v1h2h1h15h13h1v-1
+		H31z M19,14V3h11v11H19z M0,0h32v1H0V0z"/>
+</g>
+</svg>

@@ -160,6 +160,9 @@ h3,
         background-size: cover;
         border-radius: 25px;
         transition: background-position 0.6s linear;
+        &.argocasino {
+            background-image: url("img/portfolio/argocasino.jpg");
+        }
         &.cleveron {
             background-image: url("img/portfolio/cleveron.jpg");
         }
