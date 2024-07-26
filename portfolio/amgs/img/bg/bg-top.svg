@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="56px" height="90px" viewBox="0 0 56 90" style="enable-background:new 0 0 56 90;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;fill-rule:evenodd;clip-rule:evenodd;fill:#141414;}
+	.st2{display:inline;fill:#141414;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#0E61B9;}
+</style>
+<g class="st0">
+	<path class="st1" d="M-47,1c6.1,0,11-4.9,11-11h-22C-58-3.9-53.1,1-47,1z"/>
+	<path class="st1" d="M-47,89c6.1,0,11,4.9,11,11h-22C-58,93.9-53.1,89-47,89z"/>
+	<polygon class="st2" points="24,-10 -3,-10 -58,45 -3,100 24,100 -31,45 	"/>
+	<path class="st2" d="M28-2l-47,47l47,47l47-47L28-2z M11,45l17-17l17,17L28,62L11,45z"/>
+	<polygon class="st2" points="59,-10 32,-10 87,45 32,100 59,100 114,45 	"/>
+	<path class="st1" d="M103,1c-6.1,0-11-4.9-11-11h22C114-3.9,109.1,1,103,1z"/>
+	<path class="st1" d="M103,89c-6.1,0-11,4.9-11,11h22C114,93.9,109.1,89,103,89z"/>
+</g>
+<path id="BgTop" class="st3" d="M0,90V78c3.3,0,6,2.7,6,6C6,87.3,3.3,90,0,90z M56,90V78c-3.3,0-6,2.7-6,6S52.7,90,56,90z M28,21
+	l24,24L28,69L4,45L28,21z M37,45l-9-9l-9,9l9,9L37,45z M0,28v14l28-28l28,28V28L28,0L0,28z M28,90l28-28V48L28,76L0,48v14L28,90z
+	 M0,0l0,12c3.3,0,6-2.7,6-6S3.3,0,0,0z M50,6c0,3.3,2.7,6,6,6V0C52.7,0,50,2.7,50,6z"/>
+</svg>
