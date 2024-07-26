@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<title>SVG stack preview | svg-sprite</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+
+<!--
+
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<style type="text/css">
+	.svg-acc_bonuscasino-dims { width: 40px; height: 40px; }
+	.svg-acc_bonussport-dims { width: 40px; height: 40px; }
+	.svg-acc_cancel-dims { width: 40px; height: 40px; }
+	.svg-acc_exit-dims { width: 40px; height: 40px; }
+	.svg-acc_favorite-dims { width: 40px; height: 40px; }
+	.svg-acc_historygame-dims { width: 40px; height: 40px; }
+	.svg-acc_historypay-dims { width: 40px; height: 40px; }
+	.svg-acc_msg-dims { width: 40px; height: 40px; }
+	.svg-acc_profile-dims { width: 40px; height: 40px; }
+	.svg-acc_promo-dims { width: 40px; height: 40px; }
+	.svg-acc_settings-dims { width: 40px; height: 40px; }
+	.svg-acc_verification-dims { width: 40px; height: 40px; }
+	.svg-flag_de-dims { width: 24px; height: 18px; }
+	.svg-flag_en-dims { width: 24px; height: 18px; }
+	.svg-flag_pl-dims { width: 24px; height: 18px; }
+	.svg-flag_ru-dims { width: 24px; height: 18px; }
+	.svg-ico_allgame-dims { width: 40px; height: 40px; }
+	.svg-ico_bonus-dims { width: 40px; height: 40px; }
+	.svg-ico_brands-dims { width: 40px; height: 40px; }
+	.svg-ico_card-dims { width: 40px; height: 40px; }
+	.svg-ico_casino-dims { width: 40px; height: 40px; }
+	.svg-ico_close-dims { width: 30px; height: 30px; }
+	.svg-ico_esport-dims { width: 40px; height: 40px; }
+	.svg-ico_home-dims { width: 40px; height: 40px; }
+	.svg-ico_hot-dims { width: 40px; height: 40px; }
+	.svg-ico_info-dims { width: 40px; height: 40px; }
+	.svg-ico_jackpot-dims { width: 40px; height: 40px; }
+	.svg-ico_live-dims { width: 40px; height: 40px; }
+	.svg-ico_livecasino-dims { width: 40px; height: 40px; }
+	.svg-ico_menu-dims { width: 30px; height: 30px; }
+	.svg-ico_new-dims { width: 40px; height: 40px; }
+	.svg-ico_others-dims { width: 40px; height: 40px; }
+	.svg-ico_resize-dims { width: 30px; height: 30px; }
+	.svg-ico_roulette-dims { width: 40px; height: 40px; }
+	.svg-ico_search-dims { width: 20px; height: 20px; }
+	.svg-ico_slot-dims { width: 40px; height: 40px; }
+	.svg-ico_sport-dims { width: 40px; height: 40px; }
+	.svg-ico_star-dims { width: 30px; height: 30px; }
+	.svg-ico_theme-dims { width: 40px; height: 40px; }
+	.svg-ico_tournament-dims { width: 40px; height: 40px; }
+	.svg-ico_tv-dims { width: 40px; height: 40px; }
+	.svg-ico_virtual-dims { width: 40px; height: 40px; }
+	.svg-link_chat-dims { width: 30px; height: 30px; }
+	.svg-link_insta-dims { width: 30px; height: 30px; }
+	.svg-link_mail-dims { width: 30px; height: 30px; }
+	.svg-link_phone-dims { width: 30px; height: 30px; }
+	.svg-link_telegram-dims { width: 30px; height: 30px; }
+	.svg-social_facebook-dims { width: 40px; height: 40px; }
+	.svg-social_google-dims { width: 40px; height: 40px; }
+	.svg-social_insta-dims { width: 40px; height: 40px; }
+	.svg-social_mailru-dims { width: 40px; height: 40px; }
+	.svg-social_twitter-dims { width: 40px; height: 40px; }
+	.svg-social_vkontakte-dims { width: 40px; height: 40px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+		<header>
+			<h1>SVG stack preview</h1>
+			<p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>Your browser has to <a href="http://caniuse.com/#feat=svg-fragment" target="_blank" rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+				<li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
+			</ul>
+		</header>
+		<section>
+
+<!--
+
+SVG stack
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
+external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
+selector is used to show the very shape that is referenced by the fragment identifier.
+
+-->
+
+			<ul>
+
+				<li title="acc_bonuscasino">
+					<div class="icon-box">
+
+						<!-- acc_bonuscasino -->
+						<img src="../icons/icons.svg#acc_bonuscasino" class="svg-acc_bonuscasino-dims" alt="acc_bonuscasino"/>
+
+					</div>
+					<h2>acc_bonuscasino</h2>
+				</li>
+				<li title="acc_bonussport">
+					<div class="icon-box">
+
+						<!-- acc_bonussport -->
+						<img src="../icons/icons.svg#acc_bonussport" class="svg-acc_bonussport-dims" alt="acc_bonussport"/>
+
+					</div>
+					<h2>acc_bonussport</h2>
+				</li>
+				<li title="acc_cancel">
+					<div class="icon-box">
+
+						<!-- acc_cancel -->
+						<img src="../icons/icons.svg#acc_cancel" class="svg-acc_cancel-dims" alt="acc_cancel"/>
+
+					</div>
+					<h2>acc_cancel</h2>
+				</li>
+				<li title="acc_exit">
+					<div class="icon-box">
+
+						<!-- acc_exit -->
+						<img src="../icons/icons.svg#acc_exit" class="svg-acc_exit-dims" alt="acc_exit"/>
+
+					</div>
+					<h2>acc_exit</h2>
+				</li>
+				<li title="acc_favorite">
+					<div class="icon-box">
+
+						<!-- acc_favorite -->
+						<img src="../icons/icons.svg#acc_favorite" class="svg-acc_favorite-dims" alt="acc_favorite"/>
+
+					</div>
+					<h2>acc_favorite</h2>
+				</li>
+				<li title="acc_historygame">
+					<div class="icon-box">
+
+						<!-- acc_historygame -->
+						<img src="../icons/icons.svg#acc_historygame" class="svg-acc_historygame-dims" alt="acc_historygame"/>
+
+					</div>
+					<h2>acc_historygame</h2>
+				</li>
+				<li title="acc_historypay">
+					<div class="icon-box">
+
+						<!-- acc_historypay -->
+						<img src="../icons/icons.svg#acc_historypay" class="svg-acc_historypay-dims" alt="acc_historypay"/>
+
+					</div>
+					<h2>acc_historypay</h2>
+				</li>
+				<li title="acc_msg">
+					<div class="icon-box">
+
+						<!-- acc_msg -->
+						<img src="../icons/icons.svg#acc_msg" class="svg-acc_msg-dims" alt="acc_msg"/>
+
+					</div>
+					<h2>acc_msg</h2>
+				</li>
+				<li title="acc_profile">
+					<div class="icon-box">
+
+						<!-- acc_profile -->
+						<img src="../icons/icons.svg#acc_profile" class="svg-acc_profile-dims" alt="acc_profile"/>
+
+					</div>
+					<h2>acc_profile</h2>
+				</li>
+				<li title="acc_promo">
+					<div class="icon-box">
+
+						<!-- acc_promo -->
+						<img src="../icons/icons.svg#acc_promo" class="svg-acc_promo-dims" alt="acc_promo"/>
+
+					</div>
+					<h2>acc_promo</h2>
+				</li>
+				<li title="acc_settings">
+					<div class="icon-box">
+
+						<!-- acc_settings -->
+						<img src="../icons/icons.svg#acc_settings" class="svg-acc_settings-dims" alt="acc_settings"/>
+
+					</div>
+					<h2>acc_settings</h2>
+				</li>
+				<li title="acc_verification">
+					<div class="icon-box">
+
+						<!-- acc_verification -->
+						<img src="../icons/icons.svg#acc_verification" class="svg-acc_verification-dims" alt="acc_verification"/>
+
+					</div>
+					<h2>acc_verification</h2>
+				</li>
+				<li title="flag_de">
+					<div class="icon-box">
+
+						<!-- flag_de -->
+						<img src="../icons/icons.svg#flag_de" class="svg-flag_de-dims" alt="flag_de"/>
+
+					</div>
+					<h2>flag_de</h2>
+				</li>
+				<li title="flag_en">
+					<div class="icon-box">
+
+						<!-- flag_en -->
+						<img src="../icons/icons.svg#flag_en" class="svg-flag_en-dims" alt="flag_en"/>
+
+					</div>
+					<h2>flag_en</h2>
+				</li>
+				<li title="flag_pl">
+					<div class="icon-box">
+
+						<!-- flag_pl -->
+						<img src="../icons/icons.svg#flag_pl" class="svg-flag_pl-dims" alt="flag_pl"/>
+
+					</div>
+					<h2>flag_pl</h2>
+				</li>
+				<li title="flag_ru">
+					<div class="icon-box">
+
+						<!-- flag_ru -->
+						<img src="../icons/icons.svg#flag_ru" class="svg-flag_ru-dims" alt="flag_ru"/>
+
+					</div>
+					<h2>flag_ru</h2>
+				</li>
+				<li title="ico_allgame">
+					<div class="icon-box">
+
+						<!-- ico_allgame -->
+						<img src="../icons/icons.svg#ico_allgame" class="svg-ico_allgame-dims" alt="ico_allgame"/>
+
+					</div>
+					<h2>ico_allgame</h2>
+				</li>
+				<li title="ico_bonus">
+					<div class="icon-box">
+
+						<!-- ico_bonus -->
+						<img src="../icons/icons.svg#ico_bonus" class="svg-ico_bonus-dims" alt="ico_bonus"/>
+
+					</div>
+					<h2>ico_bonus</h2>
+				</li>
+				<li title="ico_brands">
+					<div class="icon-box">
+
+						<!-- ico_brands -->
+						<img src="../icons/icons.svg#ico_brands" class="svg-ico_brands-dims" alt="ico_brands"/>
+
+					</div>
+					<h2>ico_brands</h2>
+				</li>
+				<li title="ico_card">
+					<div class="icon-box">
+
+						<!-- ico_card -->
+						<img src="../icons/icons.svg#ico_card" class="svg-ico_card-dims" alt="ico_card"/>
+
+					</div>
+					<h2>ico_card</h2>
+				</li>
+				<li title="ico_casino">
+					<div class="icon-box">
+
+						<!-- ico_casino -->
+						<img src="../icons/icons.svg#ico_casino" class="svg-ico_casino-dims" alt="ico_casino"/>
+
+					</div>
+					<h2>ico_casino</h2>
+				</li>
+				<li title="ico_close">
+					<div class="icon-box">
+
+						<!-- ico_close -->
+						<img src="../icons/icons.svg#ico_close" class="svg-ico_close-dims" alt="ico_close"/>
+
+					</div>
+					<h2>ico_close</h2>
+				</li>
+				<li title="ico_esport">
+					<div class="icon-box">
+
+						<!-- ico_esport -->
+						<img src="../icons/icons.svg#ico_esport" class="svg-ico_esport-dims" alt="ico_esport"/>
+
+					</div>
+					<h2>ico_esport</h2>
+				</li>
+				<li title="ico_home">
+					<div class="icon-box">
+
+						<!-- ico_home -->
+						<img src="../icons/icons.svg#ico_home" class="svg-ico_home-dims" alt="ico_home"/>
+
+					</div>
+					<h2>ico_home</h2>
+				</li>
+				<li title="ico_hot">
+					<div class="icon-box">
+
+						<!-- ico_hot -->
+						<img src="../icons/icons.svg#ico_hot" class="svg-ico_hot-dims" alt="ico_hot"/>
+
+					</div>
+					<h2>ico_hot</h2>
+				</li>
+				<li title="ico_info">
+					<div class="icon-box">
+
+						<!-- ico_info -->
+						<img src="../icons/icons.svg#ico_info" class="svg-ico_info-dims" alt="ico_info"/>
+
+					</div>
+					<h2>ico_info</h2>
+				</li>
+				<li title="ico_jackpot">
+					<div class="icon-box">
+
+						<!-- ico_jackpot -->
+						<img src="../icons/icons.svg#ico_jackpot" class="svg-ico_jackpot-dims" alt="ico_jackpot"/>
+
+					</div>
+					<h2>ico_jackpot</h2>
+				</li>
+				<li title="ico_live">
+					<div class="icon-box">
+
+						<!-- ico_live -->
+						<img src="../icons/icons.svg#ico_live" class="svg-ico_live-dims" alt="ico_live"/>
+
+					</div>
+					<h2>ico_live</h2>
+				</li>
+				<li title="ico_livecasino">
+					<div class="icon-box">
+
+						<!-- ico_livecasino -->
+						<img src="../icons/icons.svg#ico_livecasino" class="svg-ico_livecasino-dims" alt="ico_livecasino"/>
+
+					</div>
+					<h2>ico_livecasino</h2>
+				</li>
+				<li title="ico_menu">
+					<div class="icon-box">
+
+						<!-- ico_menu -->
+						<img src="../icons/icons.svg#ico_menu" class="svg-ico_menu-dims" alt="ico_menu"/>
+
+					</div>
+					<h2>ico_menu</h2>
+				</li>
+				<li title="ico_new">
+					<div class="icon-box">
+
+						<!-- ico_new -->
+						<img src="../icons/icons.svg#ico_new" class="svg-ico_new-dims" alt="ico_new"/>
+
+					</div>
+					<h2>ico_new</h2>
+				</li>
+				<li title="ico_others">
+					<div class="icon-box">
+
+						<!-- ico_others -->
+						<img src="../icons/icons.svg#ico_others" class="svg-ico_others-dims" alt="ico_others"/>
+
+					</div>
+					<h2>ico_others</h2>
+				</li>
+				<li title="ico_resize">
+					<div class="icon-box">
+
+						<!-- ico_resize -->
+						<img src="../icons/icons.svg#ico_resize" class="svg-ico_resize-dims" alt="ico_resize"/>
+
+					</div>
+					<h2>ico_resize</h2>
+				</li>
+				<li title="ico_roulette">
+					<div class="icon-box">
+
+						<!-- ico_roulette -->
+						<img src="../icons/icons.svg#ico_roulette" class="svg-ico_roulette-dims" alt="ico_roulette"/>
+
+					</div>
+					<h2>ico_roulette</h2>
+				</li>
+				<li title="ico_search">
+					<div class="icon-box">
+
+						<!-- ico_search -->
+						<img src="../icons/icons.svg#ico_search" class="svg-ico_search-dims" alt="ico_search"/>
+
+					</div>
+					<h2>ico_search</h2>
+				</li>
+				<li title="ico_slot">
+					<div class="icon-box">
+
+						<!-- ico_slot -->
+						<img src="../icons/icons.svg#ico_slot" class="svg-ico_slot-dims" alt="ico_slot"/>
+
+					</div>
+					<h2>ico_slot</h2>
+				</li>
+				<li title="ico_sport">
+					<div class="icon-box">
+
+						<!-- ico_sport -->
+						<img src="../icons/icons.svg#ico_sport" class="svg-ico_sport-dims" alt="ico_sport"/>
+
+					</div>
+					<h2>ico_sport</h2>
+				</li>
+				<li title="ico_star">
+					<div class="icon-box">
+
+						<!-- ico_star -->
+						<img src="../icons/icons.svg#ico_star" class="svg-ico_star-dims" alt="ico_star"/>
+
+					</div>
+					<h2>ico_star</h2>
+				</li>
+				<li title="ico_theme">
+					<div class="icon-box">
+
+						<!-- ico_theme -->
+						<img src="../icons/icons.svg#ico_theme" class="svg-ico_theme-dims" alt="ico_theme"/>
+
+					</div>
+					<h2>ico_theme</h2>
+				</li>
+				<li title="ico_tournament">
+					<div class="icon-box">
+
+						<!-- ico_tournament -->
+						<img src="../icons/icons.svg#ico_tournament" class="svg-ico_tournament-dims" alt="ico_tournament"/>
+
+					</div>
+					<h2>ico_tournament</h2>
+				</li>
+				<li title="ico_tv">
+					<div class="icon-box">
+
+						<!-- ico_tv -->
+						<img src="../icons/icons.svg#ico_tv" class="svg-ico_tv-dims" alt="ico_tv"/>
+
+					</div>
+					<h2>ico_tv</h2>
+				</li>
+				<li title="ico_virtual">
+					<div class="icon-box">
+
+						<!-- ico_virtual -->
+						<img src="../icons/icons.svg#ico_virtual" class="svg-ico_virtual-dims" alt="ico_virtual"/>
+
+					</div>
+					<h2>ico_virtual</h2>
+				</li>
+				<li title="link_chat">
+					<div class="icon-box">
+
+						<!-- link_chat -->
+						<img src="../icons/icons.svg#link_chat" class="svg-link_chat-dims" alt="link_chat"/>
+
+					</div>
+					<h2>link_chat</h2>
+				</li>
+				<li title="link_insta">
+					<div class="icon-box">
+
+						<!-- link_insta -->
+						<img src="../icons/icons.svg#link_insta" class="svg-link_insta-dims" alt="link_insta"/>
+
+					</div>
+					<h2>link_insta</h2>
+				</li>
+				<li title="link_mail">
+					<div class="icon-box">
+
+						<!-- link_mail -->
+						<img src="../icons/icons.svg#link_mail" class="svg-link_mail-dims" alt="link_mail"/>
+
+					</div>
+					<h2>link_mail</h2>
+				</li>
+				<li title="link_phone">
+					<div class="icon-box">
+
+						<!-- link_phone -->
+						<img src="../icons/icons.svg#link_phone" class="svg-link_phone-dims" alt="link_phone"/>
+
+					</div>
+					<h2>link_phone</h2>
+				</li>
+				<li title="link_telegram">
+					<div class="icon-box">
+
+						<!-- link_telegram -->
+						<img src="../icons/icons.svg#link_telegram" class="svg-link_telegram-dims" alt="link_telegram"/>
+
+					</div>
+					<h2>link_telegram</h2>
+				</li>
+				<li title="social_facebook">
+					<div class="icon-box">
+
+						<!-- social_facebook -->
+						<img src="../icons/icons.svg#social_facebook" class="svg-social_facebook-dims" alt="social_facebook"/>
+
+					</div>
+					<h2>social_facebook</h2>
+				</li>
+				<li title="social_google">
+					<div class="icon-box">
+
+						<!-- social_google -->
+						<img src="../icons/icons.svg#social_google" class="svg-social_google-dims" alt="social_google"/>
+
+					</div>
+					<h2>social_google</h2>
+				</li>
+				<li title="social_insta">
+					<div class="icon-box">
+
+						<!-- social_insta -->
+						<img src="../icons/icons.svg#social_insta" class="svg-social_insta-dims" alt="social_insta"/>
+
+					</div>
+					<h2>social_insta</h2>
+				</li>
+				<li title="social_mailru">
+					<div class="icon-box">
+
+						<!-- social_mailru -->
+						<img src="../icons/icons.svg#social_mailru" class="svg-social_mailru-dims" alt="social_mailru"/>
+
+					</div>
+					<h2>social_mailru</h2>
+				</li>
+				<li title="social_twitter">
+					<div class="icon-box">
+
+						<!-- social_twitter -->
+						<img src="../icons/icons.svg#social_twitter" class="svg-social_twitter-dims" alt="social_twitter"/>
+
+					</div>
+					<h2>social_twitter</h2>
+				</li>
+				<li title="social_vkontakte">
+					<div class="icon-box">
+
+						<!-- social_vkontakte -->
+						<img src="../icons/icons.svg#social_vkontakte" class="svg-social_vkontakte-dims" alt="social_vkontakte"/>
+
+					</div>
+					<h2>social_vkontakte</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Fri, 26 Jul 2024 12:45:58 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>

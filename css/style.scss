@@ -177,6 +177,10 @@ h3,
         background-size: cover;
         border-radius: 25px;
         transition: background-position 0.6s linear;
+        &.a7 {
+            background-image: url("img/portfolio/a7.jpg");
+            transition: background-position 1.6s linear;
+        }
         &.amgs {
             background-image: url("img/portfolio/amgs.jpg");
             transition: background-position 1.6s linear;
