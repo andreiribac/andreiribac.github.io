@@ -177,6 +177,10 @@ h3,
         background-size: cover;
         border-radius: 25px;
         transition: background-position 0.6s linear;
+        &.cbt {
+            background-image: url("img/portfolio/cbt.jpg");
+            transition: background-position 3.6s linear;
+        }
         &.sim {
             background-image: url("img/portfolio/sim.jpg");
             transition: background-position 3.6s linear;
