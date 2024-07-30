@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<title>SVG stack preview | svg-sprite</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+
+<!--
+
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<style type="text/css">
+	.svg-icon_bonus-dims { width: 74px; height: 84px; }
+	.svg-icon_casino-dims { width: 60px; height: 60px; }
+	.svg-icon_checkbox-dims { width: 52px; height: 46px; }
+	.svg-icon_clients-dims { width: 74px; height: 84px; }
+	.svg-icon_cms-dims { width: 60px; height: 60px; }
+	.svg-icon_device-dims { width: 74px; height: 84px; }
+	.svg-icon_facebook-dims { width: 46px; height: 46px; }
+	.svg-icon_faq-dims { width: 60px; height: 60px; }
+	.svg-icon_gamewarning-dims { width: 60px; height: 60px; }
+	.svg-icon_info-dims { width: 74px; height: 84px; }
+	.svg-icon_instagram-dims { width: 46px; height: 46px; }
+	.svg-icon_linkedin-dims { width: 46px; height: 46px; }
+	.svg-icon_mail-dims { width: 46px; height: 46px; }
+	.svg-icon_pay-dims { width: 74px; height: 84px; }
+	.svg-icon_payments-dims { width: 60px; height: 60px; }
+	.svg-icon_phone-dims { width: 46px; height: 46px; }
+	.svg-icon_phone2-dims { width: 46px; height: 46px; }
+	.svg-icon_police-dims { width: 74px; height: 84px; }
+	.svg-icon_risk-dims { width: 60px; height: 60px; }
+	.svg-icon_security-dims { width: 74px; height: 84px; }
+	.svg-icon_share-dims { width: 30px; height: 30px; }
+	.svg-icon_skype-dims { width: 46px; height: 46px; }
+	.svg-icon_slot-dims { width: 74px; height: 84px; }
+	.svg-icon_soft-dims { width: 74px; height: 84px; }
+	.svg-icon_sql-dims { width: 74px; height: 84px; }
+	.svg-icon_support-dims { width: 60px; height: 60px; }
+	.svg-icon_telegram-dims { width: 46px; height: 46px; }
+	.svg-icon_tools-dims { width: 74px; height: 84px; }
+	.svg-icon_twitter-dims { width: 46px; height: 46px; }
+	.svg-icon_viber-dims { width: 46px; height: 46px; }
+	.svg-icon_whatsapp-dims { width: 46px; height: 46px; }
+	.svg-icon_youtube-dims { width: 46px; height: 46px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+		<header>
+			<h1>SVG stack preview</h1>
+			<p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>Your browser has to <a href="http://caniuse.com/#feat=svg-fragment" target="_blank" rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+				<li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
+			</ul>
+		</header>
+		<section>
+
+<!--
+
+SVG stack
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
+external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
+selector is used to show the very shape that is referenced by the fragment identifier.
+
+-->
+
+			<ul>
+
+				<li title="icon_bonus">
+					<div class="icon-box">
+
+						<!-- icon_bonus -->
+						<img src="../icons/icons.svg#icon_bonus" class="svg-icon_bonus-dims" alt="icon_bonus"/>
+
+					</div>
+					<h2>icon_bonus</h2>
+				</li>
+				<li title="icon_casino">
+					<div class="icon-box">
+
+						<!-- icon_casino -->
+						<img src="../icons/icons.svg#icon_casino" class="svg-icon_casino-dims" alt="icon_casino"/>
+
+					</div>
+					<h2>icon_casino</h2>
+				</li>
+				<li title="icon_checkbox">
+					<div class="icon-box">
+
+						<!-- icon_checkbox -->
+						<img src="../icons/icons.svg#icon_checkbox" class="svg-icon_checkbox-dims" alt="icon_checkbox"/>
+
+					</div>
+					<h2>icon_checkbox</h2>
+				</li>
+				<li title="icon_clients">
+					<div class="icon-box">
+
+						<!-- icon_clients -->
+						<img src="../icons/icons.svg#icon_clients" class="svg-icon_clients-dims" alt="icon_clients"/>
+
+					</div>
+					<h2>icon_clients</h2>
+				</li>
+				<li title="icon_cms">
+					<div class="icon-box">
+
+						<!-- icon_cms -->
+						<img src="../icons/icons.svg#icon_cms" class="svg-icon_cms-dims" alt="icon_cms"/>
+
+					</div>
+					<h2>icon_cms</h2>
+				</li>
+				<li title="icon_device">
+					<div class="icon-box">
+
+						<!-- icon_device -->
+						<img src="../icons/icons.svg#icon_device" class="svg-icon_device-dims" alt="icon_device"/>
+
+					</div>
+					<h2>icon_device</h2>
+				</li>
+				<li title="icon_facebook">
+					<div class="icon-box">
+
+						<!-- icon_facebook -->
+						<img src="../icons/icons.svg#icon_facebook" class="svg-icon_facebook-dims" alt="icon_facebook"/>
+
+					</div>
+					<h2>icon_facebook</h2>
+				</li>
+				<li title="icon_faq">
+					<div class="icon-box">
+
+						<!-- icon_faq -->
+						<img src="../icons/icons.svg#icon_faq" class="svg-icon_faq-dims" alt="icon_faq"/>
+
+					</div>
+					<h2>icon_faq</h2>
+				</li>
+				<li title="icon_gamewarning">
+					<div class="icon-box">
+
+						<!-- icon_gamewarning -->
+						<img src="../icons/icons.svg#icon_gamewarning" class="svg-icon_gamewarning-dims" alt="icon_gamewarning"/>
+
+					</div>
+					<h2>icon_gamewarning</h2>
+				</li>
+				<li title="icon_info">
+					<div class="icon-box">
+
+						<!-- icon_info -->
+						<img src="../icons/icons.svg#icon_info" class="svg-icon_info-dims" alt="icon_info"/>
+
+					</div>
+					<h2>icon_info</h2>
+				</li>
+				<li title="icon_instagram">
+					<div class="icon-box">
+
+						<!-- icon_instagram -->
+						<img src="../icons/icons.svg#icon_instagram" class="svg-icon_instagram-dims" alt="icon_instagram"/>
+
+					</div>
+					<h2>icon_instagram</h2>
+				</li>
+				<li title="icon_linkedin">
+					<div class="icon-box">
+
+						<!-- icon_linkedin -->
+						<img src="../icons/icons.svg#icon_linkedin" class="svg-icon_linkedin-dims" alt="icon_linkedin"/>
+
+					</div>
+					<h2>icon_linkedin</h2>
+				</li>
+				<li title="icon_mail">
+					<div class="icon-box">
+
+						<!-- icon_mail -->
+						<img src="../icons/icons.svg#icon_mail" class="svg-icon_mail-dims" alt="icon_mail"/>
+
+					</div>
+					<h2>icon_mail</h2>
+				</li>
+				<li title="icon_pay">
+					<div class="icon-box">
+
+						<!-- icon_pay -->
+						<img src="../icons/icons.svg#icon_pay" class="svg-icon_pay-dims" alt="icon_pay"/>
+
+					</div>
+					<h2>icon_pay</h2>
+				</li>
+				<li title="icon_payments">
+					<div class="icon-box">
+
+						<!-- icon_payments -->
+						<img src="../icons/icons.svg#icon_payments" class="svg-icon_payments-dims" alt="icon_payments"/>
+
+					</div>
+					<h2>icon_payments</h2>
+				</li>
+				<li title="icon_phone">
+					<div class="icon-box">
+
+						<!-- icon_phone -->
+						<img src="../icons/icons.svg#icon_phone" class="svg-icon_phone-dims" alt="icon_phone"/>
+
+					</div>
+					<h2>icon_phone</h2>
+				</li>
+				<li title="icon_phone2">
+					<div class="icon-box">
+
+						<!-- icon_phone2 -->
+						<img src="../icons/icons.svg#icon_phone2" class="svg-icon_phone2-dims" alt="icon_phone2"/>
+
+					</div>
+					<h2>icon_phone2</h2>
+				</li>
+				<li title="icon_police">
+					<div class="icon-box">
+
+						<!-- icon_police -->
+						<img src="../icons/icons.svg#icon_police" class="svg-icon_police-dims" alt="icon_police"/>
+
+					</div>
+					<h2>icon_police</h2>
+				</li>
+				<li title="icon_risk">
+					<div class="icon-box">
+
+						<!-- icon_risk -->
+						<img src="../icons/icons.svg#icon_risk" class="svg-icon_risk-dims" alt="icon_risk"/>
+
+					</div>
+					<h2>icon_risk</h2>
+				</li>
+				<li title="icon_security">
+					<div class="icon-box">
+
+						<!-- icon_security -->
+						<img src="../icons/icons.svg#icon_security" class="svg-icon_security-dims" alt="icon_security"/>
+
+					</div>
+					<h2>icon_security</h2>
+				</li>
+				<li title="icon_share">
+					<div class="icon-box">
+
+						<!-- icon_share -->
+						<img src="../icons/icons.svg#icon_share" class="svg-icon_share-dims" alt="icon_share"/>
+
+					</div>
+					<h2>icon_share</h2>
+				</li>
+				<li title="icon_skype">
+					<div class="icon-box">
+
+						<!-- icon_skype -->
+						<img src="../icons/icons.svg#icon_skype" class="svg-icon_skype-dims" alt="icon_skype"/>
+
+					</div>
+					<h2>icon_skype</h2>
+				</li>
+				<li title="icon_slot">
+					<div class="icon-box">
+
+						<!-- icon_slot -->
+						<img src="../icons/icons.svg#icon_slot" class="svg-icon_slot-dims" alt="icon_slot"/>
+
+					</div>
+					<h2>icon_slot</h2>
+				</li>
+				<li title="icon_soft">
+					<div class="icon-box">
+
+						<!-- icon_soft -->
+						<img src="../icons/icons.svg#icon_soft" class="svg-icon_soft-dims" alt="icon_soft"/>
+
+					</div>
+					<h2>icon_soft</h2>
+				</li>
+				<li title="icon_sql">
+					<div class="icon-box">
+
+						<!-- icon_sql -->
+						<img src="../icons/icons.svg#icon_sql" class="svg-icon_sql-dims" alt="icon_sql"/>
+
+					</div>
+					<h2>icon_sql</h2>
+				</li>
+				<li title="icon_support">
+					<div class="icon-box">
+
+						<!-- icon_support -->
+						<img src="../icons/icons.svg#icon_support" class="svg-icon_support-dims" alt="icon_support"/>
+
+					</div>
+					<h2>icon_support</h2>
+				</li>
+				<li title="icon_telegram">
+					<div class="icon-box">
+
+						<!-- icon_telegram -->
+						<img src="../icons/icons.svg#icon_telegram" class="svg-icon_telegram-dims" alt="icon_telegram"/>
+
+					</div>
+					<h2>icon_telegram</h2>
+				</li>
+				<li title="icon_tools">
+					<div class="icon-box">
+
+						<!-- icon_tools -->
+						<img src="../icons/icons.svg#icon_tools" class="svg-icon_tools-dims" alt="icon_tools"/>
+
+					</div>
+					<h2>icon_tools</h2>
+				</li>
+				<li title="icon_twitter">
+					<div class="icon-box">
+
+						<!-- icon_twitter -->
+						<img src="../icons/icons.svg#icon_twitter" class="svg-icon_twitter-dims" alt="icon_twitter"/>
+
+					</div>
+					<h2>icon_twitter</h2>
+				</li>
+				<li title="icon_viber">
+					<div class="icon-box">
+
+						<!-- icon_viber -->
+						<img src="../icons/icons.svg#icon_viber" class="svg-icon_viber-dims" alt="icon_viber"/>
+
+					</div>
+					<h2>icon_viber</h2>
+				</li>
+				<li title="icon_whatsapp">
+					<div class="icon-box">
+
+						<!-- icon_whatsapp -->
+						<img src="../icons/icons.svg#icon_whatsapp" class="svg-icon_whatsapp-dims" alt="icon_whatsapp"/>
+
+					</div>
+					<h2>icon_whatsapp</h2>
+				</li>
+				<li title="icon_youtube">
+					<div class="icon-box">
+
+						<!-- icon_youtube -->
+						<img src="../icons/icons.svg#icon_youtube" class="svg-icon_youtube-dims" alt="icon_youtube"/>
+
+					</div>
+					<h2>icon_youtube</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Fri, 26 Jul 2024 12:02:39 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>
